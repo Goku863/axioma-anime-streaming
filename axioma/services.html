@@ -1,610 +1,144 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0a0a0f" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080816" />
   <title>Features — AnimeForYou</title>
-  <meta name="description" content="AnimeForYou features curated anime collections, watchlists, offline downloads, subtitles, and exclusive premiere access." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <style>
-    :root {
-      --bg-primary: #0a0a0f;
-      --bg-secondary: #12121a;
-      --bg-tertiary: #1a1a25;
-      --bg-card: #151520;
-      --bg-card-hover: #1d1d2a;
-      --bg-surface: rgba(255, 255, 255, 0.03);
-      
-      --text-primary: #f8fafc;
-      --text-secondary: #a0aec0;
-      --text-muted: #636e80;
-      --text-dim: #4a5568;
-      
-      --accent-primary: #22c55e;
-      --accent-primary-rgb: 34, 197, 94;
-      --accent-secondary: #8b5cf6;
-      --accent-secondary-rgb: 139, 92, 246;
-      --accent-tertiary: #06b6d4;
-      --accent-pink: #ec4899;
-      
-      --border-color: rgba(255, 255, 255, 0.08);
-      --border-color-hover: rgba(255, 255, 255, 0.15);
-      
-      --radius-sm: 8px;
-      --radius: 12px;
-      --radius-lg: 16px;
-      --radius-xl: 24px;
-      --radius-pill: 999px;
-      
-      --ease: cubic-bezier(0.4, 0, 0.2, 1);
-      --ease-out: cubic-bezier(0, 0, 0.2, 1);
-      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-      
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
-      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
-      --shadow-glow: 0 0 40px rgba(var(--accent-primary-rgb), 0.15);
-      
-      --display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
-      --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      --mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+    .features-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 48px; }
+    .feature-card {
+      padding: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s var(--ease);
     }
-
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    
-    body {
-      margin: 0;
-      font-family: var(--sans);
-      color: var(--text-primary);
-      background: var(--bg-primary);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+    .feature-card:hover {
+      border-color: rgba(var(--accent-rgb), 0.3);
+      transform: translateY(-4px);
     }
-
-    img, svg { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; cursor: pointer; }
-
-    .page {
-      position: relative;
-      width: min(1280px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 18px 0 32px;
-    }
-
-    .top-nav {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 24px;
-      min-height: 56px;
-      margin-bottom: 18px;
-    }
-
-    .quick-actions, .auth-actions, .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .nav-links {
-      justify-content: center;
-      gap: 38px;
-      font-weight: 600;
-      font-family: var(--mono);
-      font-size: 0.84rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .nav-links a {
-      position: relative;
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      color: var(--text-secondary);
-      transition: color 0.2s var(--ease);
-    }
-
-    .nav-links a:hover { color: var(--accent-primary); }
-
-    .nav-links a[aria-current="page"] {
-      color: var(--accent-primary);
-    }
-
-    .nav-links a[aria-current="page"]::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: 6px;
-      width: 52px;
-      height: 3px;
-      border-radius: 999px;
-      background: var(--accent-primary);
-      transform: translateX(-50%);
-      box-shadow: 0 0 12px rgba(var(--accent-primary-rgb), 0.6);
-    }
-
-    .icon-button {
-      width: 44px;
-      height: 44px;
-      border: 0;
-      border-radius: var(--radius-sm);
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius);
+      background: rgba(var(--accent-rgb), 0.1);
       display: grid;
       place-items: center;
-      color: var(--bg-primary);
-      background: var(--accent-primary);
-      box-shadow: var(--shadow-glow);
-      transition: all 0.2s var(--ease);
-    }
-
-    .icon-button:nth-child(2) {
-      background: var(--accent-secondary);
-    }
-
-    .icon-button:hover {
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 0 20px rgba(var(--accent-primary-rgb), 0.4);
-    }
-
-    .btn {
-      min-height: 42px;
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-pill);
-      padding: 0 24px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-family: var(--mono);
-      font-size: 0.84rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      background: transparent;
-      color: var(--text-primary);
-      cursor: pointer;
-      transition: all 0.3s var(--ease);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .btn.primary {
-      border-color: transparent;
-      color: var(--bg-primary);
-      background: var(--accent-primary);
-      box-shadow: var(--shadow-glow);
-    }
-
-    .btn.primary:hover {
-      background: #16a34a;
-      box-shadow: 0 0 30px rgba(var(--accent-primary-rgb), 0.4);
-    }
-
-    .page-header {
-      position: relative;
-      padding: 60px 32px;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      background: 
-        radial-gradient(ellipse at 30% 70%, rgba(var(--accent-primary-rgb), 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 30%, rgba(var(--accent-secondary-rgb), 0.1) 0%, transparent 50%),
-        var(--bg-card);
-      box-shadow: var(--shadow-xl);
-      margin-bottom: 32px;
-    }
-
-    .page-header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(circle, rgba(var(--accent-primary-rgb), 0.1) 0 2px, transparent 2px);
-      background-size: 42px 42px;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-
-    .page-header .crumb {
-      position: relative;
-      z-index: 2;
-      font-family: var(--mono);
-      font-size: 0.74rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dim);
       margin-bottom: 16px;
-    }
-
-    .page-header .crumb span {
-      color: var(--accent-primary);
-    }
-
-    .page-header h1 {
-      position: relative;
-      z-index: 2;
-      font-family: var(--display);
-      font-size: clamp(2.6rem, 5.4vw, 4rem);
-      line-height: 0.98;
-      letter-spacing: -0.03em;
-      margin: 0 0 24px;
-      background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .page-header .lede {
-      position: relative;
-      z-index: 2;
-      max-width: 60ch;
-      font-size: 1.18rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    .section-title {
-      font-family: var(--display);
-      font-size: 1.8rem;
-      line-height: 1;
-      color: var(--text-primary);
-      margin: 0 0 24px;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 48px;
-    }
-
-    .feature-block {
-      position: relative;
-      padding: 32px;
-      border-radius: var(--radius-lg);
-      background: var(--bg-card);
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border-color);
-      transition: all 0.3s var(--ease);
-    }
-
-    .feature-block:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent-primary);
-      box-shadow: var(--shadow-glow);
-    }
-
-    .feature-block .num {
-      font-family: var(--mono);
-      color: var(--accent-primary);
-      font-size: 0.84rem;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .feature-block h3 {
-      margin: 0 0 12px;
-      font-family: var(--display);
       font-size: 1.5rem;
-      color: var(--text-primary);
     }
-
-    .feature-block p {
-      margin: 0 0 16px;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    .meta-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .meta-tags span {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: rgba(var(--accent-primary-rgb), 0.1);
-      color: var(--accent-primary);
-      padding: 6px 12px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
-    }
-
-    .deliverables {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .deliverables li {
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      font-size: 0.92rem;
-      color: var(--text-secondary);
-    }
-
-    .deliverables li::before {
-      content: "+";
-      color: var(--accent-primary);
-      font-weight: 600;
-      font-family: var(--mono);
-      font-size: 0.85rem;
-    }
-
-    .cta-card {
-      position: relative;
-      padding: 60px 48px;
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      background: 
-        radial-gradient(ellipse at 30% 70%, rgba(var(--accent-primary-rgb), 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 30%, rgba(var(--accent-secondary-rgb), 0.15) 0%, transparent 50%),
-        var(--bg-card);
-      box-shadow: var(--shadow-xl);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .cta-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(circle, rgba(var(--accent-primary-rgb), 0.1) 0 2px, transparent 2px);
-      background-size: 42px 42px;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-
-    .cta-card h2 {
-      position: relative;
-      z-index: 2;
-      font-family: var(--display);
-      font-size: clamp(2rem, 3.4vw, 2.8rem);
-      line-height: 1.06;
-      font-weight: 400;
-      color: var(--text-primary);
-      letter-spacing: -0.02em;
-      margin: 0 0 16px;
-    }
-
-    .cta-card p {
-      position: relative;
-      z-index: 2;
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      line-height: 1.5;
-      margin: 0 0 24px;
-    }
-
-    .cta-card .btn {
-      position: relative;
-      z-index: 2;
-      width: fit-content;
-    }
-
-    @media (max-width: 980px) {
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-card {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .page {
-        width: min(100% - 20px, 520px);
-        padding-top: 10px;
-      }
-
-      .nav-links {
-        gap: 18px;
-        flex-wrap: wrap;
-      }
-
-      .auth-actions {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .page-header {
-        padding: 40px 24px;
-      }
-
-      .page-header h1 {
-        font-size: 2.4rem;
-      }
-
-      .feature-block {
-        padding: 24px;
-      }
-
-      .deliverables {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-card {
-        padding: 40px 24px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-      }
-    }
+    .feature-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .feature-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header class="top-nav" aria-label="Primary navigation">
-      <div class="quick-actions">
-        <button class="icon-button" type="button" aria-label="Open profile">
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M19 20a7 7 0 0 0-14 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
-          </svg>
-        </button>
-        <button class="icon-button" type="button" aria-label="Add favorite">
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
+  <div class="ambient">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+  </div>
 
-      <nav class="nav-links" aria-label="Sections">
+  <div class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="close-btn" onclick="closeNav()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="nav-brand">Anime<span>ForYou</span></div>
+    <a href="index.html">Home</a>
+    <a href="work.html">Browse</a>
+    <a href="services.html" class="active">Features</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Support</a>
+  </nav>
+
+  <header class="header" id="siteHeader">
+    <div class="header-inner">
+      <button class="menu-btn" onclick="openNav()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <a href="index.html" class="logo">Anime<span>ForYou</span></a>
+      <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="work.html">Anime</a>
-        <a href="services.html" aria-current="page">Features</a>
+        <a href="work.html">Browse</a>
+        <a href="services.html" class="active">Features</a>
         <a href="about.html">About</a>
         <a href="contact.html">Support</a>
-      </nav>
-
-      <div class="auth-actions">
-        <a class="btn" href="contact.html">Log in</a>
-        <a class="btn primary" href="contact.html">Sign up</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="page-header">
-        <p class="crumb">Home → <span>Features</span></p>
-        <h1>Features for<br/>anime fans.</h1>
-        <p class="lede">Everything you need for easy anime discovery, reliable streaming, and a premium watch experience.</p>
-      </section>
+  <section class="hero">
+    <h1>Powerful <span class="gradient">Features</span></h1>
+    <p>Everything you need for the perfect anime experience</p>
+  </section>
 
-      <h2 class="section-title">What we offer</h2>
-      <section class="features-grid">
-        <article class="feature-block">
-          <span class="num">01 / 06</span>
-          <h3>Curated library</h3>
-          <p>Handpicked anime selections across all genres, from seasonal hits to timeless classics and exclusive premieres.</p>
-          <div class="meta-tags">
-            <span>Action</span><span>Romance</span><span>Fantasy</span><span>Sci-fi</span><span>Slice of life</span><span>Drama</span>
-          </div>
-          <ul class="deliverables">
-            <li>New releases every week</li>
-            <li>Curated genre collections</li>
-            <li>Staff picks and hidden gems</li>
-            <li>Classic anime spotlight</li>
-            <li>Exclusive premieres</li>
-            <li>Seasonal watch guides</li>
-          </ul>
-        </article>
+  <main class="container">
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">🔍</div>
+        <h3>Smart Search</h3>
+        <p>Find any anime instantly with our powerful search. Filter by genre, rating, or status.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>Watch anywhere. Our responsive design works perfectly on phones, tablets, and desktops.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🎯</div>
+        <h3>Personal Library</h3>
+        <p>Build your own anime library. Track what you've watched and save favorites.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">⭐</div>
+        <h3>Ratings & Reviews</h3>
+        <p>See what's popular with community ratings. Find hidden gems recommended by fans.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🔔</div>
+        <h3>New Episodes</h3>
+        <p>Never miss a release. Get notified when new episodes of your favorite series drop.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🌙</div>
+        <h3>Dark Mode</h3>
+        <p>Easy on the eyes. Our dark theme is perfect for late-night anime sessions.</p>
+      </div>
+    </div>
+  </main>
 
-        <article class="feature-block">
-          <span class="num">02 / 06</span>
-          <h3>Personal playlists</h3>
-          <p>Create watchlists, save episodes, and get personalized recommendations based on the anime you love.</p>
-          <div class="meta-tags">
-            <span>Watchlists</span><span>Favorites</span><span>Continue watching</span><span>Recommendations</span><span>History</span><span>Top picks</span>
-          </div>
-          <ul class="deliverables">
-            <li>Custom playlists</li>
-            <li>Continue watching across devices</li>
-            <li>Personalized show suggestions</li>
-            <li>Genre-based mood lists</li>
-            <li>Trending anime updates</li>
-            <li>Recommended next watch</li>
-          </ul>
-        </article>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Anime<span>ForYou</span></div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="work.html">Browse</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </div>
+      <p>&copy; 2026 AnimeForYou. All rights reserved.</p>
+    </div>
+  </footer>
 
-        <article class="feature-block">
-          <span class="num">03 / 06</span>
-          <h3>Multi-device</h3>
-          <p>Watch on desktop, mobile, tablet, or TV with synced progress and smooth playback across every screen.</p>
-          <div class="meta-tags">
-            <span>Desktop</span><span>Mobile</span><span>Tablet</span><span>TV</span><span>Sync</span><span>Playback</span>
-          </div>
-          <ul class="deliverables">
-            <li>Seamless device switching</li>
-            <li>Synced watch history</li>
-            <li>Fast playback start</li>
-            <li>Minimal buffering</li>
-            <li>Adaptive streaming quality</li>
-            <li>Fullscreen TV mode</li>
-          </ul>
-        </article>
-
-        <article class="feature-block">
-          <span class="num">04 / 06</span>
-          <h3>Offline downloads</h3>
-          <p>Save episodes and movies for offline viewing whenever you need them — perfect for travel and unreliable networks.</p>
-          <div class="meta-tags">
-            <span>Offline</span><span>Downloads</span><span>Storage</span><span>Mobile</span><span>Anywhere</span><span>Offline mode</span>
-          </div>
-          <ul class="deliverables">
-            <li>Download episodes to your device</li>
-            <li>Manage storage use</li>
-            <li>Watch without internet</li>
-            <li>Auto-clear after viewing</li>
-          </ul>
-        </article>
-
-        <article class="feature-block">
-          <span class="num">05 / 06</span>
-          <h3>Global subtitles</h3>
-          <p>Subtitles in multiple languages plus dubbed audio options for viewers worldwide.</p>
-          <div class="meta-tags">
-            <span>English</span><span>Japanese</span><span>Spanish</span><span>French</span><span>Portuguese</span><span>German</span>
-          </div>
-          <ul class="deliverables">
-            <li>Multiple subtitle languages</li>
-            <li>Audio language selection</li>
-            <li>Custom font sizes</li>
-            <li>Subtitle sync control</li>
-          </ul>
-        </article>
-
-        <article class="feature-block">
-          <span class="num">06 / 06</span>
-          <h3>Exclusive premieres</h3>
-          <p>Early releases, seasonal drops, and anime originals available first on AnimeForYou.</p>
-          <div class="meta-tags">
-            <span>Premieres</span><span>Exclusives</span><span>Seasonal</span><span>Originals</span><span>New drops</span><span>First access</span>
-          </div>
-          <ul class="deliverables">
-            <li>Early access to premieres</li>
-            <li>Original anime titles</li>
-            <li>Seasonal drop notifications</li>
-            <li>Special curated events</li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="cta-card">
-        <div>
-          <h2>Ready to start watching?</h2>
-        </div>
-        <div>
-          <p>Jump into the library, save your favorites, and stream the latest anime now.</p>
-          <a class="btn primary" href="index.html">Browse anime <span class="arrow">→</span></a>
-        </div>
-      </section>
-    </main>
-  </div>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.getElementById('navOverlay').classList.add('open');
+    }
+    function closeNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.getElementById('navOverlay').classList.remove('open');
+    }
+  </script>
 </body>
 </html>

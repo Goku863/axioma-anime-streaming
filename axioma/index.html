@@ -1,981 +1,167 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0a0a0f" />
-  <title>AnimeForYou — Premium Anime Streaming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080816" />
+  <title>AnimeForYou — Watch Anime Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <style>
-    :root {
-      --bg-primary: #0a0a0f;
-      --bg-secondary: #12121a;
-      --bg-card: #151520;
-      --bg-card-hover: #1d1d2a;
-      --text-primary: #f8fafc;
-      --text-secondary: #a0aec0;
-      --text-muted: #636e80;
-      --accent-primary: #8b5cf6;
-      --accent-primary-rgb: 139, 92, 246;
-      --accent-secondary: #06b6d4;
-      --accent-secondary-rgb: 6, 182, 212;
-      --accent-green: #22c55e;
-      --accent-pink: #ec4899;
-      --accent-orange: #f97316;
-      --border-color: rgba(255, 255, 255, 0.06);
-      --radius: 12px;
-      --radius-lg: 16px;
-      --radius-xl: 20px;
-      --radius-pill: 999px;
-      --ease: cubic-bezier(0.4, 0, 0.2, 1);
-      --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-      --shadow-glow: 0 0 60px rgba(var(--accent-primary-rgb), 0.15);
-      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --mono: 'JetBrains Mono', monospace;
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Ambient Background -->
+  <div class="ambient">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="close-btn" onclick="closeNav()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="nav-brand">Anime<span>ForYou</span></div>
+    <a href="index.html" class="active">Home</a>
+    <a href="work.html">Browse</a>
+    <a href="services.html">Features</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Support</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="header" id="siteHeader">
+    <div class="header-inner">
+      <button class="menu-btn" onclick="openNav()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <a href="index.html" class="logo">Anime<span>ForYou</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="work.html">Browse</a>
+        <a href="services.html">Features</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Your Anime.<br><span class="gradient">Your World.</span></h1>
+    <p>Discover, track, and download your favorite anime series with a beautiful modern experience.</p>
+    <div class="hero-actions">
+      <a href="work.html" class="btn btn-primary btn-lg">Browse Anime</a>
+      <a href="services.html" class="btn btn-ghost btn-lg">Features</a>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search anime..." onkeyup="filterAnime()" />
+    </div>
+  </section>
+
+  <!-- Latest Anime -->
+  <main class="container">
+    <h2 class="section-title reveal">Latest Anime</h2>
+    <div class="anime-grid" id="animeGrid"></div>
+
+    <h2 class="section-title reveal" style="margin-top: 48px;">Trending Now</h2>
+    <div class="anime-grid" id="trendingGrid"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Anime<span>ForYou</span></div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="work.html">Browse</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Support</a>
+      </div>
+      <p>&copy; 2026 AnimeForYou. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script>
+    // Mobile Navigation
+    function openNav() {
+      document.getElementById('mobileNav').classList.add('open');
+      document.getElementById('navOverlay').classList.add('open');
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font);
-      color: var(--text-primary);
-      background: var(--bg-primary);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+    function closeNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.getElementById('navOverlay').classList.remove('open');
     }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
 
-    /* ===== NAVBAR ===== */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 16px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(10, 10, 15, 0.8);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-color);
-      transition: all 0.3s var(--ease);
+    // Anime Data
+    let allAnime = [];
+
+    function loadAnime() {
+      allAnime = DataStore.getList();
+      renderGrid('animeGrid', allAnime.slice(0, 20));
+      renderGrid('trendingGrid', allAnime.filter(a => a.rating >= 8).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 8));
+      if (window.AnimeAnimations) {
+        setTimeout(() => window.AnimeAnimations.initReveal(), 100);
+      }
     }
-    .navbar.scrolled { padding: 12px 32px; background: rgba(10, 10, 15, 0.95); }
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 1.2rem;
+
+    function renderGrid(id, list) {
+      const grid = document.getElementById(id);
+      if (!list.length) {
+        grid.innerHTML = '<p class="empty-message">No anime found. Add anime via the admin panel.</p>';
+        return;
+      }
+      grid.innerHTML = list.map(a => `
+        <a href="episode.html?id=${a.id}" class="anime-card">
+          <div class="poster">
+            <img src="${a.image || 'https://cdn.myanimelist.net/images/anime/1015/138006l.jpg'}" alt="${(a.title || '').replace(/"/g, '&quot;')}" loading="lazy" />
+            <div class="overlay">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <div class="title">${(a.title || 'Unknown').replace(/</g, '&lt;')}</div>
+            <div class="meta">
+              <span class="rating">${a.rating || 'N/A'}★</span>
+              <span class="genre">${a.genre || 'Anime'}</span>
+            </div>
+          </div>
+        </a>
+      `).join('');
     }
-    .nav-brand .logo {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      display: grid;
-      place-items: center;
 
-(Showing lines 1-80 of 1074. Use offset=81 to continue.)
-</content>",metadata:$R[16187]={preview:"<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0a0a0f" />
-  <title>AnimeForYou — Premium Anime Streaming</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <style>
-    :root {
-      --bg-primary: #0a0a0f;
-      --bg-secondary: #12121a;
-      --bg-card: #151520;
-      --bg-card-hover: #1d1d2a;
-      --text-primary: #f8fafc;
-      --text-secondary: #a0aec0;
-      --text-muted: #636e80;
-      --accent-primary: #8b5cf6;",truncated:!0,loaded:$R[16188]=[],display:$R[16189]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html",text:"<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0a0a0f" />
-  <title>AnimeForYou — Premium Anime Streaming</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <style>
-    :root {
-      --bg-primary: #0a0a0f;
-      --bg-secondary: #12121a;
-      --bg-card: #151520;
-      --bg-card-hover: #1d1d2a;
-      --text-primary: #f8fafc;
-      --text-secondary: #a0aec0;
-      --text-muted: #636e80;
-      --accent-primary: #8b5cf6;
-      --accent-primary-rgb: 139, 92, 246;
-      --accent-secondary: #06b6d4;
-      --accent-secondary-rgb: 6, 182, 212;
-      --accent-green: #22c55e;
-      --accent-pink: #ec4899;
-      --accent-orange: #f97316;
-      --border-color: rgba(255, 255, 255, 0.06);
-      --radius: 12px;
-      --radius-lg: 16px;
-      --radius-xl: 20px;
-      --radius-pill: 999px;
-      --ease: cubic-bezier(0.4, 0, 0.2, 1);
-      --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-      --shadow-glow: 0 0 60px rgba(var(--accent-primary-rgb), 0.15);
-      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --mono: 'JetBrains Mono', monospace;
+    function filterAnime() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = allAnime.filter(a =>
+        (a.title || '').toLowerCase().includes(q) ||
+        (a.genre || '').toLowerCase().includes(q)
+      );
+      renderGrid('animeGrid', filtered.slice(0, 20));
+      renderGrid('trendingGrid', filtered.filter(a => a.rating >= 8).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 8));
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font);
-      color: var(--text-primary);
-      background: var(--bg-primary);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
 
-    /* ===== NAVBAR ===== */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 16px 32px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(10, 10, 15, 0.8);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-color);
-      transition: all 0.3s var(--ease);
-    }
-    .navbar.scrolled { padding: 12px 32px; background: rgba(10, 10, 15, 0.95); }
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-    .nav-brand .logo {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-      display: grid;
-      place-items: center;",lineStart:1,lineEnd:80,totalLines:1074,truncated:!0}},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html",time:$R[16190]={start:1781709108648,end:1781709108677}},id:"prt_ed62374fe001Xk5XVcZbNhm2AI",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6233ee2001Dqm1V4zrmrMgk5"},$R[16191]={reason:"tool-calls",type:"step-finish",tokens:$R[16192]={total:40655,input:444,output:68,reasoning:15,cache:$R[16193]={write:0,read:40128}},cost:0,id:"prt_ed6237842001CggYtjd4lCYvNO",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6233ee2001Dqm1V4zrmrMgk5"}],msg_ed6237881001qNjBodU4zaUP6u:$R[16194]=[$R[16195]={type:"step-start",id:"prt_ed623b61f001VSpWmZgTHW7zXY",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6237881001qNjBodU4zaUP6u"},$R[16196]={type:"reasoning",text:"I have the design tokens. The site uses:
-- Dark background: `#0a0a0f`
-- Purple accent: `#8b5cf6` (primary)
-- Cyan accent: `#06b6d4` (secondary)
-- Gradient: `linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))`
-
-I'll create a custom cursor that:
-1. Has a small dot cursor (inner) with the purple accent
-2. Has a larger ring cursor (outer) with the gradient
-3. Grows on hover over interactive elements
-4. Has a smooth trailing animation
-5. Has a subtle glow effect matching the aurora theme
-
-Let me create a shared CSS/JS file for the cursor so I don't have to duplicate it in every page. Actually, since this is a static HTML site, I'll create a separate CSS file and JS file that can be included in all pages.
-
-Let me create:
-1. `assets/css/cursor.css` - Custom cursor styles
-2. `assets/js/cursor.js` - Custom cursor logic
-
-Then include them in all pages.",time:$R[16197]={start:1781709125153,end:1781709129141},id:"prt_ed623b621001JxGTicFv3VbeJe",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6237881001qNjBodU4zaUP6u"},$R[16198]={type:"text",text:"Good, I have the design tokens. Let me create a custom cursor that matches the aurora gradient theme (purple → cyan). I'll create reusable CSS and JS files.",time:$R[16199]={start:1781709129144,end:1781709129250},id:"prt_ed623c5b8001hLU8aW9gHu2SJg",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6237881001qNjBodU4zaUP6u"},$R[16200]={type:"tool",tool:"todowrite",callID:"call_da5b5958326c4d3ab278a4ec",state:$R[16201]={status:"completed",input:$R[16202]={todos:$R[16203]=[$R[16204]={content:"Read current CSS variables and design tokens from index.html",priority:"high",status:"completed"},$R[16205]={content:"Create custom cursor CSS and JS files",priority:"high",status:"in_progress"},$R[16206]={content:"Add cursor to all pages (index, work, about, services, contact, episode, profile, admin, login)",priority:"high",status:"pending"},$R[16207]={content:"Test and verify",priority:"medium",status:"pending"}]},output:"[
-  {
-    "content": "Read current CSS variables and design tokens from index.html",
-    "status": "completed",
-    "priority": "high"
-  },
-  {
-    "content": "Create custom cursor CSS and JS files",
-    "status": "in_progress",
-    "priority": "high"
-  },
-  {
-    "content": "Add cursor to all pages (index, work, about, services, contact, episode, profile, admin, login)",
-    "status": "pending",
-    "priority": "high"
-  },
-  {
-    "content": "Test and verify",
-    "status": "pending",
-    "priority": "medium"
-  }
-]",metadata:$R[16208]={todos:$R[16209]=[$R[16210]={content:"Read current CSS variables and design tokens from index.html",status:"completed",priority:"high"},$R[16211]={content:"Create custom cursor CSS and JS files",status:"in_progress",priority:"high"},$R[16212]={content:"Add cursor to all pages (index, work, about, services, contact, episode, profile, admin, login)",status:"pending",priority:"high"},$R[16213]={content:"Test and verify",status:"pending",priority:"medium"}],truncated:!1},title:"3 todos",time:$R[16214]={start:1781709129184,end:1781709129186}},id:"prt_ed623c5cd001FADGvdy2DD39n3",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6237881001qNjBodU4zaUP6u"},$R[16215]={reason:"tool-calls",type:"step-finish",tokens:$R[16216]={total:42324,input:1405,output:171,reasoning:236,cache:$R[16217]={write:0,read:40512}},cost:0,id:"prt_ed623c6240017UKEcBdbe1s2Mc",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6237881001qNjBodU4zaUP6u"}],msg_ed623c648001ViAc9mzkSkLMv3:$R[16218]=[$R[16219]={type:"step-start",id:"prt_ed623f421001rUV8C1bcPM4mqT",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed623c648001ViAc9mzkSkLMv3"},$R[16220]={type:"reasoning",text:"Let me check the directory structure first.",time:$R[16221]={start:1781709141028,end:1781709141277},id:"prt_ed623f4240011eVvD7UCub6IAJ",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed623c648001ViAc9mzkSkLMv3"},$R[16222]={type:"tool",tool:"bash",callID:"call_ef7f05fdffe34b3dbcfea5cd",state:$R[16223]={status:"completed",input:$R[16224]={command:"Test-Path "C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\assets\\css"",description:"Check if assets/css directory exists"},output:"True\r
-",metadata:$R[16225]={output:"True\r
-",exit:0,description:"Check if assets/css directory exists",truncated:!1},title:"Check if assets/css directory exists",time:$R[16226]={start:1781709142081,end:1781709142101}},id:"prt_ed623f51e001Nbe1eAe7NZZtL7",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed623c648001ViAc9mzkSkLMv3"},$R[16227]={type:"tool",tool:"bash",callID:"call_958df24af0a34697a0062379",state:$R[16228]={status:"completed",input:$R[16229]={command:"Test-Path "C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\assets\\js"",description:"Check if assets/js directory exists"},output:"True\r
-",metadata:$R[16230]={output:"True\r
-",exit:0,description:"Check if assets/js directory exists",truncated:!1},title:"Check if assets/js directory exists",time:$R[16231]={start:1781709142420,end:1781709142442}},id:"prt_ed623f673001eDmjVL0LfP44Qx",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed623c648001ViAc9mzkSkLMv3"},$R[16232]={reason:"tool-calls",type:"step-finish",tokens:$R[16233]={total:42622,input:621,output:137,reasoning:8,cache:$R[16234]={write:0,read:41856}},cost:0,id:"prt_ed623f9ac001dOKSjtZz01mgMC",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed623c648001ViAc9mzkSkLMv3"}],msg_ed623f9d2001WrEsx74PoxBusS:$R[16235]=[$R[16236]={type:"step-start",id:"prt_ed6247a12001ApHuzU1Oi4uN8Y",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed623f9d2001WrEsx74PoxBusS"},$R[16237]={type:"reasoning",text:"Good, both directories exist. Let me create the cursor CSS and JS files.",time:$R[16238]={start:1781709175317,end:1781709175503},id:"prt_ed6247a15001K0njPtUx59XW0y",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed623f9d2001WrEsx74PoxBusS"},$R[16239]={type:"tool",tool:"write",callID:"call_5ce9dbf5d2ef4f8c92ad32b5",state:$R[16240]={status:"completed",input:$R[16241]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\assets\\css\\cursor.css",content:"/* ===== CUSTOM CURSOR ===== */
-*, *::before, *::after { cursor: none !important; }
-
-.cursor-dot,
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 99999;
-  border-radius: 50%;
-  will-change: transform;
-}
-
-/* Inner dot */
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background: #fff;
-  transform: translate(-50%, -50%);
-  transition: width 0.25s var(--ease), height 0.25s var(--ease), background 0.25s var(--ease), opacity 0.25s var(--ease);
-}
-
-/* Outer ring */
-.cursor-ring {
-  width: 40px;
-  height: 40px;
-  border: 2px solid rgba(139, 92, 246, 0.5);
-  background: rgba(139, 92, 246, 0.04);
-  transform: translate(-50%, -50%);
-  transition: width 0.35s var(--ease), height 0.35s var(--ease), border-color 0.35s var(--ease), background 0.35s var(--ease), opacity 0.3s var(--ease);
-}
-
-/* Glow trail */
-.cursor-glow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 200px;
-  pointer-events: none;
-  z-index: 99998;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(6, 182, 212, 0.04) 40%, transparent 70%);
-  transform: translate(-50%, -50%);
-  will-change: transform;
-  transition: opacity 0.4s var(--ease);
-}
-
-/* --- Hover: clickable elements --- */
-.cursor-dot.hover {
-  width: 4px;
-  height: 4px;
-  background: var(--accent-primary, #8b5cf6);
-}
-.cursor-ring.hover {
-  width: 60px;
-  height: 60px;
-  border-color: rgba(6, 182, 212, 0.6);
-  background: rgba(6, 182, 212, 0.06);
-}
-
-/* --- Hover: text inputs --- */
-.cursor-dot.text-hover {
-  width: 2px;
-  height: 24px;
-  border-radius: 2px;
-  background: var(--accent-primary, #8b5cf6);
-}
-.cursor-ring.text-hover {
-  width: 32px;
-  height: 32px;
-  border-color: rgba(139, 92, 246, 0.3);
-  background: transparent;
-}
-
-/* --- Active: click --- */
-.cursor-dot.active {
-  width: 6px;
-  height: 6px;
-  background: var(--accent-secondary, #06b6d4);
-}
-.cursor-ring.active {
-  width: 36px;
-  height: 36px;
-  border-color: rgba(6, 182, 212, 0.7);
-  background: rgba(6, 182, 212, 0.08);
-}
-
-/* --- Hidden on page leave --- */
-.cursor-dot.hidden,
-.cursor-ring.hidden,
-.cursor-glow.hidden {
-  opacity: 0;
-}
-
-/* --- Disable on touch devices --- */
-@media (hover: none) and (pointer: coarse) {
-  .cursor-dot, .cursor-ring, .cursor-glow { display: none !important; }
-  *, *::before, *::after { cursor: auto !important; }
-}
-
-/* --- Disable on small screens --- */
-@media (max-width: 768px) {
-  .cursor-dot, .cursor-ring, .cursor-glow { display: none !important; }
-  *, *::before, *::after { cursor: auto !important; }
-}
-"},output:"Wrote file successfully.",metadata:$R[16242]={diagnostics:$R[16243]={},filepath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\assets\\css\\cursor.css",exists:!1,truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\assets\\css\\cursor.css",time:$R[16244]={start:1781709183160,end:1781709183173}},id:"prt_ed6247ad1001czbWgFErxuc8Xw",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed623f9d2001WrEsx74PoxBusS"},$R[16245]={reason:"tool-calls",type:"step-finish",tokens:$R[16246]={total:43657,input:209,output:1000,reasoning:16,cache:$R[16247]={write:0,read:42432}},cost:0,id:"prt_ed62498c8001sLzBN0EoY5AtA9",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed623f9d2001WrEsx74PoxBusS"}],msg_ed62498ee001l3ZSSj61XzDbOF:$R[16248]=[$R[16249]={type:"step-start",id:"prt_ed625e2d3001D0OzXIQDouhl9P",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62498ee001l3ZSSj61XzDbOF"},$R[16250]={type:"reasoning",text:"Now let me create the JavaScript file for the cursor.",time:$R[16251]={start:1781709267669,end:1781709267672},id:"prt_ed625e2d50012VgStnaGhQ5FVM",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62498ee001l3ZSSj61XzDbOF"},$R[16252]={type:"tool",tool:"write",callID:"call_989e58ffc1614baaa8bd4b58",state:$R[16253]={status:"completed",input:$R[16254]={content:"// Custom Cursor - Aurora Theme
-(function () {
-  if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) return;
-  if (window.innerWidth <= 768) return;
-
-  const dot = document.createElement('div');
-  const ring = document.createElement('div');
-  const glow = document.createElement('div');
-  dot.className = 'cursor-dot';
-  ring.className = 'cursor-ring';
-  glow.className = 'cursor-glow';
-  document.body.appendChild(dot);
-  document.body.appendChild(ring);
-  document.body.appendChild(glow);
-
-  let mx = -100, my = -100;
-  let dx = -100, dy = -100;
-  let gx = -100, gy = -100;
-  let hovering = false;
-  let textMode = false;
-
-  document.addEventListener('mousemove', (e) => {
-    mx = e.clientX;
-    my = e.clientY;
-    dot.style.left = mx + 'px';
-    dot.style.top = my + 'px';
-  });
-
-  // Smooth ring + glow follow
-  function animate() {
-    dx += (mx - dx) * 0.12;
-    dy += (my - dy) * 0.12;
-    gx += (mx - gx) * 0.06;
-    gy += (my - gy) * 0.06;
-    ring.style.left = dx + 'px';
-    ring.style.top = dy + 'px';
-    glow.style.left = gx + 'px';
-    glow.style.top = gy + 'px';
-    requestAnimationFrame(animate);
-  }
-  animate();
-
-  // Hover detection
-  const interactiveSelector = 'a, button, [onclick], .btn, .genre-chip, .tab, .anime-card, .featured-main, .featured-small, .top10-item, .poster, .play-btn, input, textarea, select, label, [role="button"]';
-  const textSelector = 'input, textarea, select';
-
-  document.addEventListener('mouseover', (e) => {
-    const target = e.target.closest(interactiveSelector);
-    if (target) {
-      hovering = true;
-      ring.classList.add('hover');
-      dot.classList.add('hover');
-    }
-    const textTarget = e.target.closest(textSelector);
-    if (textTarget) {
-      textMode = true;
-      ring.classList.add('text-hover');
-      dot.classList.add('text-hover');
-      ring.classList.remove('hover');
-      dot.classList.remove('hover');
-    }
-  });
-
-  document.addEventListener('mouseout', (e) => {
-    const target = e.target.closest(interactiveSelector);
-    if (target) {
-      hovering = false;
-      ring.classList.remove('hover');
-      dot.classList.remove('hover');
-    }
-    const textTarget = e.target.closest(textSelector);
-    if (textTarget) {
-      textMode = false;
-      ring.classList.remove('text-hover');
-      dot.classList.remove('text-hover');
-    }
-  });
-
-  // Click animation
-  document.addEventListener('mousedown', () => {
-    ring.classList.add('active');
-    dot.classList.add('active');
-  });
-  document.addEventListener('mouseup', () => {
-    ring.classList.remove('active');
-    dot.classList.remove('active');
-  });
-
-  // Hide when cursor leaves window
-  document.addEventListener('mouseleave', () => {
-    dot.classList.add('hidden');
-    ring.classList.add('hidden');
-    glow.classList.add('hidden');
-  });
-  document.addEventListener('mouseenter', () => {
-    dot.classList.remove('hidden');
-    ring.classList.remove('hidden');
-    glow.classList.remove('hidden');
-  });
-})();
-",filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\assets\\js\\cursor.js"},output:"Wrote file successfully.",metadata:$R[16255]={diagnostics:$R[16256]={},filepath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\assets\\js\\cursor.js",exists:!1,truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\assets\\js\\cursor.js",time:$R[16257]={start:1781709273876,end:1781709273894}},id:"prt_ed625e2da001oEHHWgB8Z0ObPn",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62498ee001l3ZSSj61XzDbOF"},$R[16258]={reason:"tool-calls",type:"step-finish",tokens:$R[16259]={total:44499,input:1049,output:815,reasoning:11,cache:$R[16260]={write:0,read:42624}},cost:0,id:"prt_ed625fb28001O1opwbXSEaysrr",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62498ee001l3ZSSj61XzDbOF"}],msg_ed627bae0001Vkds897YRinkgk:$R[16261]=[$R[16262]={type:"text",text:"use this models C:\\Users\\Asus\\Downloads\\codeai if this besat ",id:"prt_ed627bae1001eVt1zPnA6Ozz07",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed627bae0001Vkds897YRinkgk"}],msg_ed62814aa0019ZbVqLXAZFa0C4:$R[16263]=[$R[16264]={type:"text",text:"retry",id:"prt_ed62814aa002XIKJL45HLII4Xw",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62814aa0019ZbVqLXAZFa0C4"}],msg_ed62814d1001Ygb3bYW8N3KgY2:$R[16265]=[$R[16266]={type:"step-start",id:"prt_ed6284a900017ewKq1Y9Lhn073",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62814d1001Ygb3bYW8N3KgY2"},$R[16267]={type:"reasoning",text:"The user wants me to look at the models in `C:\\Users\\Asus\\Downloads\\codeai` and use them if they're the best option. Let me first check what's in that directory.",time:$R[16268]={start:1781709425298,end:1781709425614},id:"prt_ed6284a92001KoADwigoiOeaXP",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62814d1001Ygb3bYW8N3KgY2"},$R[16269]={type:"tool",tool:"read",callID:"call_17554d0b77de4c1580c457cd",state:$R[16270]={status:"completed",input:$R[16271]={filePath:"C:\\Users\\Asus\\Downloads\\codeai"},output:"<path>C:\\Users\\Asus\\Downloads\\codeai</path>
-<type>directory</type>
-<entries>
-qwen3-8b-q4_k_m.gguf
-
-(1 entries)
-</entries>",metadata:$R[16272]={preview:"qwen3-8b-q4_k_m.gguf",truncated:!1,loaded:$R[16273]=[],display:$R[16274]={type:"directory",path:"C:\\Users\\Asus\\Downloads\\codeai",entries:$R[16275]=["qwen3-8b-q4_k_m.gguf"],offset:1,totalEntries:1,truncated:!1}},title:"Users\\Asus\\Downloads\\codeai",time:$R[16276]={start:1781709425695,end:1781709429478}},id:"prt_ed6284bd0001lTde9ivfNyPgyN",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62814d1001Ygb3bYW8N3KgY2"},$R[16277]={reason:"tool-calls",type:"step-finish",tokens:$R[16278]={total:44617,input:895,output:31,reasoning:43,cache:$R[16279]={write:0,read:43648}},cost:0,id:"prt_ed6285ae9001IGfGXN6ag2R3wK",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62814d1001Ygb3bYW8N3KgY2"}],msg_ed6285b110010FuXe3vl0nQ6ge:$R[16280]=[$R[16281]={type:"step-start",id:"prt_ed6289ef0001ro7Yl7G4FWG9Db",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6285b110010FuXe3vl0nQ6ge"},$R[16282]={type:"reasoning",text:"The user has a GGUF model file `qwen3-8b-q4_k_m.gguf` in their downloads. This is a quantized version of Qwen3-8B, a language model. This is a local LLM model file - it can't be used directly in a website. It needs to be run through a local inference engine like llama.cpp, Ollama, or similar.
-
-The user seems to be asking if this model is the best option for something related to their website. But a GGUF model file is not something you can use in a static HTML website. It requires server-side inference.
-
-I should clarify this with the user - what are they trying to do with this model? Are they asking about:
-1. Using it for AI features on the website?
-2. Using it as a coding assistant?
-3. Something else?
-
-The model itself is Qwen3-8B Q4_K_M quantization - this is a good local model for general tasks, but it's not relevant to the website development task at hand (adding a custom cursor animation).
-
-Let me ask the user what they want to do with this model, since it can't be used directly in a static HTML website.",time:$R[16283]={start:1781709446898,end:1781709448561},id:"prt_ed6289ef2001HyS3gN2J5PI2eG",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6285b110010FuXe3vl0nQ6ge"},$R[16284]={type:"text",text:"That's `qwen3-8b-q4_k_m.gguf` — a local LLM model file. It can't be used directly in a static HTML website. It needs a server-side runtime like Ollama or llama.cpp to run.
-
-What do you want to use it for? It's not relevant to the cursor animation task we're working on. Are you thinking of:
-
-1. **AI chatbot on the website** — Would need a backend server to run the model, not possible with static HTML + Cloudflare Pages
-2. **Something else?**",time:$R[16285]={start:1781709448563,end:1781709450175},id:"prt_ed628a5730011F4m71dS86d3Vk",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6285b110010FuXe3vl0nQ6ge"},$R[16286]={type:"tool",tool:"question",callID:"call_552748ca476740669bf7f2df",state:$R[16287]={status:"completed",input:$R[16288]={questions:$R[16289]=[$R[16290]={header:"Model usage",question:"What do you want to use the qwen3-8b model for?",options:$R[16291]=[$R[16292]={description:"Run it locally on your PC for coding help — has nothing to do with the website",label:"Local coding assistant"},$R[16293]={description:"Would require a backend server (not possible on Cloudflare Pages static hosting)",label:"AI chatbot on website"},$R[16294]={description:"Continue adding the custom cursor animation to the site",label:"Skip, continue cursor work"}]}]},output:"User has answered your questions: "What do you want to use the qwen3-8b model for?"="AI chatbot on website". You can now continue with the user's answers in mind.",metadata:$R[16295]={answers:$R[16296]=[$R[16297]=["AI chatbot on website"]],truncated:!1},title:"Asked 1 question",time:$R[16298]={start:1781709450156,end:1781709461736}},id:"prt_ed628a8cc001WM6ish8Kb6sJuG",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6285b110010FuXe3vl0nQ6ge"},$R[16299]={reason:"tool-calls",type:"step-finish",tokens:$R[16300]={total:45176,input:193,output:254,reasoning:249,cache:$R[16301]={write:0,read:44480}},cost:0,id:"prt_ed628d8ea001iKo3543ZmRSg2w",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed6285b110010FuXe3vl0nQ6ge"}],msg_ed628d911001sF2H6U5alexkXr:$R[16302]=[$R[16303]={type:"step-start",id:"prt_ed62969180016sHQu2zEsvngNz",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed628d911001sF2H6U5alexkXr"},$R[16304]={type:"reasoning",text:"The user wants to add an AI chatbot to their website using the qwen3-8b model. However, there are several issues:
-
-1. The website is static HTML hosted on Cloudflare Pages - no server-side code
-2. Running a GGUF model requires a backend server with GPU/CPU inference
-3. Cloudflare Pages doesn't support server-side rendering
-
-Options:
-1. Use a free AI API like Google's Gemini API (free tier) or a free Hugging Face Inference API
-2. Use a serverless function on Cloudflare Workers (but that can't run GGUF models)
-3. The user would need to set up a separate backend server
-
-The best practical solution for a static site on Cloudflare Pages would be to use a free AI API. Let me suggest this to the user.
-
-Actually, let me think about this more carefully. The user has Cloudflare Pages hosting. They could potentially:
-1. Use Cloudflare Workers AI - Cloudflare has their own AI inference service that supports some models
-2. Use a free tier of an AI API like Google Gemini, OpenRouter, or Hugging Face
-
-But the user specifically asked about using the qwen3-8b model. Let me check if Cloudflare Workers AI supports Qwen models.
-
-Actually, Cloudflare Workers AI does support some Qwen models! But it requires a Cloudflare account with Workers AI enabled. The user already has Cloudflare Pages, so they might have access.
-
-However, the user said they don't have a credit card. Cloudflare Workers AI has a free tier but might require a credit card for verification.
-
-Let me suggest the simplest approach: use a free AI API like Google Gemini (which they might already have access to since they use Firebase/Google) or use Cloudflare Workers AI if available.
-
-Actually, the simplest and most practical solution for a static website would be:
-1. Use the Google Gemini API (free tier, 15 RPM) - they already have a Google account
-2. Or use a free Hugging Face Inference API
-
-Let me suggest this to the user and explain the constraints.",time:$R[16305]={start:1781709498651,end:1781709502629},id:"prt_ed629691b001b6mJm00Bz6hyL0",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed628d911001sF2H6U5alexkXr"},$R[16306]={type:"text",text:"Running a GGUF model requires a backend server — can't work on static Cloudflare Pages. But here's the good news: you can use a **free AI API** instead.
-
-Since you already use Google services, the easiest option is **Google Gemini API** (free tier: 15 requests/min, no credit card needed).
-
-Want me to:
-1. **Build a chatbot using Google Gemini free API** — works on your static site, no server needed
-2. **Use Cloudflare Workers AI** — might work with your Cloudflare account but may need credit card verification",time:$R[16307]={start:1781709502631,end:1781709504464},id:"prt_ed62978a7001gCJ5sGp3ze3wPL",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed628d911001sF2H6U5alexkXr"},$R[16308]={type:"tool",tool:"question",callID:"call_a6592783fb7b402b9d491400",state:$R[16309]={status:"completed",input:$R[16310]={questions:$R[16311]=[$R[16312]={header:"Chatbot approach",options:$R[16313]=[$R[16314]={description:"Free, no credit card, works on static site. Uses your existing Google account.",label:"Google Gemini API (Recommended)"},$R[16315]={description:"Uses your Cloudflare account, may need credit card verification",label:"Cloudflare Workers AI"},$R[16316]={description:"Continue with cursor animation first, add chatbot later",label:"Skip, finish cursor first"}],question:"Which approach for the AI chatbot?"}]},output:"User has answered your questions: "Which approach for the AI chatbot?"="add your own yourself". You can now continue with the user's answers in mind.",metadata:$R[16317]={answers:$R[16318]=[$R[16319]=["add your own yourself"]],truncated:!1},title:"Asked 1 question",time:$R[16320]={start:1781709504430,end:1781709561768}},id:"prt_ed6297c87001jmUTAwqJrrAXDk",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed628d911001sF2H6U5alexkXr"},$R[16321]={reason:"tool-calls",type:"step-finish",tokens:$R[16322]={total:45911,input:749,output:248,reasoning:434,cache:$R[16323]={write:0,read:44480}},cost:0,id:"prt_ed62a5faa0015sOBoC6jA0OsJd",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed628d911001sF2H6U5alexkXr"}],msg_ed62a5fcf001N81BRE9V31aH59:$R[16324]=[$R[16325]={type:"step-start",id:"prt_ed62a91d90014uOEQMZHNqk3TK",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a5fcf001N81BRE9V31aH59"},$R[16326]={type:"reasoning",text:"The user wants me to just make the decision and implement it. Let me go with Google Gemini API since it's the simplest and most reliable option for a static site. But first, let me finish the cursor animation work since that's what we were doing, then add the chatbot.
-
-Actually, the user said "add your own yourself" - they want me to just pick the best approach and implement it. Let me go with Google Gemini API and implement both:
-1. First finish the cursor animation (add CSS/JS to all pages)
-2. Then add the AI chatbot
-
-Let me start with the cursor first since that's nearly done, then add the chatbot.",time:$R[16327]={start:1781709574619,end:1781709576837},id:"prt_ed62a91db0015WnishsQ2xO3Ry",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a5fcf001N81BRE9V31aH59"},$R[16328]={type:"text",text:"I'll go with Google Gemini API (free, no credit card). Let me finish the cursor animation first, then add the chatbot.",time:$R[16329]={start:1781709576838,end:1781709576893},id:"prt_ed62a9a86001QZPCyaAnrUFTlj",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a5fcf001N81BRE9V31aH59"},$R[16330]={type:"tool",tool:"todowrite",callID:"call_09a667e581df4e23a2684032",state:$R[16331]={status:"completed",input:$R[16332]={todos:$R[16333]=[$R[16334]={content:"Read current CSS variables and design tokens from index.html",priority:"high",status:"completed"},$R[16335]={content:"Create custom cursor CSS and JS files",priority:"high",status:"completed"},$R[16336]={content:"Add cursor to all pages (index, work, about, services, contact, episode, profile, admin, login)",priority:"high",status:"in_progress"},$R[16337]={content:"Add AI chatbot with Google Gemini API to all pages",priority:"high",status:"pending"},$R[16338]={content:"Test and verify",priority:"medium",status:"pending"}]},output:"[
-  {
-    "content": "Read current CSS variables and design tokens from index.html",
-    "status": "completed",
-    "priority": "high"
-  },
-  {
-    "content": "Create custom cursor CSS and JS files",
-    "status": "completed",
-    "priority": "high"
-  },
-  {
-    "content": "Add cursor to all pages (index, work, about, services, contact, episode, profile, admin, login)",
-    "status": "in_progress",
-    "priority": "high"
-  },
-  {
-    "content": "Add AI chatbot with Google Gemini API to all pages",
-    "status": "pending",
-    "priority": "high"
-  },
-  {
-    "content": "Test and verify",
-    "status": "pending",
-    "priority": "medium"
-  }
-]",metadata:$R[16339]={todos:$R[16340]=[$R[16341]={content:"Read current CSS variables and design tokens from index.html",status:"completed",priority:"high"},$R[16342]={content:"Create custom cursor CSS and JS files",status:"completed",priority:"high"},$R[16343]={content:"Add cursor to all pages (index, work, about, services, contact, episode, profile, admin, login)",status:"in_progress",priority:"high"},$R[16344]={content:"Add AI chatbot with Google Gemini API to all pages",status:"pending",priority:"high"},$R[16345]={content:"Test and verify",status:"pending",priority:"medium"}],truncated:!1},title:"3 todos",time:$R[16346]={start:1781709576889,end:1781709576891}},id:"prt_ed62a9aa7001v1qKcvJJdnS4b0",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a5fcf001N81BRE9V31aH59"},$R[16347]={reason:"tool-calls",type:"step-finish",tokens:$R[16348]={total:46285,input:771,output:192,reasoning:138,cache:$R[16349]={write:0,read:45184}},cost:0,id:"prt_ed62a9abf001v8PP9kDTCkrZaM",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a5fcf001N81BRE9V31aH59"}],msg_ed62a9ae60010W3tbpmBvB9dpd:$R[16350]=[$R[16351]={type:"step-start",id:"prt_ed62acb2b001niKrgirqsnzGpe",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a9ae60010W3tbpmBvB9dpd"},$R[16352]={type:"reasoning",text:"Now I need to add the cursor CSS and JS to all HTML pages. Let me check which pages exist and add the includes. I already know the pages:
-- index.html
-- work.html
-- about.html
-- services.html
-- contact.html
-- episode.html
-- profile.html
-- admin.html
-- login.html
-
-I need to add these lines to each page's `<head>` and before `</body>`:
-- `<link rel="stylesheet" href="assets/css/cursor.css" />` in `<head>`
-- `<script src="assets/js/cursor.js"></script>` before `</body>`
-
-Let me do this for all pages. I'll read each file to find the right insertion points, then edit them.",time:$R[16353]={start:1781709589293,end:1781709589986},id:"prt_ed62acb2d0018WE4Pj3hXg1TsQ",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a9ae60010W3tbpmBvB9dpd"},$R[16354]={type:"text",text:"Now I need to add the cursor CSS and JS to all 9 pages. Let me find the insertion points in each file.",time:$R[16355]={start:1781709589988,end:1781709591336},id:"prt_ed62acde4001F4tsqtyaUS28ex",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a9ae60010W3tbpmBvB9dpd"},$R[16356]={type:"tool",tool:"task",callID:"call_eab96eaecaeb4b0da9ac829e",state:$R[16357]={status:"completed",input:$R[16358]={description:"Find insertion points in all HTML files",prompt:"I need to add cursor CSS and JS to all HTML pages in the project at C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\
-
-For each of these files, find:
-1. The LAST `<link rel="stylesheet"` or `<style>` tag in the `<head>` section — I need the exact line content to insert AFTER it
-2. The `</body>` tag — I need the exact line content to insert BEFORE it
-
-Files to check: index.html, work.html, about.html, services.html, contact.html, episode.html, profile.html, admin.html, login.html
-
-For each file, return:
-- Filename
-- The line number and exact text of the last stylesheet/style reference in head
-- The line number and exact text of the closing body tag
-
-Be precise with the exact text content including indentation.",subagent_type:"explore"},output:"<task id="ses_129d52cf3ffeVwn17ChCMOMszd" state="completed">
-<task_result>
-Here are the precise findings for all 9 files:
-
----
-
-## 1. index.html
-
-**Last style tag in `<head>` (closing `</style>`):**
-- Line 708: `  </style>`
-- Insert your CSS link **after** this line (before line 709 `</head>`)
-
-**Closing `</body>` tag:**
-- Line 1073: `</body>`
-- Insert your JS script **before** this line
-
----
-
-## 2. work.html
-
-**Last style tag in `<head>` (closing `</style>`):**
-- Line 197: `  </style>`
-- Insert your CSS link **after** this line (before line 198 `</head>`)
-
-**Closing `</body>` tag:**
-- Line 393: `</body>`
-- Insert your JS script **before** this line
-
----
-
-## 3. about.html
-
-**Last style tag in `<head>` (closing `</style>`):**
-- Line 127: `  </style>`
-- Insert your CSS link **after** this line (before line 128 `</head>`)
-
-**Closing `</body>` tag:**
-- Line 251: `</body>`
-- Insert your JS script **before** this line
-
----
-
-## 4. services.html
-
-**Last style tag in `<head>` (closing `</style>`):**
-- Line 152: `  </style>`
-- Insert your CSS link **after** this line (before line 153 `</head>`)
-
-**Closing `</body>` tag:**
-- Line 292: `</body>`
-- Insert your JS script **before** this line
-
----
-
-## 5. contact.html
-
-**Last style tag in `<head>` (closing `</style>`):**
-- Line 139: `  </style>`
-- Insert your CSS link **after** this line (before line 140 `</head>`)
-
-**Closing `</body>` tag:**
-- Line 260: `</body>`
-- Insert your JS script **before** this line
-
----
-
-## 6. episode.html
-
-**Last style tag in `<head>` (closing `</style>`):**
-- Line 182: `  </style>`
-- Insert your CSS link **after** this line (before line 183 `</head>`)
-
-**Closing `</body>` tag:**
-- Line 520: `</body>`
-- Insert your JS script **before** this line
-
----
-
-## 7. profile.html
-
-**Last style tag in `<head>` (closing `</style>`):**
-- Line 143: `  </style>`
-- Insert your CSS link **after** this line (before line 144 `</head>`)
-
-**Closing `</body>` tag:**
-- Line 283: `</body>`
-- Insert your JS script **before** this line
-
----
-
-## 8. admin.html
-
-**Last style tag in `<head>` (closing `</style>`):**
-- Line 177: `  </style>`
-- Insert your CSS link **after** this line (before line 178 `</head>`)
-
-**Closing `</body>` tag:**
-- Line 846: `</body>`
-- Insert your JS script **before** this line
-
----
-
-## 9. login.html
-
-**Last style tag in `<head>` (closing `</style>`):**
-- Line 124: `  </style>`
-- Insert your CSS link **after** this line (before line 125 `</head>`)
-
-**Closing `</body>` tag:**
-- Line 360: `</body>`
-- Insert your JS script **before** this line
-
----
-
-## Summary Table
-
-| File | Last `</style>` Line | Last `</style>` Exact Text | `</body>` Line | `</body>` Exact Text |
-|---|---|---|---|---|
-| **index.html** | 708 | `  </style>` | 1073 | `</body>` |
-| **work.html** | 197 | `  </style>` | 393 | `</body>` |
-| **about.html** | 127 | `  </style>` | 251 | `</body>` |
-| **services.html** | 152 | `  </style>` | 292 | `</body>` |
-| **contact.html** | 139 | `  </style>` | 260 | `</body>` |
-| **episode.html** | 182 | `  </style>` | 520 | `</body>` |
-| **profile.html** | 143 | `  </style>` | 283 | `</body>` |
-| **admin.html** | 177 | `  </style>` | 846 | `</body>` |
-| **login.html** | 124 | `  </style>` | 360 | `</body>` |
-
-**Key observations:**
-- All 9 files use an inline `<style>` block as their last stylesheet reference in `<head>` (no external `.css` files besides Google Fonts and the Plyr CDN on episode.html).
-- In every case, the last stylesheet/style reference ends with `  </style>` (2-space indent), immediately followed by `</head>` on the next line.
-- All `</body>` tags have no indentation (flush left).
-- For login.html, the `<style>` block (line 16-124) comes after the `<script>` tags for Firebase (lines 13-14), which is an unusual ordering, but the `</style>` at line 124 is still the last style reference before `</head>`.
-</task_result>
-</task>",metadata:$R[16359]={parentSessionId:"ses_12b36e345ffe2sGXmCITmnRsm8",sessionId:"ses_129d52cf3ffeVwn17ChCMOMszd",model:$R[16360]={modelID:"mimo-v2.5-free",providerID:"opencode"},truncated:!1},title:"Find insertion points in all HTML files",time:$R[16361]={start:1781709591313,end:1781709624942}},id:"prt_ed62acde8001DuPLrnERUSzkjI",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a9ae60010W3tbpmBvB9dpd"},$R[16362]={reason:"tool-calls",type:"step-finish",tokens:$R[16363]={total:46881,input:521,output:256,reasoning:152,cache:$R[16364]={write:0,read:45952}},cost:0,id:"prt_ed62b5671001W8dpG4cK1n4jB3",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62a9ae60010W3tbpmBvB9dpd"}],msg_ed62b5696001HwT05K3dhdASjy:$R[16365]=[$R[16366]={type:"step-start",id:"prt_ed62b98a1001kwvUz7z7vToS3N",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16367]={type:"reasoning",text:"Now I have the exact insertion points for all 9 files. Let me add the cursor CSS and JS to each file. I'll do them in parallel where possible.
-
-For each file:
-1. After `  </style>` (in head), add: `\
-  <link rel="stylesheet" href="assets/css/cursor.css" />`
-2. Before `</body>`, add: `  <script src="assets/js/cursor.js"></script>\
-`
-
-Let me batch these edits.",time:$R[16368]={start:1781709641891,end:1781709643406},id:"prt_ed62b98a3001FYC6HYdXcJeUNN",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16369]={type:"text",text:"Now I'll add the cursor CSS link and JS script to all 9 pages. Let me batch the edits:",time:$R[16370]={start:1781709643408,end:1781709648689},id:"prt_ed62b9e90001lbsU5OU7vxCAgA",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16371]={type:"tool",tool:"edit",callID:"call_12e2c8b5f68f496abe2c778f",state:$R[16372]={status:"completed",input:$R[16373]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html",oldString:"  </style>
-</head>",newString:"  </style>
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-</head>"},output:"Edit applied successfully.",metadata:$R[16374]={diagnostics:$R[16375]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html
-@@ -705,8 +705,9 @@
-       .hero-stats { gap: 16px; }
-       .hero-stat .value { font-size: 1.4rem; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <!-- Navbar -->
-   <nav class="navbar" id="navbar">
-",filediff:$R[16376]={file:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html",patch:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html
-@@ -705,8 +705,9 @@
-       .hero-stats { gap: 16px; }
-       .hero-stat .value { font-size: 1.4rem; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <!-- Navbar -->
-   <nav class="navbar" id="navbar">
-",additions:1,deletions:0},truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html",time:$R[16377]={start:1781709644046,end:1781709644051}},id:"prt_ed62b9f460018gXRbmn2CoPUy7",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16378]={type:"tool",tool:"edit",callID:"call_74291a1eaac940478a271106",state:$R[16379]={status:"completed",input:$R[16380]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\work.html",oldString:"  </style>
-</head>",newString:"  </style>
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-</head>"},output:"Edit applied successfully.",metadata:$R[16381]={diagnostics:$R[16382]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\work.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\work.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\work.html
-@@ -194,8 +194,9 @@
-       .anime-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",filediff:$R[16383]={file:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\work.html",patch:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\work.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\work.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\work.html
-@@ -194,8 +194,9 @@
-       .anime-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",additions:1,deletions:0},truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\work.html",time:$R[16384]={start:1781709644626,end:1781709644629}},id:"prt_ed62ba134001a8aapAckEGKWDe",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16385]={type:"tool",tool:"edit",callID:"call_273d5a8df8e44a15a15af231",state:$R[16386]={status:"completed",input:$R[16387]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\about.html",oldString:"  </style>
-</head>",newString:"  </style>
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-</head>"},output:"Edit applied successfully.",metadata:$R[16388]={diagnostics:$R[16389]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\about.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\about.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\about.html
-@@ -124,8 +124,9 @@
-       .about-grid, .team-grid, .values-grid { grid-template-columns: 1fr; }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",filediff:$R[16390]={file:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\about.html",patch:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\about.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\about.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\about.html
-@@ -124,8 +124,9 @@
-       .about-grid, .team-grid, .values-grid { grid-template-columns: 1fr; }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",additions:1,deletions:0},truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\about.html",time:$R[16391]={start:1781709646555,end:1781709646558}},id:"prt_ed62ba37b001UC7Q7El43LVAo9",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16392]={type:"tool",tool:"edit",callID:"call_ec36e938b22e4259b455196b",state:$R[16393]={status:"completed",input:$R[16394]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\services.html",oldString:"  </style>
-</head>",newString:"  </style>
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-</head>"},output:"Edit applied successfully.",metadata:$R[16395]={diagnostics:$R[16396]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\services.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\services.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\services.html
-@@ -149,8 +149,9 @@
-       .pricing-card.popular { transform: scale(1); }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",filediff:$R[16397]={file:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\services.html",patch:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\services.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\services.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\services.html
-@@ -149,8 +149,9 @@
-       .pricing-card.popular { transform: scale(1); }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",additions:1,deletions:0},truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\services.html",time:$R[16398]={start:1781709646631,end:1781709646634}},id:"prt_ed62baacb001c8WqwWjI7uKQyH",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16399]={type:"tool",tool:"edit",callID:"call_7cdb35b1daf2465fa8fde388",state:$R[16400]={status:"completed",input:$R[16401]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\contact.html",oldString:"  </style>
-</head>",newString:"  </style>
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-</head>"},output:"Edit applied successfully.",metadata:$R[16402]={diagnostics:$R[16403]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\contact.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\contact.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\contact.html
-@@ -136,8 +136,9 @@
-       .form-row { grid-template-columns: 1fr; }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",filediff:$R[16404]={file:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\contact.html",patch:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\contact.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\contact.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\contact.html
-@@ -136,8 +136,9 @@
-       .form-row { grid-template-columns: 1fr; }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",additions:1,deletions:0},truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\contact.html",time:$R[16405]={start:1781709647465,end:1781709647468}},id:"prt_ed62bab21001Rh4f7wW3PuFPMv",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16406]={type:"tool",tool:"edit",callID:"call_740baabc38cd46858a8d6b3a",state:$R[16407]={status:"completed",input:$R[16408]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\episode.html",oldString:"  </style>
-</head>",newString:"  </style>
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-</head>"},output:"Edit applied successfully.",metadata:$R[16409]={diagnostics:$R[16410]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\episode.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\episode.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\episode.html
-@@ -179,8 +179,9 @@
-       .related-grid { grid-template-columns: 1fr 1fr; }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",filediff:$R[16411]={file:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\episode.html",patch:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\episode.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\episode.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\episode.html
-@@ -179,8 +179,9 @@
-       .related-grid { grid-template-columns: 1fr 1fr; }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",additions:1,deletions:0},truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\episode.html",time:$R[16412]={start:1781709647725,end:1781709647729}},id:"prt_ed62bae6e001Qd5OrilFVOQogE",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16413]={type:"tool",tool:"edit",callID:"call_1709d3c2d71e4637bac34e7a",state:$R[16414]={status:"completed",input:$R[16415]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\profile.html",oldString:"  </style>
-</head>",newString:"  </style>
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-</head>"},output:"Edit applied successfully.",metadata:$R[16416]={diagnostics:$R[16417]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\profile.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\profile.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\profile.html
-@@ -140,8 +140,9 @@
-       .anime-grid { grid-template-columns: repeat(3, 1fr); }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",filediff:$R[16418]={file:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\profile.html",patch:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\profile.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\profile.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\profile.html
-@@ -140,8 +140,9 @@
-       .anime-grid { grid-template-columns: repeat(3, 1fr); }
-       .footer-grid { grid-template-columns: 1fr 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",additions:1,deletions:0},truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\profile.html",time:$R[16419]={start:1781709647811,end:1781709647815}},id:"prt_ed62baf5b0015hN1Sc1j5seYLu",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16420]={type:"tool",tool:"edit",callID:"call_207b0a9f242a4cd2930fe040",state:$R[16421]={status:"completed",input:$R[16422]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\admin.html",oldString:"  </style>
-</head>",newString:"  </style>
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-</head>"},output:"Edit applied successfully.",metadata:$R[16423]={diagnostics:$R[16424]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\admin.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\admin.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\admin.html
-@@ -174,8 +174,9 @@
-       .stats-grid { grid-template-columns: 1fr 1fr; }
-       .form-row { grid-template-columns: 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",filediff:$R[16425]={file:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\admin.html",patch:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\admin.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\admin.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\admin.html
-@@ -174,8 +174,9 @@
-       .stats-grid { grid-template-columns: 1fr 1fr; }
-       .form-row { grid-template-columns: 1fr; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <nav class="navbar">
-     <div class="nav-brand">
-",additions:1,deletions:0},truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\admin.html",time:$R[16426]={start:1781709647982,end:1781709647985}},id:"prt_ed62bafb1001uh41Q9JclpDGP9",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16427]={type:"tool",tool:"edit",callID:"call_bdc51e88b636462c97c927c6",state:$R[16428]={status:"completed",input:$R[16429]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\login.html",oldString:"  </style>
-</head>",newString:"  </style>
-  <link rel="stylesheet" href="assets/css/cursor.css" />
-</head>"},output:"Edit applied successfully.",metadata:$R[16430]={diagnostics:$R[16431]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\login.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\login.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\login.html
-@@ -121,8 +121,9 @@
-       body { padding: 16px; justify-content: flex-start; padding-top: 40px; }
-       .auth-card { padding: 24px; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <div class="auth-container">
-     <a href="index.html" class="back-link">
-",filediff:$R[16432]={file:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\login.html",patch:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\login.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\login.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\login.html
-@@ -121,8 +121,9 @@
-       body { padding: 16px; justify-content: flex-start; padding-top: 40px; }
-       .auth-card { padding: 24px; }
-     }
-   </style>
-+  <link rel="stylesheet" href="assets/css/cursor.css" />
- </head>
- <body>
-   <div class="auth-container">
-     <a href="index.html" class="back-link">
-",additions:1,deletions:0},truncated:!1},title:"Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\login.html",time:$R[16433]={start:1781709648633,end:1781709648636}},id:"prt_ed62bb09c001nJweV2N7vH0v1Z",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"},$R[16434]={reason:"tool-calls",type:"step-finish",tokens:$R[16435]={total:49153,input:1733,output:853,reasoning:103,cache:$R[16436]={write:0,read:46464}},cost:0,id:"prt_ed62bb333001O1Vgcm2kKCe6By",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62b5696001HwT05K3dhdASjy"}],msg_ed62bb3560015sW4rXFjtWutet:$R[16437]=[$R[16438]={type:"step-start",id:"prt_ed62bfaa5001n5eVHsFJORwni6",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62bb3560015sW4rXFjtWutet"},$R[16439]={type:"reasoning",text:"CSS added to all 9 pages. Now I need to add the JS before `</body>` in all 9 pages.",time:$R[16440]={start:1781709666982,end:1781709668975},id:"prt_ed62bfaa6001unsQrezj41p6kY",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62bb3560015sW4rXFjtWutet"},$R[16441]={type:"text",text:"CSS added to all 9 pages. Now adding the JS before `</body>`:",time:$R[16442]={start:1781709668977,end:1781709672407},id:"prt_ed62c0271001b3BbRC7ZM1KVaq",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_ed62bb3560015sW4rXFjtWutet"},$R[16443]={type:"tool",tool:"edit",callID:"call_af2df058540b4f9f80af94e7",state:$R[16444]={status:"completed",input:$R[16445]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html",newString:"  <script src="assets/js/cursor.js"></script>
-</body>",oldString:"</body>"},output:"Edit applied successfully.",metadata:$R[16446]={diagnostics:$R[16447]={},diff:"Index: C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html
-===================================================================
---- C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html
-+++ C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\axioma\\index.html
-@@ -1070,6 +1070,7 @@
-       const list = getLibrary();
-       if (list.length > 0) window.location.href = 'episode.html?id=' + list[0].id;
-     });
-   </script>
-+  <script src="assets/js/cursor.js"></script>
- </body>
- </html>
+    // Initialize
+    DataStore.init();
+    DataStore.seedData();
+    loadAnime();
+  </script>
+</body>
+</html>
