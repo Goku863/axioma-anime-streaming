@@ -1,0 +1,2740 @@
+ommit and push all changes",status:"pending",priority:"high"}],truncated:!1},title:"9 todos",time:$R[27811]={start:1781800251685,end:1781800251688}},id:"prt_edb921749001471Ahk45SWYLnb",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb91f402001di609jV5jYS6k2"},$R[27812]={reason:"tool-calls",snapshot:"fe5f6386e8b71b1092622095aaf5ac9d9a1807c9",type:"step-finish",tokens:$R[27813]={total:71464,input:454,output:246,reasoning:172,cache:$R[27814]={write:0,read:70592}},cost:0,id:"prt_edb923274001nYTb7UG43FZtmP",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb91f402001di609jV5jYS6k2"}],msg_edb923453001qguIPS9xJ6o4I5:$R[27815]=[$R[27816]={snapshot:"fe5f6386e8b71b1092622095aaf5ac9d9a1807c9",type:"step-start",id:"prt_edb9244c2001y28BCL0qL0oPQ6",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb923453001qguIPS9xJ6o4I5"},$R[27817]={type:"reasoning",text:"Let me first diagnose the cover image issue. Let me check the _headers file and the current state of all files.",time:$R[27818]={start:1781800256709,end:1781800257346},id:"prt_edb9244c5001oJbTNEevaZlY0n",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb923453001qguIPS9xJ6o4I5"},$R[27819]={type:"tool",tool:"read",callID:"call_25806c43a80e42dfa38124cf",state:$R[27820]={status:"completed",input:$R[27821]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\_headers"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\_headers\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: /*
+2:   X-Content-Type-Options: nosniff
+3:   X-Frame-Options: DENY
+4:   X-XSS-Protection: 1; mode=block
+5:   X-Permitted-Cross-Domain-Policies: none
+6:   Referrer-Policy: strict-origin-when-cross-origin
+7:   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+8:   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://cdn.myanimelist.net https://cdn.myanimelist.net data: blob: https:; media-src 'self' https: blob:; frame-src https://drive.google.com https://*.firebaseapp.com; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://*.firebaseapp.com https://api.jikan.moe;
+9:   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+(End of file - total 9 lines)
+\x3C/content>",metadata:$R[27822]={preview:"/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Permitted-Cross-Domain-Policies: none
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://cdn.myanimelist.net https://cdn.myanimelist.net data: blob: https:; media-src 'self' https: blob:; frame-src https://drive.google.com https://*.firebaseapp.com; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://*.firebaseapp.com https://api.jikan.moe;
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",truncated:!1,loaded:$R[27823]=[],display:$R[27824]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\_headers",text:"/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Permitted-Cross-Domain-Policies: none
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://cdn.myanimelist.net https://cdn.myanimelist.net data: blob: https:; media-src 'self' https: blob:; frame-src https://drive.google.com https://*.firebaseapp.com; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://*.firebaseapp.com https://api.jikan.moe;
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",lineStart:1,lineEnd:9,totalLines:9,truncated:!1}},title:"_headers",time:$R[27825]={start:1781800257386,end:1781800257469}},id:"prt_edb924748001XL4oEqj1ZU66Xo",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb923453001qguIPS9xJ6o4I5"},$R[27826]={type:"tool",tool:"read",callID:"call_5da85aa67e2b4b418080cb5a",state:$R[27827]={status:"completed",input:$R[27828]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\index.html"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\index.html\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: \x3C!doctype html>
+2: \x3Chtml lang="en">
+3: \x3Chead>
+4:   \x3Cmeta charset="utf-8" />
+5:   \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+6:   \x3Cmeta name="theme-color" content="#0a0a1a" />
+7:   \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+8:   \x3Ctitle>AnimeForYou — Watch Anime Online\x3C/title>
+9:   \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+10:   \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+11:   \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+12:   \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+13: \x3C/head>
+14: \x3Cbody>
+15:   \x3C!-- Ambient Background -->
+16:   \x3Cdiv class="ambient">
+17:     \x3Cdiv class="ambient-orb orb-1">\x3C/div>
+18:     \x3Cdiv class="ambient-orb orb-2">\x3C/div>
+19:     \x3Cdiv class="ambient-orb orb-3">\x3C/div>
+20:   \x3C/div>
+21: 
+22:   \x3C!-- Mobile Nav -->
+23:   \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+24:   \x3Cnav class="mobile-nav" id="mobileNav">
+25:     \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+26:     \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+27:     \x3Ca href="index.html" class="active">Home\x3C/a>
+28:     \x3Ca href="work.html">Browse\x3C/a>
+29:     \x3Ca href="services.html">Features\x3C/a>
+30:     \x3Ca href="about.html">About\x3C/a>
+31:     \x3Ca href="contact.html">Support\x3C/a>
+32:   \x3C/nav>
+33: 
+34:   \x3C!-- Header -->
+35:   \x3Cheader class="header">
+36:     \x3Cdiv class="header-inner">
+37:       \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+38:       \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+39:       \x3Cdiv class="nav-links">
+40:         \x3Ca href="index.html" class="active">Home\x3C/a>
+41:         \x3Ca href="work.html">Browse\x3C/a>
+42:         \x3Ca href="services.html">Features\x3C/a>
+43:         \x3Ca href="about.html">About\x3C/a>
+44:         \x3Ca href="contact.html">Support\x3C/a>
+45:       \x3C/div>
+46:     \x3C/div>
+47:   \x3C/header>
+48: 
+49:   \x3C!-- Search -->
+50:   \x3Csection class="search-section">
+51:     \x3Cdiv class="search-box">
+52:       \x3Cinput type="text" id="searchInput" placeholder="Search anime..." onkeyup="filterAnime()" />
+53:       \x3Cbutton onclick="filterAnime()">Search\x3C/button>
+54:     \x3C/div>
+55:   \x3C/section>
+56: 
+57:   \x3C!-- Anime Grid -->
+58:   \x3Cmain class="container">
+59:     \x3Ch2 class="section-title reveal">Latest Anime\x3C/h2>
+60:     \x3Cdiv class="anime-grid" id="animeGrid">\x3C/div>
+61: 
+62:     \x3Ch2 class="section-title reveal" style="margin-top:40px">Trending Now\x3C/h2>
+63:     \x3Cdiv class="anime-grid" id="trendingGrid">\x3C/div>
+64:   \x3C/main>
+65: 
+66:   \x3C!-- Footer -->
+67:   \x3Cfooter class="footer">
+68:     \x3Cdiv class="footer-inner">
+69:       \x3Cdiv class="footer-links">
+70:         \x3Ca href="index.html">Home\x3C/a>
+71:         \x3Ca href="work.html">Browse\x3C/a>
+72:         \x3Ca href="about.html">About\x3C/a>
+73:         \x3Ca href="contact.html">Support\x3C/a>
+74: 
+75:       \x3C/div>
+76:       \x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>
+77:     \x3C/div>
+78:   \x3C/footer>
+79: 
+80:   \x3C!-- Firebase -->
+81:   \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js">\x3C/script>
+82:   \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js">\x3C/script>
+83:   \x3Cscript src="assets/js/data-store.js">\x3C/script>
+84:   \x3Cscript src="assets/js/animations.js">\x3C/script>
+85:   \x3Cscript>
+86:     const firebaseConfig = {apiKey:"AIzaSyC4eObWxV8Nk64ssj2U7efXhlKxEeECPFI",authDomain:"animeforyou-e73a5.firebaseapp.com",projectId:"animeforyou-e73a5",storageBucket:"animeforyou-e73a5.firebasestorage.app",messagingSenderId:"747290347081",appId:"1:747290347081:web:354e7c49829a809010e198"};
+87:     if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+88: 
+89:     function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+90:     function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+91: 
+92:     let allAnime = [];
+93:     function loadAnime() {
+94:       allAnime = DataStore.getList();
+95:       renderGrid('animeGrid', allAnime);
+96:       renderGrid('trendingGrid', allAnime.filter(a => a.rating >= 8).slice(0, 8));
+97:       if (window.AnimeAnimations) setTimeout(() => window.AnimeAnimations.initReveal(), 100);
+98:     }
+99: 
+100:     function renderGrid(id, list) {
+101:       const grid = document.getElementById(id);
+102:       if (!list.length) { grid.innerHTML = '\x3Cp style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:60px 20px">No anime found. Add anime via the admin panel.\x3C/p>'; return; }
+103:       grid.innerHTML = list.map(a => `
+104:         \x3Ca href="episode.html?id=${a.id}" class="anime-card">
+105:           \x3Cimg src="${a.image || 'https://cdn.myanimelist.net/images/anime/1015/138006l.jpg'}" alt="${(a.title||'').replace(/"/g,'&quot;')}" loading="lazy" />
+106:           \x3Cdiv class="info">
+107:             \x3Cdiv class="title">${(a.title||'Unknown').replace(/\x3C/g,'&lt;')}\x3C/div>
+108:             \x3Cdiv class="meta">\x3Cspan class="rating">${a.rating || 'N/A'}★\x3C/span> ${a.genre || 'Anime'}\x3C/div>
+109:           \x3C/div>
+110:         \x3C/a>
+111:       `).join('');
+112:     }
+113: 
+114:     function filterAnime() {
+115:       const q = document.getElementById('searchInput').value.toLowerCase();
+116:       const filtered = allAnime.filter(a => (a.title||'').toLowerCase().includes(q) || (a.genre||'').toLowerCase().includes(q));
+117:       renderGrid('animeGrid', filtered);
+118:       renderGrid('trendingGrid', filtered.slice(0, 4));
+119:     }
+120: 
+121:     DataStore.init();
+122:     DataStore.seedData();
+123:     loadAnime();
+124:   \x3C/script>
+125: \x3C/body>
+126: \x3C/html>
+
+(End of file - total 126 lines)
+\x3C/content>",metadata:$R[27829]={preview:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>AnimeForYou — Watch Anime Online\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3C!-- Ambient Background -->
+  \x3Cdiv class="ambient">
+    \x3Cdiv class="ambient-orb orb-1">\x3C/div>
+    \x3Cdiv class="ambient-orb orb-2">\x3C/div>
+    \x3Cdiv class="ambient-orb orb-3">\x3C/div>
+  \x3C/div>",truncated:!1,loaded:$R[27830]=[],display:$R[27831]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\index.html",text:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>AnimeForYou — Watch Anime Online\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3C!-- Ambient Background -->
+  \x3Cdiv class="ambient">
+    \x3Cdiv class="ambient-orb orb-1">\x3C/div>
+    \x3Cdiv class="ambient-orb orb-2">\x3C/div>
+    \x3Cdiv class="ambient-orb orb-3">\x3C/div>
+  \x3C/div>
+
+  \x3C!-- Mobile Nav -->
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html" class="active">Home\x3C/a>
+    \x3Ca href="work.html">Browse\x3C/a>
+    \x3Ca href="services.html">Features\x3C/a>
+    \x3Ca href="about.html">About\x3C/a>
+    \x3Ca href="contact.html">Support\x3C/a>
+  \x3C/nav>
+
+  \x3C!-- Header -->
+  \x3Cheader class="header">
+    \x3Cdiv class="header-inner">
+      \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+      \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+      \x3Cdiv class="nav-links">
+        \x3Ca href="index.html" class="active">Home\x3C/a>
+        \x3Ca href="work.html">Browse\x3C/a>
+        \x3Ca href="services.html">Features\x3C/a>
+        \x3Ca href="about.html">About\x3C/a>
+        \x3Ca href="contact.html">Support\x3C/a>
+      \x3C/div>
+    \x3C/div>
+  \x3C/header>
+
+  \x3C!-- Search -->
+  \x3Csection class="search-section">
+    \x3Cdiv class="search-box">
+      \x3Cinput type="text" id="searchInput" placeholder="Search anime..." onkeyup="filterAnime()" />
+      \x3Cbutton onclick="filterAnime()">Search\x3C/button>
+    \x3C/div>
+  \x3C/section>
+
+  \x3C!-- Anime Grid -->
+  \x3Cmain class="container">
+    \x3Ch2 class="section-title reveal">Latest Anime\x3C/h2>
+    \x3Cdiv class="anime-grid" id="animeGrid">\x3C/div>
+
+    \x3Ch2 class="section-title reveal" style="margin-top:40px">Trending Now\x3C/h2>
+    \x3Cdiv class="anime-grid" id="trendingGrid">\x3C/div>
+  \x3C/main>
+
+  \x3C!-- Footer -->
+  \x3Cfooter class="footer">
+    \x3Cdiv class="footer-inner">
+      \x3Cdiv class="footer-links">
+        \x3Ca href="index.html">Home\x3C/a>
+        \x3Ca href="work.html">Browse\x3C/a>
+        \x3Ca href="about.html">About\x3C/a>
+        \x3Ca href="contact.html">Support\x3C/a>
+
+      \x3C/div>
+      \x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>
+    \x3C/div>
+  \x3C/footer>
+
+  \x3C!-- Firebase -->
+  \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js">\x3C/script>
+  \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js">\x3C/script>
+  \x3Cscript src="assets/js/data-store.js">\x3C/script>
+  \x3Cscript src="assets/js/animations.js">\x3C/script>
+  \x3Cscript>
+    const firebaseConfig = {apiKey:"AIzaSyC4eObWxV8Nk64ssj2U7efXhlKxEeECPFI",authDomain:"animeforyou-e73a5.firebaseapp.com",projectId:"animeforyou-e73a5",storageBucket:"animeforyou-e73a5.firebasestorage.app",messagingSenderId:"747290347081",appId:"1:747290347081:web:354e7c49829a809010e198"};
+    if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+
+    let allAnime = [];
+    function loadAnime() {
+      allAnime = DataStore.getList();
+      renderGrid('animeGrid', allAnime);
+      renderGrid('trendingGrid', allAnime.filter(a => a.rating >= 8).slice(0, 8));
+      if (window.AnimeAnimations) setTimeout(() => window.AnimeAnimations.initReveal(), 100);
+    }
+
+    function renderGrid(id, list) {
+      const grid = document.getElementById(id);
+      if (!list.length) { grid.innerHTML = '\x3Cp style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:60px 20px">No anime found. Add anime via the admin panel.\x3C/p>'; return; }
+      grid.innerHTML = list.map(a => `
+        \x3Ca href="episode.html?id=${a.id}" class="anime-card">
+          \x3Cimg src="${a.image || 'https://cdn.myanimelist.net/images/anime/1015/138006l.jpg'}" alt="${(a.title||'').replace(/"/g,'&quot;')}" loading="lazy" />
+          \x3Cdiv class="info">
+            \x3Cdiv class="title">${(a.title||'Unknown').replace(/\x3C/g,'&lt;')}\x3C/div>
+            \x3Cdiv class="meta">\x3Cspan class="rating">${a.rating || 'N/A'}★\x3C/span> ${a.genre || 'Anime'}\x3C/div>
+          \x3C/div>
+        \x3C/a>
+      `).join('');
+    }
+
+    function filterAnime() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = allAnime.filter(a => (a.title||'').toLowerCase().includes(q) || (a.genre||'').toLowerCase().includes(q));
+      renderGrid('animeGrid', filtered);
+      renderGrid('trendingGrid', filtered.slice(0, 4));
+    }
+
+    DataStore.init();
+    DataStore.seedData();
+    loadAnime();
+  \x3C/script>
+\x3C/body>
+\x3C/html>",lineStart:1,lineEnd:126,totalLines:126,truncated:!1}},title:"index.html",time:$R[27832]={start:1781800257732,end:1781800257756}},id:"prt_edb9247710010fbRP1RkEopqxs",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb923453001qguIPS9xJ6o4I5"},$R[27833]={type:"tool",tool:"read",callID:"call_cee6aafcbbcc4b04a8a532ab",state:$R[27834]={status:"completed",input:$R[27835]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\episode.html"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\episode.html\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: \x3C!doctype html>
+2: \x3Chtml lang="en">
+3: \x3Chead>
+4:   \x3Cmeta charset="utf-8" />
+5:   \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+6:   \x3Cmeta name="theme-color" content="#0a0a1a" />
+7:   \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+8:   \x3Ctitle>Download Anime — AnimeForYou\x3C/title>
+9:   \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+10:   \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+11:   \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+12:   \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+13: \x3C/head>
+14: \x3Cbody>
+15:   \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+16:   \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+17:   \x3Cnav class="mobile-nav" id="mobileNav">
+18:     \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+19:     \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+20:     \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+21:   \x3C/nav>
+22:   \x3Cheader class="header">
+23:     \x3Cdiv class="header-inner">
+24:       \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+25:       \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+26:       \x3Cdiv class="nav-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>
+27:     \x3C/div>
+28:   \x3C/header>
+29: 
+30:   \x3Cmain class="dl-page" id="dlPage">
+31:     \x3C!-- Loading state -->
+32:     \x3Cdiv id="loadingState" style="text-align:center;padding:80px 20px;color:var(--text-muted)">
+33:       \x3Cdiv style="width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.6s linear infinite;margin:0 auto 16px">\x3C/div>
+34:       \x3Cp>Loading...\x3C/p>
+35:     \x3C/div>
+36: 
+37:     \x3C!-- Error state -->
+38:     \x3Cdiv id="errorState" style="display:none;text-align:center;padding:80px 20px;color:var(--text-muted)">
+39:       \x3Ch2 style="margin-bottom:8px">Anime Not Found\x3C/h2>
+40:       \x3Cp>The anime you're looking for doesn't exist or has been removed.\x3C/p>
+41:       \x3Ca href="index.html" class="btn btn-primary" style="margin-top:20px">Browse Anime\x3C/a>
+42:     \x3C/div>
+43: 
+44:     \x3C!-- Download card -->
+45:     \x3Cdiv id="dlContent" style="display:none">
+46:       \x3C!-- Main Card -->
+47:       \x3Cdiv class="dl-card">
+48:         \x3Cdiv class="dl-card-top">
+49:           \x3Cdiv class="dl-thumb">
+50:             \x3Cimg id="dlImage" src="" alt="" />
+51:             \x3Cspan class="dl-badge" id="dlBadge">HD\x3C/span>
+52:           \x3C/div>
+53:           \x3Cdiv class="dl-info">
+54:             \x3Ch1 id="dlTitle">\x3C/h1>
+55:             \x3Cdiv class="dl-meta">
+56:               \x3Cspan id="dlRating">\x3C/span>
+57:               \x3Cspan class="dot">·\x3C/span>
+58:               \x3Cspan id="dlGenre">\x3C/span>
+59:               \x3Cspan class="dot">·\x3C/span>
+60:               \x3Cspan id="dlYear">\x3C/span>
+61:               \x3Cspan class="dot">·\x3C/span>
+62:               \x3Cspan id="dlEps">\x3C/span>
+63:             \x3C/div>
+64:             \x3Ctable class="dl-table" id="dlTable">\x3C/table>
+65:           \x3C/div>
+66:         \x3C/div>
+67: 
+68:         \x3C!-- Episode selector -->
+69:         \x3Cdiv class="dl-actions">
+70:           \x3Cdiv style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+71:             \x3Clabel style="font-weight:500;font-size:0.9rem;color:var(--text-muted)">Select Episode:\x3C/label>
+72:             \x3Cselect id="epSelect" style="padding:8px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.9rem;flex:1" onchange="loadEpisode(this.value)">\x3C/select>
+73:           \x3C/div>
+74: 
+75:           \x3C!-- Download Servers -->
+76:           \x3Cdiv id="dlServers">\x3C/div>
+77:         \x3C/div>
+78:       \x3C/div>
+79: 
+80:       \x3C!-- Storyline -->
+81:       \x3Cdiv class="dl-card" id="storylineCard" style="display:none">
+82:         \x3Cdiv style="padding:24px">
+83:           \x3Ch3 style="margin-bottom:12px;font-weight:600">Storyline\x3C/h3>
+84:           \x3Cp id="storylineText" style="color:var(--text-muted);font-size:0.9rem;line-height:1.8">\x3C/p>
+85:         \x3C/div>
+86:       \x3C/div>
+87: 
+88:       \x3C!-- Episode Navigation -->
+89:       \x3Cdiv class="dl-ep-nav">
+90:         \x3Ca id="prevEp" href="#" onclick="goEp(-1);return false">← Previous Episode\x3C/a>
+91:         \x3Ca id="nextEp" href="#" onclick="goEp(1);return false">Next Episode →\x3C/a>
+92:       \x3C/div>
+93:     \x3C/div>
+94:   \x3C/main>
+95: 
+96:   \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+97:   \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js">\x3C/script>
+98:   \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js">\x3C/script>
+99:   \x3Cscript src="assets/js/data-store.js">\x3C/script>
+100:   \x3Cscript src="assets/js/animations.js">\x3C/script>
+101:   \x3Cscript>
+102:     var firebaseConfig = {apiKey:"AIzaSyC4eObWxV8Nk64ssj2U7efXhlKxEeECPFI",authDomain:"animeforyou-e73a5.firebaseapp.com",projectId:"animeforyou-e73a5",storageBucket:"animeforyou-e73a5.firebasestorage.app",messagingSenderId:"747290347081",appId:"1:747290347081:web:354e7c49829a809010e198"};
+103:     if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+104:     function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+105:     function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+106: 
+107:     var currentAnime = null, currentEpIndex = 0;
+108:     var allAnime = [];
+109: 
+110:     function init() {
+111:       DataStore.init();
+112:       DataStore.seedData();
+113:       allAnime = DataStore.getList();
+114:       var id = new URLSearchParams(window.location.search).get('id');
+115:       if (!id) { showError(); return; }
+116:       currentAnime = allAnime.find(function(a) { return String(a.id) === String(id); });
+117:       if (!currentAnime) { showError(); return; }
+118:       document.title = currentAnime.title + ' — AnimeForYou';
+119:       renderPage();
+120:     }
+121: 
+122:     function showError() {
+123:       document.getElementById('loadingState').style.display = 'none';
+124:       document.getElementById('errorState').style.display = 'block';
+125:     }
+126: 
+127:     function renderPage() {
+128:       document.getElementById('loadingState').style.display = 'none';
+129:       document.getElementById('dlContent').style.display = 'block';
+130:       var a = currentAnime;
+131: 
+132:       // Thumbnail
+133:       document.getElementById('dlImage').src = a.image || 'https://cdn.myanimelist.net/images/anime/1015/138006l.jpg';
+134:       document.getElementById('dlImage').alt = a.title;
+135:       document.getElementById('dlBadge').textContent = (a.quality || 'HD').split('|')[0].trim();
+136: 
+137:       // Title
+138:       document.getElementById('dlTitle').textContent = a.title;
+139: 
+140:       // Meta
+141:       var eps = a.episodes || [];
+142:       document.getElementById('dlRating').innerHTML = '\x3Cspan style="color:var(--accent);font-weight:600">' + (a.rating || 'N/A') + '★\x3C/span>';
+143:       document.getElementById('dlGenre').textContent = a.genre || 'Anime';
+144:       document.getElementById('dlYear').textContent = a.year || '';
+145:       document.getElementById('dlEps').textContent = eps.length + ' Episodes';
+146: 
+147:       // Info table
+148:       var t = '';
+149:       if (a.imdbRating) t += '\x3Ctr>\x3Ctd>IMDb Rating\x3C/td>\x3Ctd>' + esc(a.imdbRating) + '\x3C/td>\x3C/tr>';
+150:       if (a.creator) t += '\x3Ctr>\x3Ctd>Creator\x3C/td>\x3Ctd>' + esc(a.creator) + '\x3C/td>\x3C/tr>';
+151:       if (a.stars) t += '\x3Ctr>\x3Ctd>Stars\x3C/td>\x3Ctd>' + esc(a.stars) + '\x3C/td>\x3C/tr>';
+152:       if (a.language) t += '\x3Ctr>\x3Ctd>Language\x3C/td>\x3Ctd>' + esc(a.language) + '\x3C/td>\x3C/tr>';
+153:       document.getElementById('dlTable').innerHTML = t;
+154: 
+155:       // Storyline
+156:       var s = a.storyline || a.description;
+157:       if (s) {
+158:         document.getElementById('storylineCard').style.display = 'block';
+159:         document.getElementById('storylineText').textContent = s;
+160:       }
+161: 
+162:       // Episode selector
+163:       var sel = document.getElementById('epSelect');
+164:       sel.innerHTML = eps.map(function(ep, i) {
+165:         return '\x3Coption value="' + i + '">Episode ' + (i + 1) + (ep.title ? ' — ' + ep.title : '') + '\x3C/option>';
+166:       }).join('');
+167: 
+168:       // Load first episode with downloads, or last episode
+169:       currentEpIndex = 0;
+170:       for (var i = eps.length - 1; i >= 0; i--) {
+171:         if (eps[i].downloads && eps[i].downloads.length > 0) { currentEpIndex = i; break; }
+172:       }
+173:       sel.value = currentEpIndex;
+174:       loadEpisode(currentEpIndex);
+175:       updateNavLinks();
+176:     }
+177: 
+178:     function loadEpisode(idx) {
+179:       currentEpIndex = parseInt(idx);
+180:       var eps = currentAnime.episodes || [];
+181:       var ep = eps[currentEpIndex];
+182:       if (!ep) return;
+183: 
+184:       var el = document.getElementById('dlServers');
+185:       var dls = ep.downloads || [];
+186: 
+187:       if (!dls.length) {
+188:         el.innerHTML = '\x3Cdiv style="text-align:center;padding:24px;color:var(--text-muted)">\x3Cp>No download links available for this episode.\x3C/p>\x3Cp style="font-size:0.85rem;margin-top:8px">Links will be added soon.\x3C/p>\x3C/div>';
+189:         return;
+190:       }
+191: 
+192:       var servers = dls.map(function(d, i) {
+193:         var serverClass = getServerClass(d.quality);
+194:         var serverName = getServerName(d.quality);
+195:         var isPrimary = i === 0;
+196:         return '\x3Cdiv class="dl-server">' +
+197:           '\x3Cdiv class="dl-server-info">' +
+198:           '\x3Cdiv class="dl-server-icon ' + serverClass + '">' + (d.quality || 'HD').replace('p','') + '\x3C/div>' +
+199:           '\x3Cdiv>' +
+200:           '\x3Cdiv class="dl-server-name">' + esc(serverName) + '\x3C/div>' +
+201:           '\x3Cdiv class="dl-server-size">' + esc(d.quality || '') + (d.size ? ' · ' + esc(d.size) : '') + '\x3C/div>' +
+202:           '\x3C/div>' +
+203:           '\x3C/div>' +
+204:           '\x3Ca href="' + esc(d.url || '#') + '" target="_blank" rel="noopener" class="dl-server-btn ' + (isPrimary ? 'primary' : 'secondary') + '">' +
+205:           (isPrimary ? '⬇ Download' : 'Download') +
+206:           '\x3C/a>' +
+207:           '\x3C/div>';
+208:       }).join('');
+209: 
+210:       el.innerHTML = servers;
+211:     }
+212: 
+213:     function getServerClass(quality) {
+214:       if (!quality) return 'direct';
+215:       var q = quality.toLowerCase();
+216:       if (q.includes('1080') || q.includes('hd')) return 'direct';
+217:       if (q.includes('720')) return 'mega';
+218:       if (q.includes('480')) return 'mediafire';
+219:       return 'direct';
+220:     }
+221: 
+222:     function getServerName(quality) {
+223:       if (!quality) return 'Download Server';
+224:       var q = quality.toLowerCase();
+225:       if (q.includes('1080')) return 'Full HD Server';
+226:       if (q.includes('720')) return 'HD Server';
+227:       if (q.includes('480')) return 'SD Server';
+228:       return quality + ' Server';
+229:     }
+230: 
+231:     function updateNavLinks() {
+232:       var eps = currentAnime.episodes || [];
+233:       var prev = document.getElementById('prevEp');
+234:       var next = document.getElementById('nextEp');
+235:       if (currentEpIndex \x3C= 0) { prev.classList.add('disabled'); } else { prev.classList.remove('disabled'); }
+236:       if (currentEpIndex >= eps.length - 1) { next.classList.add('disabled'); } else { next.classList.remove('disabled'); }
+237:     }
+238: 
+239:     function goEp(dir) {
+240:       var newIdx = currentEpIndex + dir;
+241:       var eps = currentAnime.episodes || [];
+242:       if (newIdx \x3C 0 || newIdx >= eps.length) return;
+243:       currentEpIndex = newIdx;
+244:       document.getElementById('epSelect').value = newIdx;
+245:       loadEpisode(newIdx);
+246:       updateNavLinks();
+247:       window.scrollTo({ top: 0, behavior: 'smooth' });
+248:     }
+249: 
+250:     function esc(s) { if (!s) return ''; var d = document.createElement('div'); d.textContent = String(s); return d.innerHTML; }
+251: 
+252:     init();
+253:   \x3C/script>
+254: \x3C/body>
+255: \x3C/html>
+
+(End of file - total 255 lines)
+\x3C/content>",metadata:$R[27836]={preview:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>Download Anime — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>",truncated:!1,loaded:$R[27837]=[],display:$R[27838]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\episode.html",text:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>Download Anime — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+  \x3C/nav>
+  \x3Cheader class="header">
+    \x3Cdiv class="header-inner">
+      \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+      \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+      \x3Cdiv class="nav-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>
+    \x3C/div>
+  \x3C/header>
+
+  \x3Cmain class="dl-page" id="dlPage">
+    \x3C!-- Loading state -->
+    \x3Cdiv id="loadingState" style="text-align:center;padding:80px 20px;color:var(--text-muted)">
+      \x3Cdiv style="width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.6s linear infinite;margin:0 auto 16px">\x3C/div>
+      \x3Cp>Loading...\x3C/p>
+    \x3C/div>
+
+    \x3C!-- Error state -->
+    \x3Cdiv id="errorState" style="display:none;text-align:center;padding:80px 20px;color:var(--text-muted)">
+      \x3Ch2 style="margin-bottom:8px">Anime Not Found\x3C/h2>
+      \x3Cp>The anime you're looking for doesn't exist or has been removed.\x3C/p>
+      \x3Ca href="index.html" class="btn btn-primary" style="margin-top:20px">Browse Anime\x3C/a>
+    \x3C/div>
+
+    \x3C!-- Download card -->
+    \x3Cdiv id="dlContent" style="display:none">
+      \x3C!-- Main Card -->
+      \x3Cdiv class="dl-card">
+        \x3Cdiv class="dl-card-top">
+          \x3Cdiv class="dl-thumb">
+            \x3Cimg id="dlImage" src="" alt="" />
+            \x3Cspan class="dl-badge" id="dlBadge">HD\x3C/span>
+          \x3C/div>
+          \x3Cdiv class="dl-info">
+            \x3Ch1 id="dlTitle">\x3C/h1>
+            \x3Cdiv class="dl-meta">
+              \x3Cspan id="dlRating">\x3C/span>
+              \x3Cspan class="dot">·\x3C/span>
+              \x3Cspan id="dlGenre">\x3C/span>
+              \x3Cspan class="dot">·\x3C/span>
+              \x3Cspan id="dlYear">\x3C/span>
+              \x3Cspan class="dot">·\x3C/span>
+              \x3Cspan id="dlEps">\x3C/span>
+            \x3C/div>
+            \x3Ctable class="dl-table" id="dlTable">\x3C/table>
+          \x3C/div>
+        \x3C/div>
+
+        \x3C!-- Episode selector -->
+        \x3Cdiv class="dl-actions">
+          \x3Cdiv style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+            \x3Clabel style="font-weight:500;font-size:0.9rem;color:var(--text-muted)">Select Episode:\x3C/label>
+            \x3Cselect id="epSelect" style="padding:8px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.9rem;flex:1" onchange="loadEpisode(this.value)">\x3C/select>
+          \x3C/div>
+
+          \x3C!-- Download Servers -->
+          \x3Cdiv id="dlServers">\x3C/div>
+        \x3C/div>
+      \x3C/div>
+
+      \x3C!-- Storyline -->
+      \x3Cdiv class="dl-card" id="storylineCard" style="display:none">
+        \x3Cdiv style="padding:24px">
+          \x3Ch3 style="margin-bottom:12px;font-weight:600">Storyline\x3C/h3>
+          \x3Cp id="storylineText" style="color:var(--text-muted);font-size:0.9rem;line-height:1.8">\x3C/p>
+        \x3C/div>
+      \x3C/div>
+
+      \x3C!-- Episode Navigation -->
+      \x3Cdiv class="dl-ep-nav">
+        \x3Ca id="prevEp" href="#" onclick="goEp(-1);return false">← Previous Episode\x3C/a>
+        \x3Ca id="nextEp" href="#" onclick="goEp(1);return false">Next Episode →\x3C/a>
+      \x3C/div>
+    \x3C/div>
+  \x3C/main>
+
+  \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+  \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js">\x3C/script>
+  \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js">\x3C/script>
+  \x3Cscript src="assets/js/data-store.js">\x3C/script>
+  \x3Cscript src="assets/js/animations.js">\x3C/script>
+  \x3Cscript>
+    var firebaseConfig = {apiKey:"AIzaSyC4eObWxV8Nk64ssj2U7efXhlKxEeECPFI",authDomain:"animeforyou-e73a5.firebaseapp.com",projectId:"animeforyou-e73a5",storageBucket:"animeforyou-e73a5.firebasestorage.app",messagingSenderId:"747290347081",appId:"1:747290347081:web:354e7c49829a809010e198"};
+    if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+
+    var currentAnime = null, currentEpIndex = 0;
+    var allAnime = [];
+
+    function init() {
+      DataStore.init();
+      DataStore.seedData();
+      allAnime = DataStore.getList();
+      var id = new URLSearchParams(window.location.search).get('id');
+      if (!id) { showError(); return; }
+      currentAnime = allAnime.find(function(a) { return String(a.id) === String(id); });
+      if (!currentAnime) { showError(); return; }
+      document.title = currentAnime.title + ' — AnimeForYou';
+      renderPage();
+    }
+
+    function showError() {
+      document.getElementById('loadingState').style.display = 'none';
+      document.getElementById('errorState').style.display = 'block';
+    }
+
+    function renderPage() {
+      document.getElementById('loadingState').style.display = 'none';
+      document.getElementById('dlContent').style.display = 'block';
+      var a = currentAnime;
+
+      // Thumbnail
+      document.getElementById('dlImage').src = a.image || 'https://cdn.myanimelist.net/images/anime/1015/138006l.jpg';
+      document.getElementById('dlImage').alt = a.title;
+      document.getElementById('dlBadge').textContent = (a.quality || 'HD').split('|')[0].trim();
+
+      // Title
+      document.getElementById('dlTitle').textContent = a.title;
+
+      // Meta
+      var eps = a.episodes || [];
+      document.getElementById('dlRating').innerHTML = '\x3Cspan style="color:var(--accent);font-weight:600">' + (a.rating || 'N/A') + '★\x3C/span>';
+      document.getElementById('dlGenre').textContent = a.genre || 'Anime';
+      document.getElementById('dlYear').textContent = a.year || '';
+      document.getElementById('dlEps').textContent = eps.length + ' Episodes';
+
+      // Info table
+      var t = '';
+      if (a.imdbRating) t += '\x3Ctr>\x3Ctd>IMDb Rating\x3C/td>\x3Ctd>' + esc(a.imdbRating) + '\x3C/td>\x3C/tr>';
+      if (a.creator) t += '\x3Ctr>\x3Ctd>Creator\x3C/td>\x3Ctd>' + esc(a.creator) + '\x3C/td>\x3C/tr>';
+      if (a.stars) t += '\x3Ctr>\x3Ctd>Stars\x3C/td>\x3Ctd>' + esc(a.stars) + '\x3C/td>\x3C/tr>';
+      if (a.language) t += '\x3Ctr>\x3Ctd>Language\x3C/td>\x3Ctd>' + esc(a.language) + '\x3C/td>\x3C/tr>';
+      document.getElementById('dlTable').innerHTML = t;
+
+      // Storyline
+      var s = a.storyline || a.description;
+      if (s) {
+        document.getElementById('storylineCard').style.display = 'block';
+        document.getElementById('storylineText').textContent = s;
+      }
+
+      // Episode selector
+      var sel = document.getElementById('epSelect');
+      sel.innerHTML = eps.map(function(ep, i) {
+        return '\x3Coption value="' + i + '">Episode ' + (i + 1) + (ep.title ? ' — ' + ep.title : '') + '\x3C/option>';
+      }).join('');
+
+      // Load first episode with downloads, or last episode
+      currentEpIndex = 0;
+      for (var i = eps.length - 1; i >= 0; i--) {
+        if (eps[i].downloads && eps[i].downloads.length > 0) { currentEpIndex = i; break; }
+      }
+      sel.value = currentEpIndex;
+      loadEpisode(currentEpIndex);
+      updateNavLinks();
+    }
+
+    function loadEpisode(idx) {
+      currentEpIndex = parseInt(idx);
+      var eps = currentAnime.episodes || [];
+      var ep = eps[currentEpIndex];
+      if (!ep) return;
+
+      var el = document.getElementById('dlServers');
+      var dls = ep.downloads || [];
+
+      if (!dls.length) {
+        el.innerHTML = '\x3Cdiv style="text-align:center;padding:24px;color:var(--text-muted)">\x3Cp>No download links available for this episode.\x3C/p>\x3Cp style="font-size:0.85rem;margin-top:8px">Links will be added soon.\x3C/p>\x3C/div>';
+        return;
+      }
+
+      var servers = dls.map(function(d, i) {
+        var serverClass = getServerClass(d.quality);
+        var serverName = getServerName(d.quality);
+        var isPrimary = i === 0;
+        return '\x3Cdiv class="dl-server">' +
+          '\x3Cdiv class="dl-server-info">' +
+          '\x3Cdiv class="dl-server-icon ' + serverClass + '">' + (d.quality || 'HD').replace('p','') + '\x3C/div>' +
+          '\x3Cdiv>' +
+          '\x3Cdiv class="dl-server-name">' + esc(serverName) + '\x3C/div>' +
+          '\x3Cdiv class="dl-server-size">' + esc(d.quality || '') + (d.size ? ' · ' + esc(d.size) : '') + '\x3C/div>' +
+          '\x3C/div>' +
+          '\x3C/div>' +
+          '\x3Ca href="' + esc(d.url || '#') + '" target="_blank" rel="noopener" class="dl-server-btn ' + (isPrimary ? 'primary' : 'secondary') + '">' +
+          (isPrimary ? '⬇ Download' : 'Download') +
+          '\x3C/a>' +
+          '\x3C/div>';
+      }).join('');
+
+      el.innerHTML = servers;
+    }
+
+    function getServerClass(quality) {
+      if (!quality) return 'direct';
+      var q = quality.toLowerCase();
+      if (q.includes('1080') || q.includes('hd')) return 'direct';
+      if (q.includes('720')) return 'mega';
+      if (q.includes('480')) return 'mediafire';
+      return 'direct';
+    }
+
+    function getServerName(quality) {
+      if (!quality) return 'Download Server';
+      var q = quality.toLowerCase();
+      if (q.includes('1080')) return 'Full HD Server';
+      if (q.includes('720')) return 'HD Server';
+      if (q.includes('480')) return 'SD Server';
+      return quality + ' Server';
+    }
+
+    function updateNavLinks() {
+      var eps = currentAnime.episodes || [];
+      var prev = document.getElementById('prevEp');
+      var next = document.getElementById('nextEp');
+      if (currentEpIndex \x3C= 0) { prev.classList.add('disabled'); } else { prev.classList.remove('disabled'); }
+      if (currentEpIndex >= eps.length - 1) { next.classList.add('disabled'); } else { next.classList.remove('disabled'); }
+    }
+
+    function goEp(dir) {
+      var newIdx = currentEpIndex + dir;
+      var eps = currentAnime.episodes || [];
+      if (newIdx \x3C 0 || newIdx >= eps.length) return;
+      currentEpIndex = newIdx;
+      document.getElementById('epSelect').value = newIdx;
+      loadEpisode(newIdx);
+      updateNavLinks();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function esc(s) { if (!s) return ''; var d = document.createElement('div'); d.textContent = String(s); return d.innerHTML; }
+
+    init();
+  \x3C/script>
+\x3C/body>
+\x3C/html>",lineStart:1,lineEnd:255,totalLines:255,truncated:!1}},title:"episode.html",time:$R[27839]={start:1781800258048,end:1781800258068}},id:"prt_edb9248f2001VT0zQLWiQKNiT5",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb923453001qguIPS9xJ6o4I5"},$R[27840]={type:"tool",tool:"read",callID:"call_9dce9e8b42184683a0688446",state:$R[27841]={status:"completed",input:$R[27842]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\assets\\css\\styles.css"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\assets\\css\\styles.css\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: /* AnimeForYou — Modern Animated Design */
+2: *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+3: :root{
+4:   --bg:#0a0a1a;
+5:   --bg-secondary:#111128;
+6:   --bg-card:#16163a;
+7:   --bg-card-hover:#1e1e4a;
+8:   --text:#f0f0ff;
+9:   --text-muted:#8888aa;
+10:   --accent:#f97316;
+11:   --accent-hover:#fb923c;
+12:   --accent-glow:rgba(249,115,22,0.3);
+13:   --accent-rgb:249,115,22;
+14:   --purple:#a855f7;
+15:   --cyan:#06b6d4;
+16:   --pink:#ec4899;
+17:   --border:rgba(255,255,255,0.08);
+18:   --glass:rgba(255,255,255,0.03);
+19:   --glass-border:rgba(255,255,255,0.08);
+20:   --radius:12px;
+21:   --radius-lg:20px;
+22:   --max-w:1280px;
+23:   --ease:cubic-bezier(0.16,1,0.3,1);
+24:   --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
+25: }
+26: html{scroll-behavior:smooth}
+27: body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;overflow-x:hidden}
+28: ::selection{background:var(--accent);color:white}
+29: a{color:var(--accent);text-decoration:none;transition:color 0.3s var(--ease)}
+30: a:hover{color:var(--accent-hover)}
+31: img{max-width:100%;display:block}
+32: 
+33: /* ─── Ambient Background ─── */
+34: .ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+35: .ambient-orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:0.15;animation:orbFloat 20s ease-in-out infinite}
+36: .orb-1{width:600px;height:600px;background:var(--accent);top:-200px;right:-200px;animation-delay:0s}
+37: .orb-2{width:500px;height:500px;background:var(--purple);bottom:-150px;left:-150px;animation-delay:-7s}
+38: .orb-3{width:400px;height:400px;background:var(--cyan);top:50%;left:50%;animation-delay:-14s}
+39: @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-30px) scale(1.1)}66%{transform:translate(-20px,20px) scale(0.9)}}
+40: 
+41: /* ─── Header ─── */
+42: .header{position:sticky;top:0;z-index:100;background:rgba(10,10,26,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 20px;transition:all 0.4s var(--ease)}
+43: .header-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:16px;height:64px}
+44: .menu-btn{background:var(--glass);border:1px solid var(--glass-border);color:var(--text);cursor:pointer;padding:10px;border-radius:var(--radius);transition:all 0.3s var(--ease)}
+45: .menu-btn:hover{background:rgba(255,255,255,0.08);transform:scale(1.05)}
+46: .menu-btn svg{width:20px;height:20px}
+47: .logo{font-size:1.4rem;font-weight:800;color:var(--text);letter-spacing:-0.5px;transition:transform 0.3s var(--ease-spring)}
+48: .logo:hover{transform:scale(1.02)}
+49: .logo span{background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+50: .nav-links{display:none;gap:8px;margin-left:auto}
+51: .nav-links a{padding:8px 16px;border-radius:var(--radius);color:var(--text-muted);font-size:0.9rem;font-weight:500;transition:all 0.3s var(--ease)}
+52: .nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--glass)}
+53: @media(min-width:768px){.nav-links{display:flex}}
+54: .header-actions{display:flex;gap:8px;margin-left:auto}
+55: 
+56: /* ─── Search ─── */
+57: .search-section{max-width:var(--max-w);margin:0 auto;padding:32px 20px 16px}
+58: .search-box{display:flex;gap:10px;position:relative}
+59: .search-box::before{content:'';position:absolute;inset:-1px;border-radius:calc(var(--radius) + 1px);background:linear-gradient(135deg,var(--accent),var(--purple),var(--cyan));opacity:0;transition:opacity 0.4s var(--ease);z-index:-1}
+60: .search-box:focus-within::before{opacity:1}
+61: .search-box input{flex:1;padding:14px 20px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg-secondary);color:var(--text);font-size:1rem;outline:none;transition:all 0.3s var(--ease)}
+62: .search-box input:focus{border-color:var(--accent);box-shadow:0 0 20px var(--accent-glow)}
+63: .search-box button{padding:14px 28px;border-radius:var(--radius);background:linear-gradient(135deg,var(--accent),#f97316);color:white;border:none;font-weight:600;cursor:pointer;transition:all 0.3s var(--ease);position:relative;overflow:hidden}
+64: .search-box button::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,0.2),transparent);transform:translateX(-100%);transition:transform 0.5s var(--ease)}
+65: .search-box button:hover::before{transform:translateX(100%)}
+66: .search-box button:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--accent-glow)}
+67: .search-box button:active{transform:scale(0.97)}
+68: 
+69: /* ─── Section Titles ─── */
+70: .section-title{font-size:1.3rem;font-weight:700;margin:32px 0 20px;display:flex;align-items:center;gap:12px}
+71: .section-title::before{content:'';width:4px;height:24px;background:linear-gradient(180deg,var(--accent),var(--pink));border-radius:2px}
+72: 
+73: /* ─── Grid ─── */
+74: .container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+75: .anime-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px}
+76: .anime-card{background:var(--bg-card);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);transition:all 0.4s var(--ease);position:relative;cursor:pointer}
+77: .anime-card::before{content:'';position:absolute;inset:0;border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--accent-glow),transparent);opacity:0;transition:opacity 0.4s var(--ease);z-index:1;pointer-events:none}
+78: .anime-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,0.4),0 0 30px var(--accent-glow);border-color:var(--accent)}
+79: .anime-card:hover::before{opacity:1}
+80: .anime-card img{width:100%;aspect-ratio:2/3;object-fit:cover;transition:transform 0.6s var(--ease)}
+81: .anime-card:hover img{transform:scale(1.05)}
+82: .anime-card .info{padding:14px;position:relative;z-index:2}
+83: .anime-card .title{font-size:0.9rem;font-weight:600;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+84: .anime-card .meta{font-size:0.75rem;color:var(--text-muted);margin-top:6px;display:flex;align-items:center;gap:6px}
+85: .anime-card .rating{color:var(--accent);font-weight:600}
+86: 
+87: /* ─── Mobile Nav ─── */
+88: .mobile-nav{position:fixed;top:0;left:-300px;width:300px;height:100vh;background:rgba(17,17,40,0.95);backdrop-filter:blur(20px);z-index:200;transition:left 0.4s var(--ease);padding:24px;overflow-y:auto;border-right:1px solid var(--border)}
+89: .mobile-nav.open{left:0}
+90: .mobile-nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);z-index:199;display:none;opacity:0;transition:opacity 0.3s var(--ease)}
+91: .mobile-nav-overlay.open{display:block;opacity:1}
+92: .mobile-nav .nav-brand{font-size:1.3rem;font-weight:800;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+93: .mobile-nav .nav-brand span{background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+94: .mobile-nav a{display:block;padding:14px 16px;color:var(--text-muted);border-radius:var(--radius);transition:all 0.3s var(--ease);font-weight:500;margin-bottom:4px}
+95: .mobile-nav a:hover,.mobile-nav a.active{color:var(--text);background:var(--glass)}
+96: .close-btn{background:none;border:none;color:var(--text);cursor:pointer;position:absolute;top:20px;right:20px;padding:8px;border-radius:var(--radius);transition:all 0.3s var(--ease)}
+97: .close-btn:hover{background:var(--glass);transform:rotate(90deg)}
+98: 
+99: /* ─── Footer ─── */
+100: .footer{background:var(--bg-secondary);border-top:1px solid var(--border);padding:48px 20px;margin-top:60px;position:relative}
+101: .footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+102: .footer-inner{max-width:var(--max-w);margin:0 auto;text-align:center}
+103: .footer-links{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:24px}
+104: .footer-links a{color:var(--text-muted);font-weight:500;transition:all 0.3s var(--ease)}
+105: .footer-links a:hover{color:var(--accent);transform:translateY(-2px)}
+106: .footer p{color:var(--text-muted);font-size:0.85rem}
+107: 
+108: /* ─── Buttons ─── */
+109: .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:var(--radius);font-weight:600;cursor:pointer;border:none;font-size:0.95rem;transition:all 0.3s var(--ease);position:relative;overflow:hidden}
+110: .btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,0.1),transparent);transform:translateX(-100%);transition:transform 0.5s var(--ease)}
+111: .btn:hover::before{transform:translateX(100%)}
+112: .btn-primary{background:linear-gradient(135deg,var(--accent),#f97316);color:white;box-shadow:0 4px 15px var(--accent-glow)}
+113: .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--accent-glow)}
+114: .btn-primary:active{transform:scale(0.97)}
+115: .btn-ghost{background:var(--glass);border:1px solid var(--glass-border);color:var(--text)}
+116: .btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:rgba(249,115,22,0.1)}
+117: .btn-danger{background:linear-gradient(135deg,#ef4444,#dc2626);color:white}
+118: 
+119: /* ─── Auth Pages ─── */
+120: .auth-page{min-height:100vh;display:grid;place-items:center;padding:20px;position:relative}
+121: .auth-card{background:rgba(17,17,40,0.8);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:40px;width:100%;max-width:420px;position:relative;overflow:hidden}
+122: .auth-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--cyan))}
+123: .auth-card h1{font-size:1.6rem;margin-bottom:8px;font-weight:700}
+124: .auth-card p{color:var(--text-muted);margin-bottom:28px}
+125: .form-group{margin-bottom:18px}
+126: .form-group label{display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;font-weight:500}
+127: .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:1rem;transition:all 0.3s var(--ease)}
+128: .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 20px var(--accent-glow)}
+129: .google-btn{width:100%;padding:14px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;font-size:1rem;font-weight:500;transition:all 0.3s var(--ease)}
+130: .google-btn:hover{background:var(--bg-card);border-color:var(--accent);transform:translateY(-2px)}
+131: 
+132: /* ─── Profile ─── */
+133: .profile-header{display:flex;align-items:center;gap:24px;padding:40px 20px;max-width:var(--max-w);margin:0 auto}
+134: .avatar{width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);box-shadow:0 0 20px var(--accent-glow);transition:transform 0.3s var(--ease-spring)}
+135: .avatar:hover{transform:scale(1.1)}
+136: .stats{display:flex;gap:32px;margin-top:12px}
+137: .stat{text-align:center}
+138: .stat .num{font-size:1.4rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+139: .stat .label{font-size:0.75rem;color:var(--text-muted);margin-top:2px}
+140: 
+141: /* ─── Admin ─── */
+142: .admin-tabs{display:flex;gap:8px;margin:24px 0;flex-wrap:wrap}
+143: .admin-tab{padding:10px 20px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--glass-border);color:var(--text-muted);cursor:pointer;font-weight:500;transition:all 0.3s var(--ease)}
+144: .admin-tab:hover{border-color:var(--accent);color:var(--text)}
+145: .admin-tab.active{background:linear-gradient(135deg,var(--accent),#f97316);color:white;border-color:transparent;box-shadow:0 4px 15px var(--accent-glow)}
+146: .admin-form{background:rgba(17,17,40,0.6);backdrop-filter:blur(10px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:28px;margin-bottom:20px;position:relative;overflow:hidden}
+147: .admin-form::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple))}
+148: .admin-form h3{margin-bottom:20px;font-weight:600}
+149: .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+150: @media(max-width:600px){.form-row{grid-template-columns:1fr}}
+151: 
+152: /* ─── Episode Player ─── */
+153: .player-page{max-width:var(--max-w);margin:0 auto;padding:24px 20px}
+154: .player-wrapper{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+155: .player-wrapper iframe,.player-wrapper video{position:absolute;top:0;left:0;width:100%;height:100%}
+156: .episode-nav{display:flex;justify-content:space-between;align-items:center;margin:20px 0}
+157: .episode-nav button{padding:10px 20px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--glass-border);color:var(--text);cursor:pointer;font-weight:500;transition:all 0.3s var(--ease)}
+158: .episode-nav button:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+159: .episode-nav button:disabled{opacity:0.4;cursor:not-allowed;transform:none}
+160: .episode-info{margin:20px 0}
+161: .episode-info h1{font-size:1.4rem;margin-bottom:8px}
+162: .episode-info p{color:var(--text-muted)}
+163: 
+164: /* ─── Contact ─── */
+165: .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:var(--max-w);margin:0 auto;padding:20px}
+166: .card{background:rgba(17,17,40,0.6);backdrop-filter:blur(10px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:28px;position:relative;overflow:hidden}
+167: .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple))}
+168: .contact-info{display:grid;gap:12px}
+169: @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+170: .faq-item{background:rgba(17,17,40,0.6);border:1px solid var(--glass-border);border-radius:var(--radius);padding:20px;margin-bottom:12px;transition:all 0.3s var(--ease)}
+171: .faq-item:hover{border-color:var(--accent);transform:translateX(4px)}
+172: .faq-item h3,.faq-item h4{font-size:1rem;margin-bottom:8px}
+173: .faq-item p{color:var(--text-muted);font-size:0.9rem}
+174: 
+175: /* ─── About ─── */
+176: .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:var(--max-w);margin:0 auto;padding:20px;align-items:center}
+177: @media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+178: .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;max-width:var(--max-w);margin:0 auto;padding:20px}
+179: .team-card{text-align:center;background:rgba(17,17,40,0.6);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:28px;transition:all 0.4s var(--ease)}
+180: .team-card:hover{transform:translateY(-8px);border-color:var(--accent);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+181: .team-avatar{width:80px;height:80px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(135deg,var(--accent),var(--purple));display:grid;place-items:center;font-size:1.5rem;font-weight:700;color:white;box-shadow:0 0 20px var(--accent-glow)}
+182: 
+183: /* ─── Features ─── */
+184: .features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;max-width:var(--max-w);margin:0 auto;padding:20px}
+185: .feature-card{background:rgba(17,17,40,0.6);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:28px;transition:all 0.4s var(--ease);position:relative;overflow:hidden}
+186: .feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--cyan));transform:scaleX(0);transition:transform 0.4s var(--ease);transform-origin:left}
+187: .feature-card:hover::before{transform:scaleX(1)}
+188: .feature-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+189: .feature-icon{width:48px;height:48px;border-radius:var(--radius);background:linear-gradient(135deg,var(--accent-glow),rgba(168,85,247,0.2));display:grid;place-items:center;margin-bottom:16px;color:var(--accent)}
+190: .feature-card h3{margin-bottom:8px;font-weight:600}
+191: .feature-card p{color:var(--text-muted);font-size:0.9rem}
+192: 
+193: /* ─── Chatbot ─── */
+194: .chatbot-fab{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--pink));color:white;border:none;cursor:pointer;z-index:100;display:grid;place-items:center;box-shadow:0 8px 30px var(--accent-glow);transition:all 0.3s var(--ease-spring)}
+195: .chatbot-fab:hover{transform:scale(1.1);box-shadow:0 12px 40px var(--accent-glow)}
+196: .chatbot-fab svg{width:26px;height:26px}
+197: .chatbot-window{position:fixed;bottom:100px;right:24px;width:380px;max-height:520px;background:rgba(17,17,40,0.95);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);z-index:100;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+198: .chatbot-window.open{display:flex;animation:slideUp 0.4s var(--ease)}
+199: @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+200: .chatbot-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+201: .chatbot-header h3{font-size:0.95rem;font-weight:600}
+202: .chatbot-header-info{flex:1;margin-left:12px}
+203: .chatbot-close{background:none;border:none;color:var(--text-muted);cursor:pointer;padding:4px;border-radius:var(--radius);transition:all 0.2s}
+204: .chatbot-close:hover{color:var(--text);background:var(--glass)}
+205: .chatbot-messages{flex:1;overflow-y:auto;padding:16px;max-height:360px}
+206: .chat-msg{margin-bottom:12px;padding:12px 16px;border-radius:var(--radius);max-width:85%;font-size:0.9rem;line-height:1.5;animation:msgIn 0.3s var(--ease)}
+207: @keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+208: .chat-msg.user{background:linear-gradient(135deg,var(--accent),var(--pink));color:white;margin-left:auto;border-bottom-right-radius:4px}
+209: .chat-msg.bot{background:var(--bg-card);border:1px solid var(--border);border-bottom-left-radius:4px}
+210: .chat-msg.typing{color:var(--text-muted);font-style:italic}
+211: .chat-suggestion{display:inline-block;padding:6px 14px;margin:4px;border-radius:20px;background:var(--glass);border:1px solid var(--glass-border);color:var(--text-muted);font-size:0.8rem;cursor:pointer;transition:all 0.2s}
+212: .chat-suggestion:hover{border-color:var(--accent);color:var(--accent)}
+213: .chat-typing{display:flex;gap:4px;padding:12px 16px}
+214: .chat-typing span{width:8px;height:8px;border-radius:50%;background:var(--text-muted);animation:typingDot 1.4s infinite}
+215: .chat-typing span:nth-child(2){animation-delay:0.2s}
+216: .chat-typing span:nth-child(3){animation-delay:0.4s}
+217: @keyframes typingDot{0%,60%,100%{opacity:0.3;transform:scale(0.8)}30%{opacity:1;transform:scale(1)}}
+218: .chatbot-input{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--border)}
+219: .chatbot-input input{flex:1;padding:12px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.9rem;transition:border-color 0.3s}
+220: .chatbot-input input:focus{border-color:var(--accent)}
+221: .chatbot-input button{padding:12px 20px;border-radius:var(--radius);background:linear-gradient(135deg,var(--accent),var(--pink));color:white;border:none;cursor:pointer;font-weight:600;transition:all 0.3s var(--ease)}
+222: .chatbot-input button:hover{transform:scale(1.05)}
+223: 
+224: /* ─── Toast ─── */
+225: .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:linear-gradient(135deg,var(--accent),var(--pink));color:white;padding:14px 28px;border-radius:var(--radius);font-size:0.9rem;font-weight:500;z-index:999;opacity:0;transition:all 0.4s var(--ease);box-shadow:0 8px 30px var(--accent-glow)}
+226: .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+227: 
+228: /* ─── Page Header ─── */
+229: .page-header{padding:48px 20px;max-width:var(--max-w);margin:0 auto}
+230: .page-header h1{font-size:2.2rem;margin-bottom:8px;font-weight:700}
+231: .page-header p{color:var(--text-muted);font-size:1.05rem}
+232: 
+233: /* ─── Anime Detail Page ─── */
+234: .anime-detail{display:grid;grid-template-columns:280px 1fr;gap:32px;padding:40px 0;align-items:start}
+235: .anime-detail-left img{width:100%;border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+236: .anime-detail-right h1{font-size:1.8rem;margin-bottom:12px;font-weight:700}
+237: .anime-meta{color:var(--text-muted);font-size:0.95rem;margin-bottom:16px}
+238: .anime-meta .rating{color:var(--accent);font-weight:600}
+239: .anime-desc{color:var(--text-muted);line-height:1.8;margin-bottom:20px}
+240: .anime-actions{display:flex;gap:8px;flex-wrap:wrap}
+241: .detail-section{margin:32px 0}
+242: .detail-text{color:var(--text-muted);line-height:1.8;font-size:0.95rem}
+243: .info-table{margin:12px 0}
+244: .info-table-inner{width:100%;border-collapse:collapse}
+245: .info-table-inner td{padding:8px 16px 8px 0;color:var(--text-muted);font-size:0.9rem;border-bottom:1px solid var(--border);vertical-align:top}
+246: .info-table-inner td:first-child{color:var(--text);font-weight:500;white-space:nowrap;width:140px}
+247: 
+248: /* ─── Episode Card (Download) ─── */
+249: .episode-list{display:flex;flex-direction:column;gap:16px;padding-bottom:40px}
+250: .episode-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;transition:all 0.3s var(--ease)}
+251: .episode-card:hover{border-color:rgba(var(--accent-rgb),0.3);background:var(--bg-card-hover)}
+252: .episode-card-header{display:flex;justify-content:space-between;align-items:start;gap:16px}
+253: .episode-card-header h3{font-size:1.05rem;font-weight:600;margin-bottom:4px}
+254: .episode-card-desc{color:var(--text-muted);font-size:0.85rem;margin:0}
+255: .download-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+256: .download-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:var(--radius);background:linear-gradient(135deg,var(--accent),#ea580c);color:white;font-size:0.85rem;font-weight:600;transition:all 0.3s var(--ease);text-decoration:none}
+257: .download-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px var(--accent-glow);color:white}
+258: .download-btn::before{content:'⬇';font-size:0.9rem}
+259: 
+260: /* ─── Scroll Reveal ─── */
+261: .reveal{opacity:0;transform:translateY(30px);transition:all 0.6s var(--ease)}
+262: .reveal.visible{opacity:1;transform:translateY(0)}
+263: .reveal-delay-1{transition-delay:0.1s}
+264: .reveal-delay-2{transition-delay:0.2s}
+265: .reveal-delay-3{transition-delay:0.3s}
+266: .reveal-delay-4{transition-delay:0.4s}
+267: 
+268: /* ─── Shimmer Loading ─── */
+269: .shimmer{background:linear-gradient(90deg,var(--bg-card) 25%,var(--bg-card-hover) 50%,var(--bg-card) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:var(--radius)}
+270: @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+271: @keyframes spin{to{transform:rotate(360deg)}}
+272: 
+273: /* ─── Download Page (GDFlix Style) ─── */
+274: .dl-page{max-width:800px;margin:0 auto;padding:24px 20px}
+275: .dl-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:24px}
+276: .dl-card-top{display:flex;gap:24px;padding:24px}
+277: .dl-thumb{width:180px;min-height:260px;border-radius:var(--radius);overflow:hidden;flex-shrink:0;background:var(--bg);position:relative}
+278: .dl-thumb img{width:100%;height:100%;object-fit:cover}
+279: .dl-thumb .dl-badge{position:absolute;top:8px;left:8px;background:var(--accent);color:white;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:700}
+280: .dl-info{flex:1;display:flex;flex-direction:column;justify-content:center}
+281: .dl-info h1{font-size:1.4rem;font-weight:700;margin-bottom:8px;line-height:1.3}
+282: .dl-info .dl-meta{color:var(--text-muted);font-size:0.85rem;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:12px}
+283: .dl-info .dl-meta span{display:flex;align-items:center;gap:4px}
+284: .dl-info .dl-meta .dot{color:var(--accent)}
+285: .dl-table{width:100%;border-collapse:collapse;margin-top:12px}
+286: .dl-table tr td{padding:8px 12px;border-bottom:1px solid var(--border);font-size:0.85rem}
+287: .dl-table tr td:first-child{color:var(--text-muted);width:120px;font-weight:500}
+288: .dl-table tr td:last-child{color:var(--text)}
+289: .dl-actions{padding:0 24px 24px}
+290: .dl-server{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;transition:all 0.3s var(--ease)}
+291: .dl-server:hover{border-color:var(--accent);background:rgba(var(--accent-rgb),0.05)}
+292: .dl-server-info{display:flex;align-items:center;gap:12px}
+293: .dl-server-icon{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-size:0.7rem;font-weight:800;color:white;flex-shrink:0}
+294: .dl-server-icon.gdrive{background:linear-gradient(135deg,#4285f4,#34a853)}
+295: .dl-server-icon.mega{background:linear-gradient(135deg,#d9232e,#ff6b00)}
+296: .dl-server-icon.mediafire{background:linear-gradient(135deg,#005dab,#00a4ef)}
+297: .dl-server-icon.fichier{background:linear-gradient(135deg,#1a1a2e,#e94560)}
+298: .dl-server-icon.direct{background:linear-gradient(135deg,var(--accent),#ea580c)}
+299: .dl-server-name{font-weight:600;font-size:0.95rem}
+300: .dl-server-size{font-size:0.8rem;color:var(--text-muted)}
+301: .dl-server-btn{padding:10px 24px;border-radius:var(--radius);font-weight:600;font-size:0.85rem;border:none;cursor:pointer;transition:all 0.3s var(--ease);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+302: .dl-server-btn.primary{background:linear-gradient(135deg,var(--accent),#ea580c);color:white;box-shadow:0 4px 15px var(--accent-glow)}
+303: .dl-server-btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--accent-glow)}
+304: .dl-server-btn.secondary{background:var(--glass);border:1px solid var(--glass-border);color:var(--text)}
+305: .dl-server-btn.secondary:hover{border-color:var(--accent);color:var(--accent)}
+306: .dl-countdown{text-align:center;padding:32px;color:var(--text-muted)}
+307: .dl-countdown .timer{font-size:2.5rem;font-weight:800;color:var(--accent);margin:12px 0}
+308: .dl-countdown p{font-size:0.9rem}
+309: .dl-ep-nav{display:flex;gap:12px;margin-top:24px}
+310: .dl-ep-nav a{flex:1;padding:14px;border-radius:var(--radius);background:var(--bg-card);border:1px solid var(--border);text-align:center;text-decoration:none;color:var(--text);font-weight:500;transition:all 0.3s var(--ease)}
+311: .dl-ep-nav a:hover{border-color:var(--accent);transform:translateY(-2px)}
+312: .dl-ep-nav a.disabled{opacity:0.3;pointer-events:none}
+313: @media(max-width:600px){
+314:   .dl-card-top{flex-direction:column;align-items:center;text-align:center}
+315:   .dl-thumb{width:140px;min-height:200px}
+316:   .dl-info .dl-meta{justify-content:center}
+317:   .dl-table tr td{text-align:left}
+318:   .dl-server{flex-direction:column;gap:12px;text-align:center}
+319:   .dl-ep-nav{flex-direction:column}
+320: }
+321: 
+322: /* ─── Responsive ─── */
+323: @media(max-width:600px){
+324:   .anime-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+325:   .search-box{flex-direction:column}
+326:   .header-inner{gap:8px}
+327:   .page-header h1{font-size:1.6rem}
+328:   .anime-detail{grid-template-columns:1fr;text-align:center}
+329:   .anime-detail-left img{max-width:200px;margin:0 auto}
+330:   .anime-actions{justify-content:center}
+331:   .download-links{justify-content:center}
+332:   .episode-card-header{flex-direction:column}
+333: }
+334: 
+335: /* ─── Reduced Motion ─── */
+336: @media(prefers-reduced-motion:reduce){
+337:   *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}
+338:   .reveal{opacity:1;transform:none}
+339: }
+
+(End of file - total 339 lines)
+\x3C/content>",metadata:$R[27843]={preview:"/* AnimeForYou — Modern Animated Design */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a1a;
+  --bg-secondary:#111128;
+  --bg-card:#16163a;
+  --bg-card-hover:#1e1e4a;
+  --text:#f0f0ff;
+  --text-muted:#8888aa;
+  --accent:#f97316;
+  --accent-hover:#fb923c;
+  --accent-glow:rgba(249,115,22,0.3);
+  --accent-rgb:249,115,22;
+  --purple:#a855f7;
+  --cyan:#06b6d4;
+  --pink:#ec4899;
+  --border:rgba(255,255,255,0.08);
+  --glass:rgba(255,255,255,0.03);
+  --glass-border:rgba(255,255,255,0.08);
+  --radius:12px;",truncated:!1,loaded:$R[27844]=[],display:$R[27845]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\assets\\css\\styles.css",text:"/* AnimeForYou — Modern Animated Design */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a1a;
+  --bg-secondary:#111128;
+  --bg-card:#16163a;
+  --bg-card-hover:#1e1e4a;
+  --text:#f0f0ff;
+  --text-muted:#8888aa;
+  --accent:#f97316;
+  --accent-hover:#fb923c;
+  --accent-glow:rgba(249,115,22,0.3);
+  --accent-rgb:249,115,22;
+  --purple:#a855f7;
+  --cyan:#06b6d4;
+  --pink:#ec4899;
+  --border:rgba(255,255,255,0.08);
+  --glass:rgba(255,255,255,0.03);
+  --glass-border:rgba(255,255,255,0.08);
+  --radius:12px;
+  --radius-lg:20px;
+  --max-w:1280px;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;overflow-x:hidden}
+::selection{background:var(--accent);color:white}
+a{color:var(--accent);text-decoration:none;transition:color 0.3s var(--ease)}
+a:hover{color:var(--accent-hover)}
+img{max-width:100%;display:block}
+
+/* ─── Ambient Background ─── */
+.ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.ambient-orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:0.15;animation:orbFloat 20s ease-in-out infinite}
+.orb-1{width:600px;height:600px;background:var(--accent);top:-200px;right:-200px;animation-delay:0s}
+.orb-2{width:500px;height:500px;background:var(--purple);bottom:-150px;left:-150px;animation-delay:-7s}
+.orb-3{width:400px;height:400px;background:var(--cyan);top:50%;left:50%;animation-delay:-14s}
+@keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-30px) scale(1.1)}66%{transform:translate(-20px,20px) scale(0.9)}}
+
+/* ─── Header ─── */
+.header{position:sticky;top:0;z-index:100;background:rgba(10,10,26,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 20px;transition:all 0.4s var(--ease)}
+.header-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:16px;height:64px}
+.menu-btn{background:var(--glass);border:1px solid var(--glass-border);color:var(--text);cursor:pointer;padding:10px;border-radius:var(--radius);transition:all 0.3s var(--ease)}
+.menu-btn:hover{background:rgba(255,255,255,0.08);transform:scale(1.05)}
+.menu-btn svg{width:20px;height:20px}
+.logo{font-size:1.4rem;font-weight:800;color:var(--text);letter-spacing:-0.5px;transition:transform 0.3s var(--ease-spring)}
+.logo:hover{transform:scale(1.02)}
+.logo span{background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:none;gap:8px;margin-left:auto}
+.nav-links a{padding:8px 16px;border-radius:var(--radius);color:var(--text-muted);font-size:0.9rem;font-weight:500;transition:all 0.3s var(--ease)}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--glass)}
+@media(min-width:768px){.nav-links{display:flex}}
+.header-actions{display:flex;gap:8px;margin-left:auto}
+
+/* ─── Search ─── */
+.search-section{max-width:var(--max-w);margin:0 auto;padding:32px 20px 16px}
+.search-box{display:flex;gap:10px;position:relative}
+.search-box::before{content:'';position:absolute;inset:-1px;border-radius:calc(var(--radius) + 1px);background:linear-gradient(135deg,var(--accent),var(--purple),var(--cyan));opacity:0;transition:opacity 0.4s var(--ease);z-index:-1}
+.search-box:focus-within::before{opacity:1}
+.search-box input{flex:1;padding:14px 20px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg-secondary);color:var(--text);font-size:1rem;outline:none;transition:all 0.3s var(--ease)}
+.search-box input:focus{border-color:var(--accent);box-shadow:0 0 20px var(--accent-glow)}
+.search-box button{padding:14px 28px;border-radius:var(--radius);background:linear-gradient(135deg,var(--accent),#f97316);color:white;border:none;font-weight:600;cursor:pointer;transition:all 0.3s var(--ease);position:relative;overflow:hidden}
+.search-box button::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,0.2),transparent);transform:translateX(-100%);transition:transform 0.5s var(--ease)}
+.search-box button:hover::before{transform:translateX(100%)}
+.search-box button:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--accent-glow)}
+.search-box button:active{transform:scale(0.97)}
+
+/* ─── Section Titles ─── */
+.section-title{font-size:1.3rem;font-weight:700;margin:32px 0 20px;display:flex;align-items:center;gap:12px}
+.section-title::before{content:'';width:4px;height:24px;background:linear-gradient(180deg,var(--accent),var(--pink));border-radius:2px}
+
+/* ─── Grid ─── */
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+.anime-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px}
+.anime-card{background:var(--bg-card);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);transition:all 0.4s var(--ease);position:relative;cursor:pointer}
+.anime-card::before{content:'';position:absolute;inset:0;border-radius:var(--radius-lg);background:linear-gradient(135deg,var(--accent-glow),transparent);opacity:0;transition:opacity 0.4s var(--ease);z-index:1;pointer-events:none}
+.anime-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 40px rgba(0,0,0,0.4),0 0 30px var(--accent-glow);border-color:var(--accent)}
+.anime-card:hover::before{opacity:1}
+.anime-card img{width:100%;aspect-ratio:2/3;object-fit:cover;transition:transform 0.6s var(--ease)}
+.anime-card:hover img{transform:scale(1.05)}
+.anime-card .info{padding:14px;position:relative;z-index:2}
+.anime-card .title{font-size:0.9rem;font-weight:600;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.anime-card .meta{font-size:0.75rem;color:var(--text-muted);margin-top:6px;display:flex;align-items:center;gap:6px}
+.anime-card .rating{color:var(--accent);font-weight:600}
+
+/* ─── Mobile Nav ─── */
+.mobile-nav{position:fixed;top:0;left:-300px;width:300px;height:100vh;background:rgba(17,17,40,0.95);backdrop-filter:blur(20px);z-index:200;transition:left 0.4s var(--ease);padding:24px;overflow-y:auto;border-right:1px solid var(--border)}
+.mobile-nav.open{left:0}
+.mobile-nav-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);z-index:199;display:none;opacity:0;transition:opacity 0.3s var(--ease)}
+.mobile-nav-overlay.open{display:block;opacity:1}
+.mobile-nav .nav-brand{font-size:1.3rem;font-weight:800;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.mobile-nav .nav-brand span{background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mobile-nav a{display:block;padding:14px 16px;color:var(--text-muted);border-radius:var(--radius);transition:all 0.3s var(--ease);font-weight:500;margin-bottom:4px}
+.mobile-nav a:hover,.mobile-nav a.active{color:var(--text);background:var(--glass)}
+.close-btn{background:none;border:none;color:var(--text);cursor:pointer;position:absolute;top:20px;right:20px;padding:8px;border-radius:var(--radius);transition:all 0.3s var(--ease)}
+.close-btn:hover{background:var(--glass);transform:rotate(90deg)}
+
+/* ─── Footer ─── */
+.footer{background:var(--bg-secondary);border-top:1px solid var(--border);padding:48px 20px;margin-top:60px;position:relative}
+.footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+.footer-inner{max-width:var(--max-w);margin:0 auto;text-align:center}
+.footer-links{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:24px}
+.footer-links a{color:var(--text-muted);font-weight:500;transition:all 0.3s var(--ease)}
+.footer-links a:hover{color:var(--accent);transform:translateY(-2px)}
+.footer p{color:var(--text-muted);font-size:0.85rem}
+
+/* ─── Buttons ─── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:var(--radius);font-weight:600;cursor:pointer;border:none;font-size:0.95rem;transition:all 0.3s var(--ease);position:relative;overflow:hidden}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent,rgba(255,255,255,0.1),transparent);transform:translateX(-100%);transition:transform 0.5s var(--ease)}
+.btn:hover::before{transform:translateX(100%)}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#f97316);color:white;box-shadow:0 4px 15px var(--accent-glow)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--accent-glow)}
+.btn-primary:active{transform:scale(0.97)}
+.btn-ghost{background:var(--glass);border:1px solid var(--glass-border);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:rgba(249,115,22,0.1)}
+.btn-danger{background:linear-gradient(135deg,#ef4444,#dc2626);color:white}
+
+/* ─── Auth Pages ─── */
+.auth-page{min-height:100vh;display:grid;place-items:center;padding:20px;position:relative}
+.auth-card{background:rgba(17,17,40,0.8);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:40px;width:100%;max-width:420px;position:relative;overflow:hidden}
+.auth-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--cyan))}
+.auth-card h1{font-size:1.6rem;margin-bottom:8px;font-weight:700}
+.auth-card p{color:var(--text-muted);margin-bottom:28px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;font-weight:500}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:1rem;transition:all 0.3s var(--ease)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 20px var(--accent-glow)}
+.google-btn{width:100%;padding:14px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;font-size:1rem;font-weight:500;transition:all 0.3s var(--ease)}
+.google-btn:hover{background:var(--bg-card);border-color:var(--accent);transform:translateY(-2px)}
+
+/* ─── Profile ─── */
+.profile-header{display:flex;align-items:center;gap:24px;padding:40px 20px;max-width:var(--max-w);margin:0 auto}
+.avatar{width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);box-shadow:0 0 20px var(--accent-glow);transition:transform 0.3s var(--ease-spring)}
+.avatar:hover{transform:scale(1.1)}
+.stats{display:flex;gap:32px;margin-top:12px}
+.stat{text-align:center}
+.stat .num{font-size:1.4rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat .label{font-size:0.75rem;color:var(--text-muted);margin-top:2px}
+
+/* ─── Admin ─── */
+.admin-tabs{display:flex;gap:8px;margin:24px 0;flex-wrap:wrap}
+.admin-tab{padding:10px 20px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--glass-border);color:var(--text-muted);cursor:pointer;font-weight:500;transition:all 0.3s var(--ease)}
+.admin-tab:hover{border-color:var(--accent);color:var(--text)}
+.admin-tab.active{background:linear-gradient(135deg,var(--accent),#f97316);color:white;border-color:transparent;box-shadow:0 4px 15px var(--accent-glow)}
+.admin-form{background:rgba(17,17,40,0.6);backdrop-filter:blur(10px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:28px;margin-bottom:20px;position:relative;overflow:hidden}
+.admin-form::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple))}
+.admin-form h3{margin-bottom:20px;font-weight:600}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+
+/* ─── Episode Player ─── */
+.player-page{max-width:var(--max-w);margin:0 auto;padding:24px 20px}
+.player-wrapper{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.player-wrapper iframe,.player-wrapper video{position:absolute;top:0;left:0;width:100%;height:100%}
+.episode-nav{display:flex;justify-content:space-between;align-items:center;margin:20px 0}
+.episode-nav button{padding:10px 20px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--glass-border);color:var(--text);cursor:pointer;font-weight:500;transition:all 0.3s var(--ease)}
+.episode-nav button:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.episode-nav button:disabled{opacity:0.4;cursor:not-allowed;transform:none}
+.episode-info{margin:20px 0}
+.episode-info h1{font-size:1.4rem;margin-bottom:8px}
+.episode-info p{color:var(--text-muted)}
+
+/* ─── Contact ─── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:var(--max-w);margin:0 auto;padding:20px}
+.card{background:rgba(17,17,40,0.6);backdrop-filter:blur(10px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:28px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple))}
+.contact-info{display:grid;gap:12px}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.faq-item{background:rgba(17,17,40,0.6);border:1px solid var(--glass-border);border-radius:var(--radius);padding:20px;margin-bottom:12px;transition:all 0.3s var(--ease)}
+.faq-item:hover{border-color:var(--accent);transform:translateX(4px)}
+.faq-item h3,.faq-item h4{font-size:1rem;margin-bottom:8px}
+.faq-item p{color:var(--text-muted);font-size:0.9rem}
+
+/* ─── About ─── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:var(--max-w);margin:0 auto;padding:20px;align-items:center}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;max-width:var(--max-w);margin:0 auto;padding:20px}
+.team-card{text-align:center;background:rgba(17,17,40,0.6);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:28px;transition:all 0.4s var(--ease)}
+.team-card:hover{transform:translateY(-8px);border-color:var(--accent);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.team-avatar{width:80px;height:80px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(135deg,var(--accent),var(--purple));display:grid;place-items:center;font-size:1.5rem;font-weight:700;color:white;box-shadow:0 0 20px var(--accent-glow)}
+
+/* ─── Features ─── */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;max-width:var(--max-w);margin:0 auto;padding:20px}
+.feature-card{background:rgba(17,17,40,0.6);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:28px;transition:all 0.4s var(--ease);position:relative;overflow:hidden}
+.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--purple),var(--cyan));transform:scaleX(0);transition:transform 0.4s var(--ease);transform-origin:left}
+.feature-card:hover::before{transform:scaleX(1)}
+.feature-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.feature-icon{width:48px;height:48px;border-radius:var(--radius);background:linear-gradient(135deg,var(--accent-glow),rgba(168,85,247,0.2));display:grid;place-items:center;margin-bottom:16px;color:var(--accent)}
+.feature-card h3{margin-bottom:8px;font-weight:600}
+.feature-card p{color:var(--text-muted);font-size:0.9rem}
+
+/* ─── Chatbot ─── */
+.chatbot-fab{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--pink));color:white;border:none;cursor:pointer;z-index:100;display:grid;place-items:center;box-shadow:0 8px 30px var(--accent-glow);transition:all 0.3s var(--ease-spring)}
+.chatbot-fab:hover{transform:scale(1.1);box-shadow:0 12px 40px var(--accent-glow)}
+.chatbot-fab svg{width:26px;height:26px}
+.chatbot-window{position:fixed;bottom:100px;right:24px;width:380px;max-height:520px;background:rgba(17,17,40,0.95);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);z-index:100;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.chatbot-window.open{display:flex;animation:slideUp 0.4s var(--ease)}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.chatbot-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.chatbot-header h3{font-size:0.95rem;font-weight:600}
+.chatbot-header-info{flex:1;margin-left:12px}
+.chatbot-close{background:none;border:none;color:var(--text-muted);cursor:pointer;padding:4px;border-radius:var(--radius);transition:all 0.2s}
+.chatbot-close:hover{color:var(--text);background:var(--glass)}
+.chatbot-messages{flex:1;overflow-y:auto;padding:16px;max-height:360px}
+.chat-msg{margin-bottom:12px;padding:12px 16px;border-radius:var(--radius);max-width:85%;font-size:0.9rem;line-height:1.5;animation:msgIn 0.3s var(--ease)}
+@keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.chat-msg.user{background:linear-gradient(135deg,var(--accent),var(--pink));color:white;margin-left:auto;border-bottom-right-radius:4px}
+.chat-msg.bot{background:var(--bg-card);border:1px solid var(--border);border-bottom-left-radius:4px}
+.chat-msg.typing{color:var(--text-muted);font-style:italic}
+.chat-suggestion{display:inline-block;padding:6px 14px;margin:4px;border-radius:20px;background:var(--glass);border:1px solid var(--glass-border);color:var(--text-muted);font-size:0.8rem;cursor:pointer;transition:all 0.2s}
+.chat-suggestion:hover{border-color:var(--accent);color:var(--accent)}
+.chat-typing{display:flex;gap:4px;padding:12px 16px}
+.chat-typing span{width:8px;height:8px;border-radius:50%;background:var(--text-muted);animation:typingDot 1.4s infinite}
+.chat-typing span:nth-child(2){animation-delay:0.2s}
+.chat-typing span:nth-child(3){animation-delay:0.4s}
+@keyframes typingDot{0%,60%,100%{opacity:0.3;transform:scale(0.8)}30%{opacity:1;transform:scale(1)}}
+.chatbot-input{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--border)}
+.chatbot-input input{flex:1;padding:12px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:0.9rem;transition:border-color 0.3s}
+.chatbot-input input:focus{border-color:var(--accent)}
+.chatbot-input button{padding:12px 20px;border-radius:var(--radius);background:linear-gradient(135deg,var(--accent),var(--pink));color:white;border:none;cursor:pointer;font-weight:600;transition:all 0.3s var(--ease)}
+.chatbot-input button:hover{transform:scale(1.05)}
+
+/* ─── Toast ─── */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:linear-gradient(135deg,var(--accent),var(--pink));color:white;padding:14px 28px;border-radius:var(--radius);font-size:0.9rem;font-weight:500;z-index:999;opacity:0;transition:all 0.4s var(--ease);box-shadow:0 8px 30px var(--accent-glow)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ─── Page Header ─── */
+.page-header{padding:48px 20px;max-width:var(--max-w);margin:0 auto}
+.page-header h1{font-size:2.2rem;margin-bottom:8px;font-weight:700}
+.page-header p{color:var(--text-muted);font-size:1.05rem}
+
+/* ─── Anime Detail Page ─── */
+.anime-detail{display:grid;grid-template-columns:280px 1fr;gap:32px;padding:40px 0;align-items:start}
+.anime-detail-left img{width:100%;border-radius:var(--radius-lg);box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.anime-detail-right h1{font-size:1.8rem;margin-bottom:12px;font-weight:700}
+.anime-meta{color:var(--text-muted);font-size:0.95rem;margin-bottom:16px}
+.anime-meta .rating{color:var(--accent);font-weight:600}
+.anime-desc{color:var(--text-muted);line-height:1.8;margin-bottom:20px}
+.anime-actions{display:flex;gap:8px;flex-wrap:wrap}
+.detail-section{margin:32px 0}
+.detail-text{color:var(--text-muted);line-height:1.8;font-size:0.95rem}
+.info-table{margin:12px 0}
+.info-table-inner{width:100%;border-collapse:collapse}
+.info-table-inner td{padding:8px 16px 8px 0;color:var(--text-muted);font-size:0.9rem;border-bottom:1px solid var(--border);vertical-align:top}
+.info-table-inner td:first-child{color:var(--text);font-weight:500;white-space:nowrap;width:140px}
+
+/* ─── Episode Card (Download) ─── */
+.episode-list{display:flex;flex-direction:column;gap:16px;padding-bottom:40px}
+.episode-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px 24px;transition:all 0.3s var(--ease)}
+.episode-card:hover{border-color:rgba(var(--accent-rgb),0.3);background:var(--bg-card-hover)}
+.episode-card-header{display:flex;justify-content:space-between;align-items:start;gap:16px}
+.episode-card-header h3{font-size:1.05rem;font-weight:600;margin-bottom:4px}
+.episode-card-desc{color:var(--text-muted);font-size:0.85rem;margin:0}
+.download-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.download-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:var(--radius);background:linear-gradient(135deg,var(--accent),#ea580c);color:white;font-size:0.85rem;font-weight:600;transition:all 0.3s var(--ease);text-decoration:none}
+.download-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px var(--accent-glow);color:white}
+.download-btn::before{content:'⬇';font-size:0.9rem}
+
+/* ─── Scroll Reveal ─── */
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.6s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-delay-4{transition-delay:0.4s}
+
+/* ─── Shimmer Loading ─── */
+.shimmer{background:linear-gradient(90deg,var(--bg-card) 25%,var(--bg-card-hover) 50%,var(--bg-card) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:var(--radius)}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ─── Download Page (GDFlix Style) ─── */
+.dl-page{max-width:800px;margin:0 auto;padding:24px 20px}
+.dl-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:24px}
+.dl-card-top{display:flex;gap:24px;padding:24px}
+.dl-thumb{width:180px;min-height:260px;border-radius:var(--radius);overflow:hidden;flex-shrink:0;background:var(--bg);position:relative}
+.dl-thumb img{width:100%;height:100%;object-fit:cover}
+.dl-thumb .dl-badge{position:absolute;top:8px;left:8px;background:var(--accent);color:white;padding:3px 10px;border-radius:20px;font-size:0.7rem;font-weight:700}
+.dl-info{flex:1;display:flex;flex-direction:column;justify-content:center}
+.dl-info h1{font-size:1.4rem;font-weight:700;margin-bottom:8px;line-height:1.3}
+.dl-info .dl-meta{color:var(--text-muted);font-size:0.85rem;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:12px}
+.dl-info .dl-meta span{display:flex;align-items:center;gap:4px}
+.dl-info .dl-meta .dot{color:var(--accent)}
+.dl-table{width:100%;border-collapse:collapse;margin-top:12px}
+.dl-table tr td{padding:8px 12px;border-bottom:1px solid var(--border);font-size:0.85rem}
+.dl-table tr td:first-child{color:var(--text-muted);width:120px;font-weight:500}
+.dl-table tr td:last-child{color:var(--text)}
+.dl-actions{padding:0 24px 24px}
+.dl-server{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;transition:all 0.3s var(--ease)}
+.dl-server:hover{border-color:var(--accent);background:rgba(var(--accent-rgb),0.05)}
+.dl-server-info{display:flex;align-items:center;gap:12px}
+.dl-server-icon{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-size:0.7rem;font-weight:800;color:white;flex-shrink:0}
+.dl-server-icon.gdrive{background:linear-gradient(135deg,#4285f4,#34a853)}
+.dl-server-icon.mega{background:linear-gradient(135deg,#d9232e,#ff6b00)}
+.dl-server-icon.mediafire{background:linear-gradient(135deg,#005dab,#00a4ef)}
+.dl-server-icon.fichier{background:linear-gradient(135deg,#1a1a2e,#e94560)}
+.dl-server-icon.direct{background:linear-gradient(135deg,var(--accent),#ea580c)}
+.dl-server-name{font-weight:600;font-size:0.95rem}
+.dl-server-size{font-size:0.8rem;color:var(--text-muted)}
+.dl-server-btn{padding:10px 24px;border-radius:var(--radius);font-weight:600;font-size:0.85rem;border:none;cursor:pointer;transition:all 0.3s var(--ease);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.dl-server-btn.primary{background:linear-gradient(135deg,var(--accent),#ea580c);color:white;box-shadow:0 4px 15px var(--accent-glow)}
+.dl-server-btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--accent-glow)}
+.dl-server-btn.secondary{background:var(--glass);border:1px solid var(--glass-border);color:var(--text)}
+.dl-server-btn.secondary:hover{border-color:var(--accent);color:var(--accent)}
+.dl-countdown{text-align:center;padding:32px;color:var(--text-muted)}
+.dl-countdown .timer{font-size:2.5rem;font-weight:800;color:var(--accent);margin:12px 0}
+.dl-countdown p{font-size:0.9rem}
+.dl-ep-nav{display:flex;gap:12px;margin-top:24px}
+.dl-ep-nav a{flex:1;padding:14px;border-radius:var(--radius);background:var(--bg-card);border:1px solid var(--border);text-align:center;text-decoration:none;color:var(--text);font-weight:500;transition:all 0.3s var(--ease)}
+.dl-ep-nav a:hover{border-color:var(--accent);transform:translateY(-2px)}
+.dl-ep-nav a.disabled{opacity:0.3;pointer-events:none}
+@media(max-width:600px){
+  .dl-card-top{flex-direction:column;align-items:center;text-align:center}
+  .dl-thumb{width:140px;min-height:200px}
+  .dl-info .dl-meta{justify-content:center}
+  .dl-table tr td{text-align:left}
+  .dl-server{flex-direction:column;gap:12px;text-align:center}
+  .dl-ep-nav{flex-direction:column}
+}
+
+/* ─── Responsive ─── */
+@media(max-width:600px){
+  .anime-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+  .search-box{flex-direction:column}
+  .header-inner{gap:8px}
+  .page-header h1{font-size:1.6rem}
+  .anime-detail{grid-template-columns:1fr;text-align:center}
+  .anime-detail-left img{max-width:200px;margin:0 auto}
+  .anime-actions{justify-content:center}
+  .download-links{justify-content:center}
+  .episode-card-header{flex-direction:column}
+}
+
+/* ─── Reduced Motion ─── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}
+  .reveal{opacity:1;transform:none}
+}",lineStart:1,lineEnd:339,totalLines:339,truncated:!1}},title:"assets\\css\\styles.css",time:$R[27846]={start:1781800258821,end:1781800258903}},id:"prt_edb924a50001GV6VjSMM5xGnTY",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb923453001qguIPS9xJ6o4I5"},$R[27847]={type:"tool",tool:"read",callID:"call_4cd1338ad9db420eb87cd2d8",state:$R[27848]={status:"completed",input:$R[27849]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\assets\\js\\data-store.js"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\assets\\js\\data-store.js\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: // AnimeForYou - Data Store
+2: // localStorage = source of truth. Firestore = async backup.
+3: 
+4: const DataStore = {
+5:   db: null,
+6:   LS_KEY: 'a4y_anime_library',
+7: 
+8:   init() {
+9:     if (this.db) return;
+10:     try { if (typeof firebase !== 'undefined' && firebase.apps.length) this.db = firebase.firestore(); } catch (e) {}
+11:   },
+12: 
+13:   esc(str) {
+14:     if (!str) return '';
+15:     const div = document.createElement('div');
+16:     div.textContent = String(str);
+17:     return div.innerHTML;
+18:   },
+19: 
+20:   getList() {
+21:     try { return JSON.parse(localStorage.getItem(this.LS_KEY) || '[]'); }
+22:     catch (e) { return []; }
+23:   },
+24: 
+25:   setList(list) {
+26:     localStorage.setItem(this.LS_KEY, JSON.stringify(list));
+27:   },
+28: 
+29:   async pushToFirestore(list) {
+30:     this.init();
+31:     if (!this.db) return;
+32:     try {
+33:       const snapshot = await this.db.collection('anime').get();
+34:       const del = this.db.batch();
+35:       snapshot.forEach(doc => del.delete(doc.ref));
+36:       await del.commit();
+37: 
+38:       for (let i = 0; i \x3C list.length; i += 450) {
+39:         const batch = this.db.batch();
+40:         list.slice(i, i + 450).forEach(a => {
+41:           batch.set(this.db.collection('anime').doc(String(a.id)), {
+42:             title: a.title || '',
+43:             description: a.description || '',
+44:             genre: a.genre || '',
+45:             year: a.year || '',
+46:             episodes: a.episodes || [],
+47:             rating: a.rating || 0,
+48:             image: a.image || '',
+49:             imdbRating: a.imdbRating || '',
+50:             creator: a.creator || '',
+51:             stars: a.stars || '',
+52:             quality: a.quality || '',
+53:             language: a.language || '',
+54:             storyline: a.storyline || '',
+55:             createdAt: a.createdAt || Date.now()
+56:           });
+57:         });
+58:         await batch.commit();
+59:       }
+60:     } catch (e) {
+61:       console.warn('Firestore push failed:', e.message);
+62:     }
+63:   },
+64: 
+65:   async saveAnime(list) {
+66:     this.init();
+67:     let maxId = 0;
+68:     list.forEach(a => { if (a.id && a.id > maxId) maxId = a.id; });
+69:     list.forEach(a => { if (!a.id) { maxId++; a.id = maxId; } });
+70:     this.setList(list);
+71:     this.pushToFirestore(list);
+72:     return list;
+73:   },
+74: 
+75:   async addAnime(anime) {
+76:     const list = this.getList();
+77:     list.push(anime);
+78:     return this.saveAnime(list);
+79:   },
+80: 
+81:   async deleteAnime(id) {
+82:     const list = this.getList().filter(a => a.id !== id);
+83:     return this.saveAnime(list);
+84:   },
+85: 
+86:   seedData() {
+87:     const list = this.getList();
+88:     let changed = false;
+89: 
+90:     const KONOSUBA_EPS = [
+91:       { title: "This Self-Proclaimed Hero, and Another One", description: "Kazuma dies embarrassingly and meets Aqua, who offers him a second chance in a fantasy world.", downloads: [
+92:         { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+93:       ]},
+94:       { title: "An Excellent Net-Dead Person, and a Goddess!", description: "Kazuma and Aqua struggle to survive in their new world with no money and no skills.", downloads: [
+95:         { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+96:       ]},
+97:       { title: "A Charming Goddess, and an Embarrassing Crusader!", description: "The party meets Darkness, a crusader who can't aim but loves being attacked.", downloads: [
+98:         { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+99:       ]},
+100:       { title: "A Powerful Goddess, and a Final Blow!", description: "The party takes on a quest to defeat a dangerous demon, but things go hilariously wrong.", downloads: [
+101:         { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+102:       ]},
+103:       { title: "A Blacksmith, and These Adventurer Days!", description: "Kazuma gets a job as a blacksmith's apprentice while the girls cause chaos.", downloads: [
+104:         { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+105:       ]},
+106:       { title: "A Demon King's Army, and an Arch-Wizard!", description: "Megumin's explosive powers attract attention from both friends and enemies.", downloads: [
+107:         { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+108:       ]},
+109:       { title: "A Final Secret Weapon, and a Goddess' Smirk!", description: "The party prepares for their biggest battle yet with questionable tactics.", downloads: [
+110:         { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+111:       ]},
+112:       { title: "And Let's Go to the Demon King's Castle!", description: "The group attempts to infiltrate the Demon King's castle with disastrous results.", downloads: [
+113:         { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+114:       ]}
+115:     ];
+116: 
+117:     const hasK = list.findIndex(a => a.id === 1);
+118: 
+119:     if (hasK === -1) {
+120:       list.unshift({
+121:         id: 1,
+122:         title: "Konosuba: God's Blessing on This Wonderful World!",
+123:         genre: "Animation, Adventure, Comedy, Fantasy",
+124:         rating: 8.5, imdbRating: "7.8/10", year: "2016–2025",
+125:         creator: "Natsume Akatsuki",
+126:         stars: "Jun Fukushima, Sora Amamiya, Rie Takahashi, Ai Kayano",
+127:         quality: "480p | 720p | 1080p (HD)",
+128:         language: "English Dubbed | Japanese (With English Subtitles)",
+129:         image: "https://cdn.myanimelist.net/images/anime/1015/138006l.jpg",
+130:         description: "After dying a laughable death on his way back from buying a game, Kazuma Satou is given the chance to be reincarnated in a fantasy world.",
+131:         storyline: "It was a happy day for Kazuma - right up to the moment he died. A goddess intervenes and offers him a second chance in a magical land where real-life game-like rules apply.",
+132:         episodes: KONOSUBA_EPS,
+133:         createdAt: Date.now()
+134:       });
+135:       changed = true;
+136:     } else {
+137:       const k = list[hasK];
+138:       const needsPatch = !k.episodes || !k.episodes.length || !k.episodes[0] || !k.episodes[0].downloads || (Array.isArray(k.episodes[0].downloads) && k.episodes[0].downloads.length === 0);
+139:       if (needsPatch) {
+140:         k.episodes = KONOSUBA_EPS;
+141:         k.storyline = k.storyline || "It was a happy day for Kazuma - right up to the moment he died.";
+142:         k.imdbRating = k.imdbRating || "7.8/10";
+143:         k.creator = k.creator || "Natsume Akatsuki";
+144:         k.stars = k.stars || "Jun Fukushima, Sora Amamiya, Rie Takahashi, Ai Kayano";
+145:         k.quality = k.quality || "480p | 720p | 1080p (HD)";
+146:         k.language = k.language || "English Dubbed | Japanese (With English Subtitles)";
+147:         changed = true;
+148:       }
+149:       // Ensure id=1 is always first
+150:       if (hasK > 0) {
+151:         const item = list.splice(hasK, 1)[0];
+152:         list.unshift(item);
+153:         changed = true;
+154:       }
+155:     }
+156: 
+157:     // Ensure every anime has an id
+158:     let maxId = 0;
+159:     list.forEach(a => { if (a.id && a.id > maxId) maxId = a.id; });
+160:     list.forEach(a => { if (!a.id) { maxId++; a.id = maxId; changed = true; } });
+161: 
+162:     if (changed) {
+163:       this.setList(list);
+164:       this.pushToFirestore(list);
+165:     }
+166:   },
+167: 
+168:   async getAnimeListAsync() {
+169:     this.init();
+170:     if (!this.db) return this.getList();
+171:     try {
+172:       const snapshot = await this.db.collection('anime').get();
+173:       const list = [];
+174:       snapshot.forEach(doc => { list.push(doc.data()); });
+175:       if (list.length) return list;
+176:     } catch (e) {}
+177:     return this.getList();
+178:   }
+179: };
+
+(End of file - total 179 lines)
+\x3C/content>",metadata:$R[27850]={preview:"// AnimeForYou - Data Store
+// localStorage = source of truth. Firestore = async backup.
+
+const DataStore = {
+  db: null,
+  LS_KEY: 'a4y_anime_library',
+
+  init() {
+    if (this.db) return;
+    try { if (typeof firebase !== 'undefined' && firebase.apps.length) this.db = firebase.firestore(); } catch (e) {}
+  },
+
+  esc(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = String(str);
+    return div.innerHTML;
+  },
+
+  getList() {",truncated:!1,loaded:$R[27851]=[],display:$R[27852]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\assets\\js\\data-store.js",text:"// AnimeForYou - Data Store
+// localStorage = source of truth. Firestore = async backup.
+
+const DataStore = {
+  db: null,
+  LS_KEY: 'a4y_anime_library',
+
+  init() {
+    if (this.db) return;
+    try { if (typeof firebase !== 'undefined' && firebase.apps.length) this.db = firebase.firestore(); } catch (e) {}
+  },
+
+  esc(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = String(str);
+    return div.innerHTML;
+  },
+
+  getList() {
+    try { return JSON.parse(localStorage.getItem(this.LS_KEY) || '[]'); }
+    catch (e) { return []; }
+  },
+
+  setList(list) {
+    localStorage.setItem(this.LS_KEY, JSON.stringify(list));
+  },
+
+  async pushToFirestore(list) {
+    this.init();
+    if (!this.db) return;
+    try {
+      const snapshot = await this.db.collection('anime').get();
+      const del = this.db.batch();
+      snapshot.forEach(doc => del.delete(doc.ref));
+      await del.commit();
+
+      for (let i = 0; i \x3C list.length; i += 450) {
+        const batch = this.db.batch();
+        list.slice(i, i + 450).forEach(a => {
+          batch.set(this.db.collection('anime').doc(String(a.id)), {
+            title: a.title || '',
+            description: a.description || '',
+            genre: a.genre || '',
+            year: a.year || '',
+            episodes: a.episodes || [],
+            rating: a.rating || 0,
+            image: a.image || '',
+            imdbRating: a.imdbRating || '',
+            creator: a.creator || '',
+            stars: a.stars || '',
+            quality: a.quality || '',
+            language: a.language || '',
+            storyline: a.storyline || '',
+            createdAt: a.createdAt || Date.now()
+          });
+        });
+        await batch.commit();
+      }
+    } catch (e) {
+      console.warn('Firestore push failed:', e.message);
+    }
+  },
+
+  async saveAnime(list) {
+    this.init();
+    let maxId = 0;
+    list.forEach(a => { if (a.id && a.id > maxId) maxId = a.id; });
+    list.forEach(a => { if (!a.id) { maxId++; a.id = maxId; } });
+    this.setList(list);
+    this.pushToFirestore(list);
+    return list;
+  },
+
+  async addAnime(anime) {
+    const list = this.getList();
+    list.push(anime);
+    return this.saveAnime(list);
+  },
+
+  async deleteAnime(id) {
+    const list = this.getList().filter(a => a.id !== id);
+    return this.saveAnime(list);
+  },
+
+  seedData() {
+    const list = this.getList();
+    let changed = false;
+
+    const KONOSUBA_EPS = [
+      { title: "This Self-Proclaimed Hero, and Another One", description: "Kazuma dies embarrassingly and meets Aqua, who offers him a second chance in a fantasy world.", downloads: [
+        { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+      ]},
+      { title: "An Excellent Net-Dead Person, and a Goddess!", description: "Kazuma and Aqua struggle to survive in their new world with no money and no skills.", downloads: [
+        { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+      ]},
+      { title: "A Charming Goddess, and an Embarrassing Crusader!", description: "The party meets Darkness, a crusader who can't aim but loves being attacked.", downloads: [
+        { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+      ]},
+      { title: "A Powerful Goddess, and a Final Blow!", description: "The party takes on a quest to defeat a dangerous demon, but things go hilariously wrong.", downloads: [
+        { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+      ]},
+      { title: "A Blacksmith, and These Adventurer Days!", description: "Kazuma gets a job as a blacksmith's apprentice while the girls cause chaos.", downloads: [
+        { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+      ]},
+      { title: "A Demon King's Army, and an Arch-Wizard!", description: "Megumin's explosive powers attract attention from both friends and enemies.", downloads: [
+        { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+      ]},
+      { title: "A Final Secret Weapon, and a Goddess' Smirk!", description: "The party prepares for their biggest battle yet with questionable tactics.", downloads: [
+        { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+      ]},
+      { title: "And Let's Go to the Demon King's Castle!", description: "The group attempts to infiltrate the Demon King's castle with disastrous results.", downloads: [
+        { quality: "1080p", url: "#", size: "250MB" }, { quality: "720p", url: "#", size: "150MB" }, { quality: "480p", url: "#", size: "80MB" }
+      ]}
+    ];
+
+    const hasK = list.findIndex(a => a.id === 1);
+
+    if (hasK === -1) {
+      list.unshift({
+        id: 1,
+        title: "Konosuba: God's Blessing on This Wonderful World!",
+        genre: "Animation, Adventure, Comedy, Fantasy",
+        rating: 8.5, imdbRating: "7.8/10", year: "2016–2025",
+        creator: "Natsume Akatsuki",
+        stars: "Jun Fukushima, Sora Amamiya, Rie Takahashi, Ai Kayano",
+        quality: "480p | 720p | 1080p (HD)",
+        language: "English Dubbed | Japanese (With English Subtitles)",
+        image: "https://cdn.myanimelist.net/images/anime/1015/138006l.jpg",
+        description: "After dying a laughable death on his way back from buying a game, Kazuma Satou is given the chance to be reincarnated in a fantasy world.",
+        storyline: "It was a happy day for Kazuma - right up to the moment he died. A goddess intervenes and offers him a second chance in a magical land where real-life game-like rules apply.",
+        episodes: KONOSUBA_EPS,
+        createdAt: Date.now()
+      });
+      changed = true;
+    } else {
+      const k = list[hasK];
+      const needsPatch = !k.episodes || !k.episodes.length || !k.episodes[0] || !k.episodes[0].downloads || (Array.isArray(k.episodes[0].downloads) && k.episodes[0].downloads.length === 0);
+      if (needsPatch) {
+        k.episodes = KONOSUBA_EPS;
+        k.storyline = k.storyline || "It was a happy day for Kazuma - right up to the moment he died.";
+        k.imdbRating = k.imdbRating || "7.8/10";
+        k.creator = k.creator || "Natsume Akatsuki";
+        k.stars = k.stars || "Jun Fukushima, Sora Amamiya, Rie Takahashi, Ai Kayano";
+        k.quality = k.quality || "480p | 720p | 1080p (HD)";
+        k.language = k.language || "English Dubbed | Japanese (With English Subtitles)";
+        changed = true;
+      }
+      // Ensure id=1 is always first
+      if (hasK > 0) {
+        const item = list.splice(hasK, 1)[0];
+        list.unshift(item);
+        changed = true;
+      }
+    }
+
+    // Ensure every anime has an id
+    let maxId = 0;
+    list.forEach(a => { if (a.id && a.id > maxId) maxId = a.id; });
+    list.forEach(a => { if (!a.id) { maxId++; a.id = maxId; changed = true; } });
+
+    if (changed) {
+      this.setList(list);
+      this.pushToFirestore(list);
+    }
+  },
+
+  async getAnimeListAsync() {
+    this.init();
+    if (!this.db) return this.getList();
+    try {
+      const snapshot = await this.db.collection('anime').get();
+      const list = [];
+      snapshot.forEach(doc => { list.push(doc.data()); });
+      if (list.length) return list;
+    } catch (e) {}
+    return this.getList();
+  }
+};",lineStart:1,lineEnd:179,totalLines:179,truncated:!1}},title:"assets\\js\\data-store.js",time:$R[27853]={start:1781800258917,end:1781800258959}},id:"prt_edb924d08001451wNDWoD8kB8w",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb923453001qguIPS9xJ6o4I5"},$R[27854]={reason:"tool-calls",snapshot:"fe5f6386e8b71b1092622095aaf5ac9d9a1807c9",type:"step-finish",tokens:$R[27855]={total:72006,input:722,output:220,reasoning:24,cache:$R[27856]={write:0,read:71040}},cost:0,id:"prt_edb924f18001F0ulWp7P5o5DOt",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb923453001qguIPS9xJ6o4I5"}],msg_edb925164001fQpL59j2FtJsD7:$R[27857]=[$R[27858]={snapshot:"fe5f6386e8b71b1092622095aaf5ac9d9a1807c9",type:"step-start",id:"prt_edb92ae09001RXIBwQW09Gn56b",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb925164001fQpL59j2FtJsD7"},$R[27859]={type:"reasoning",text:"Now I can see the issue. The cover images are from `cdn.myanimelist.net` which requires proper referrer and CORS headers. Looking at the CSP in `_headers`:
+
+```
+img-src 'self' https://cdn.myanimelist.net https://cdn.myanimelist.net data: blob: https:
+```
+
+The `https:` at the end should allow all HTTPS images. But the issue might be:
+1. The image URLs might be incorrect (like the default one: `https://cdn.myanimelist.net/images/anime/1015/138006l.jpg`)
+2. There might be a referrer issue - MAL blocks requests without proper referrer
+
+
+3. The CORS headers could be blocking the request
+
+I should test the image URLs directly and consider adding a referrer policy or using a proxy, though the real problem might be simpler—the image URLs from MAL might just be outdated or the `l` suffix might not work anymore. I need to check the image URLs and fix them, then redesign all the pages.",time:$R[27860]={start:1781800283664,end:1781800286288},id:"prt_edb92ae10001i95LlxtLVM7WSi",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb925164001fQpL59j2FtJsD7"},$R[27861]={type:"tool",tool:"read",callID:"call_54f970cc071145c1950b067e",state:$R[27862]={status:"completed",input:$R[27863]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\about.html"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\about.html\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: \x3C!doctype html>
+2: \x3Chtml lang="en">
+3: \x3Chead>
+4:   \x3Cmeta charset="utf-8" />
+5:   \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+6:   \x3Cmeta name="theme-color" content="#0a0a1a" />
+7:   \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+8:   \x3Ctitle>About — AnimeForYou\x3C/title>
+9:   \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+10:   \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+11:   \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+12:   \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+13: \x3C/head>
+14: \x3Cbody>
+15:   \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+16:   \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+17:   \x3Cnav class="mobile-nav" id="mobileNav">
+18:     \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+19:     \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+20:     \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html" class="active">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+21:   \x3C/nav>
+22:   \x3Cheader class="header">
+23:     \x3Cdiv class="header-inner">
+24:       \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+25:       \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+26:       \x3Cdiv class="nav-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html" class="active">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>
+27:     \x3C/div>
+28:   \x3C/header>
+29:   \x3Cmain class="container">
+30:     \x3Cdiv class="about-grid">
+31:       \x3Cdiv class="reveal">
+32:         \x3Ch1 style="font-size:2.2rem;margin-bottom:16px;font-weight:700">About AnimeForYou\x3C/h1>
+33:         \x3Cp style="color:var(--text-muted);margin-bottom:16px;line-height:1.8">Your premium destination for streaming anime series, movies, and exclusives. We provide a curated collection of the best anime content with a modern, beautiful viewing experience.\x3C/p>
+34:         \x3Cp style="color:var(--text-muted);line-height:1.8">Our mission is to make anime accessible to everyone with a fast, free, and beautiful platform.\x3C/p>
+35:       \x3C/div>
+36:       \x3Cdiv class="reveal" style="text-align:center">\x3Cimg src="assets/img/gojo.jpg" alt="Gojo Satoru" style="border-radius:var(--radius-lg);max-width:100%;max-height:400px;width:auto;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.4)" />\x3C/div>
+37:     \x3C/div>
+38:     \x3Ch2 class="section-title reveal" style="margin-top:60px">Our Team\x3C/h2>
+39:     \x3Cdiv class="team-grid">
+40:       \x3Cdiv class="team-card reveal">\x3Cdiv class="team-avatar">A\x3C/div>\x3Ch3>Aria\x3C/h3>\x3Cp style="color:var(--text-muted);font-size:0.85rem;margin-top:4px">AI Assistant\x3C/p>\x3C/div>
+41:       \x3Cdiv class="team-card reveal">\x3Cdiv class="team-avatar" style="background:linear-gradient(135deg,var(--cyan),var(--purple))">Y\x3C/div>\x3Ch3>You\x3C/h3>\x3Cp style="color:var(--text-muted);font-size:0.85rem;margin-top:4px">Founder\x3C/p>\x3C/div>
+42:     \x3C/div>
+43:   \x3C/main>
+44:   \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cdiv class="footer-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+45:   \x3Cscript src="assets/js/animations.js">\x3C/script>
+46:   \x3Cscript>
+47:     function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+48:     function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+49:   \x3C/script>
+50: \x3C/body>
+51: \x3C/html>
+
+(End of file - total 51 lines)
+\x3C/content>",metadata:$R[27864]={preview:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>About — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html" class="active">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>",truncated:!1,loaded:$R[27865]=[],display:$R[27866]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\about.html",text:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>About — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html" class="active">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+  \x3C/nav>
+  \x3Cheader class="header">
+    \x3Cdiv class="header-inner">
+      \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+      \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+      \x3Cdiv class="nav-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html" class="active">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>
+    \x3C/div>
+  \x3C/header>
+  \x3Cmain class="container">
+    \x3Cdiv class="about-grid">
+      \x3Cdiv class="reveal">
+        \x3Ch1 style="font-size:2.2rem;margin-bottom:16px;font-weight:700">About AnimeForYou\x3C/h1>
+        \x3Cp style="color:var(--text-muted);margin-bottom:16px;line-height:1.8">Your premium destination for streaming anime series, movies, and exclusives. We provide a curated collection of the best anime content with a modern, beautiful viewing experience.\x3C/p>
+        \x3Cp style="color:var(--text-muted);line-height:1.8">Our mission is to make anime accessible to everyone with a fast, free, and beautiful platform.\x3C/p>
+      \x3C/div>
+      \x3Cdiv class="reveal" style="text-align:center">\x3Cimg src="assets/img/gojo.jpg" alt="Gojo Satoru" style="border-radius:var(--radius-lg);max-width:100%;max-height:400px;width:auto;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,0.4)" />\x3C/div>
+    \x3C/div>
+    \x3Ch2 class="section-title reveal" style="margin-top:60px">Our Team\x3C/h2>
+    \x3Cdiv class="team-grid">
+      \x3Cdiv class="team-card reveal">\x3Cdiv class="team-avatar">A\x3C/div>\x3Ch3>Aria\x3C/h3>\x3Cp style="color:var(--text-muted);font-size:0.85rem;margin-top:4px">AI Assistant\x3C/p>\x3C/div>
+      \x3Cdiv class="team-card reveal">\x3Cdiv class="team-avatar" style="background:linear-gradient(135deg,var(--cyan),var(--purple))">Y\x3C/div>\x3Ch3>You\x3C/h3>\x3Cp style="color:var(--text-muted);font-size:0.85rem;margin-top:4px">Founder\x3C/p>\x3C/div>
+    \x3C/div>
+  \x3C/main>
+  \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cdiv class="footer-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+  \x3Cscript src="assets/js/animations.js">\x3C/script>
+  \x3Cscript>
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+  \x3C/script>
+\x3C/body>
+\x3C/html>",lineStart:1,lineEnd:51,totalLines:51,truncated:!1}},title:"about.html",time:$R[27867]={start:1781800286860,end:1781800286909}},id:"prt_edb92b857001MhchvPBbOvagmW",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb925164001fQpL59j2FtJsD7"},$R[27868]={type:"tool",tool:"read",callID:"call_83ee4ce746224ecc90c31f62",state:$R[27869]={status:"completed",input:$R[27870]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\services.html"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\services.html\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: \x3C!doctype html>
+2: \x3Chtml lang="en">
+3: \x3Chead>
+4:   \x3Cmeta charset="utf-8" />
+5:   \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+6:   \x3Cmeta name="theme-color" content="#0a0a1a" />
+7:   \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+8:   \x3Ctitle>Features — AnimeForYou\x3C/title>
+9:   \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+10:   \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+11:   \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+12:   \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+13: \x3C/head>
+14: \x3Cbody>
+15:   \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+16:   \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+17:   \x3Cnav class="mobile-nav" id="mobileNav">
+18:     \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+19:     \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+20:     \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html" class="active">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+21:   \x3C/nav>
+22:   \x3Cheader class="header">
+23:     \x3Cdiv class="header-inner">
+24:       \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+25:       \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+26:       \x3Cdiv class="nav-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html" class="active">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>
+27:     \x3C/div>
+28:   \x3C/header>
+29:   \x3Cmain class="container">
+30:     \x3Cdiv class="page-header reveal">\x3Ch1>Features\x3C/h1>\x3Cp>Everything you need for the ultimate anime experience\x3C/p>\x3C/div>
+31:     \x3Cdiv class="features-grid">
+32:       \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpolygon points="5 3 19 12 5 21 5 3"/>\x3C/svg>\x3C/div>\x3Ch3>HD Streaming\x3C/h3>\x3Cp>Watch anime in high quality with adaptive streaming and multiple resolution options.\x3C/p>\x3C/div>
+33:       \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpath d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>\x3C/svg>\x3C/div>\x3Ch3>Watchlist\x3C/h3>\x3Cp>Save anime to your watchlist and never lose track of what you're watching.\x3C/p>\x3C/div>
+34:       \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpath d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>\x3C/svg>\x3C/div>\x3Ch3>Favorites\x3C/h3>\x3Cp>Mark your favorite series and access them quickly from your profile.\x3C/p>\x3C/div>
+35:       \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Ccircle cx="12" cy="12" r="10"/>\x3Cpolyline points="12 6 12 12 16 14"/>\x3C/svg>\x3C/div>\x3Ch3>Episode Navigation\x3C/h3>\x3Cp>Easy prev/next episode navigation with watch progress tracking.\x3C/p>\x3C/div>
+36:       \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpath d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>\x3C/svg>\x3C/div>\x3Ch3>AI Chatbot\x3C/h3>\x3Cp>Get anime recommendations and answers from our AI assistant Aria.\x3C/p>\x3C/div>
+37:       \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpath d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>\x3C/svg>\x3C/div>\x3Ch3>Google Drive\x3C/h3>\x3Cp>Stream directly from Google Drive with 5TB of free storage.\x3C/p>\x3C/div>
+38:     \x3C/div>
+39:   \x3C/main>
+40:   \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cdiv class="footer-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+41:   \x3Cscript src="assets/js/animations.js">\x3C/script>
+42:   \x3Cscript>
+43:     function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+44:     function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+45:   \x3C/script>
+46: \x3C/body>
+47: \x3C/html>
+
+(End of file - total 47 lines)
+\x3C/content>",metadata:$R[27871]={preview:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>Features — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html" class="active">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>",truncated:!1,loaded:$R[27872]=[],display:$R[27873]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\services.html",text:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>Features — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html" class="active">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+  \x3C/nav>
+  \x3Cheader class="header">
+    \x3Cdiv class="header-inner">
+      \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+      \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+      \x3Cdiv class="nav-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html" class="active">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>
+    \x3C/div>
+  \x3C/header>
+  \x3Cmain class="container">
+    \x3Cdiv class="page-header reveal">\x3Ch1>Features\x3C/h1>\x3Cp>Everything you need for the ultimate anime experience\x3C/p>\x3C/div>
+    \x3Cdiv class="features-grid">
+      \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpolygon points="5 3 19 12 5 21 5 3"/>\x3C/svg>\x3C/div>\x3Ch3>HD Streaming\x3C/h3>\x3Cp>Watch anime in high quality with adaptive streaming and multiple resolution options.\x3C/p>\x3C/div>
+      \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpath d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>\x3C/svg>\x3C/div>\x3Ch3>Watchlist\x3C/h3>\x3Cp>Save anime to your watchlist and never lose track of what you're watching.\x3C/p>\x3C/div>
+      \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpath d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>\x3C/svg>\x3C/div>\x3Ch3>Favorites\x3C/h3>\x3Cp>Mark your favorite series and access them quickly from your profile.\x3C/p>\x3C/div>
+      \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Ccircle cx="12" cy="12" r="10"/>\x3Cpolyline points="12 6 12 12 16 14"/>\x3C/svg>\x3C/div>\x3Ch3>Episode Navigation\x3C/h3>\x3Cp>Easy prev/next episode navigation with watch progress tracking.\x3C/p>\x3C/div>
+      \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpath d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>\x3C/svg>\x3C/div>\x3Ch3>AI Chatbot\x3C/h3>\x3Cp>Get anime recommendations and answers from our AI assistant Aria.\x3C/p>\x3C/div>
+      \x3Cdiv class="feature-card reveal">\x3Cdiv class="feature-icon">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cpath d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>\x3C/svg>\x3C/div>\x3Ch3>Google Drive\x3C/h3>\x3Cp>Stream directly from Google Drive with 5TB of free storage.\x3C/p>\x3C/div>
+    \x3C/div>
+  \x3C/main>
+  \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cdiv class="footer-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+  \x3Cscript src="assets/js/animations.js">\x3C/script>
+  \x3Cscript>
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+  \x3C/script>
+\x3C/body>
+\x3C/html>",lineStart:1,lineEnd:47,totalLines:47,truncated:!1}},title:"services.html",time:$R[27874]={start:1781800287196,end:1781800287270}},id:"prt_edb92ba90001L1P5fhe2pyccUB",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb925164001fQpL59j2FtJsD7"},$R[27875]={type:"tool",tool:"read",callID:"call_72cccd263fec4605bfc314b6",state:$R[27876]={status:"completed",input:$R[27877]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\contact.html"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\contact.html\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: \x3C!doctype html>
+2: \x3Chtml lang="en">
+3: \x3Chead>
+4:   \x3Cmeta charset="utf-8" />
+5:   \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+6:   \x3Cmeta name="theme-color" content="#0a0a1a" />
+7:   \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+8:   \x3Ctitle>Support — AnimeForYou\x3C/title>
+9:   \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+10:   \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+11:   \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+12:   \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+13: \x3C/head>
+14: \x3Cbody>
+15:   \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+16:   \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+17:   \x3Cnav class="mobile-nav" id="mobileNav">
+18:     \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+19:     \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+20:     \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html" class="active">Support\x3C/a>
+21:   \x3C/nav>
+22:   \x3Cheader class="header">
+23:     \x3Cdiv class="header-inner">
+24:       \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+25:       \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+26:       \x3Cdiv class="nav-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html" class="active">Support\x3C/a>\x3C/div>
+27:     \x3C/div>
+28:   \x3C/header>
+29:   \x3Cmain class="container">
+30:     \x3Cdiv class="page-header reveal">\x3Ch1>Support\x3C/h1>\x3Cp>We're here to help\x3C/p>\x3C/div>
+31:     \x3Cdiv class="contact-grid">
+32:       \x3Cdiv class="card reveal">
+33:         \x3Ch3 style="margin-bottom:16px">Send a Message\x3C/h3>
+34:         \x3Cdiv class="form-group">\x3Clabel for="cName">Name\x3C/label>\x3Cinput type="text" id="cName" placeholder="Your name" />\x3C/div>
+35:         \x3Cdiv class="form-group">\x3Clabel for="cEmail">Email\x3C/label>\x3Cinput type="email" id="cEmail" placeholder="your@email.com" />\x3C/div>
+36:         \x3Cdiv class="form-group">\x3Clabel for="cSubject">Subject\x3C/label>\x3Cinput type="text" id="cSubject" placeholder="How can we help?" />\x3C/div>
+37:         \x3Cdiv class="form-group">\x3Clabel for="cMessage">Message\x3C/label>\x3Ctextarea id="cMessage" placeholder="Describe your issue..." style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;color:var(--text);width:100%;min-height:120px;font-family:inherit;resize:vertical">\x3C/textarea>\x3C/div>
+38:         \x3Cdiv id="contactMsg" style="font-size:0.85rem;margin-bottom:12px">\x3C/div>
+39:         \x3Cbutton class="btn btn-primary" style="width:100%" onclick="sendContact()">Send Message\x3C/button>
+40:       \x3C/div>
+41:       \x3Cdiv class="contact-info reveal">
+42:         \x3Ch3>FAQ\x3C/h3>
+43:         \x3Cdiv class="faq-item">\x3Ch4>Is AnimeForYou free?\x3C/h4>\x3Cp>Yes! 100% free. No credit card required.\x3C/p>\x3C/div>
+44:         \x3Cdiv class="faq-item">\x3Ch4>How do I report a bug?\x3C/h4>\x3Cp>Use the contact form or open an issue on GitHub.\x3C/p>\x3C/div>
+45:         \x3Cdiv class="faq-item">\x3Ch4>Can I suggest new anime?\x3C/h4>\x3Cp>Absolutely! Send us your suggestions.\x3C/p>\x3C/div>
+46:         \x3Cdiv class="faq-item">\x3Ch4>How do I add anime?\x3C/h4>\x3Cp>Visit the Admin Dashboard to add anime and episodes with download links.\x3C/p>\x3C/div>
+47:       \x3C/div>
+48:     \x3C/div>
+49:   \x3C/main>
+50:   \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cdiv class="footer-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+51:   \x3Cscript src="assets/js/animations.js">\x3C/script>
+52:   \x3Cscript>
+53:     function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+54:     function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+55:     function sendContact() {
+56:       const n = document.getElementById('cName').value, e = document.getElementById('cEmail').value, s = document.getElementById('cSubject').value, m = document.getElementById('cMessage').value;
+57:       const el = document.getElementById('contactMsg');
+58:       if (!n || !e || !s || !m) { el.style.color = '#ef4444'; el.textContent = 'Please fill all fields.'; return; }
+59:       el.style.color = 'var(--accent)'; el.textContent = 'Message sent! We\\'ll get back to you soon.';
+60:       document.getElementById('cName').value = ''; document.getElementById('cEmail').value = ''; document.getElementById('cSubject').value = ''; document.getElementById('cMessage').value = '';
+61:     }
+62:   \x3C/script>
+63: \x3C/body>
+64: \x3C/html>
+
+(End of file - total 64 lines)
+\x3C/content>",metadata:$R[27878]={preview:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>Support — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html" class="active">Support\x3C/a>",truncated:!1,loaded:$R[27879]=[],display:$R[27880]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\contact.html",text:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>Support — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html" class="active">Support\x3C/a>
+  \x3C/nav>
+  \x3Cheader class="header">
+    \x3Cdiv class="header-inner">
+      \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+      \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+      \x3Cdiv class="nav-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html" class="active">Support\x3C/a>\x3C/div>
+    \x3C/div>
+  \x3C/header>
+  \x3Cmain class="container">
+    \x3Cdiv class="page-header reveal">\x3Ch1>Support\x3C/h1>\x3Cp>We're here to help\x3C/p>\x3C/div>
+    \x3Cdiv class="contact-grid">
+      \x3Cdiv class="card reveal">
+        \x3Ch3 style="margin-bottom:16px">Send a Message\x3C/h3>
+        \x3Cdiv class="form-group">\x3Clabel for="cName">Name\x3C/label>\x3Cinput type="text" id="cName" placeholder="Your name" />\x3C/div>
+        \x3Cdiv class="form-group">\x3Clabel for="cEmail">Email\x3C/label>\x3Cinput type="email" id="cEmail" placeholder="your@email.com" />\x3C/div>
+        \x3Cdiv class="form-group">\x3Clabel for="cSubject">Subject\x3C/label>\x3Cinput type="text" id="cSubject" placeholder="How can we help?" />\x3C/div>
+        \x3Cdiv class="form-group">\x3Clabel for="cMessage">Message\x3C/label>\x3Ctextarea id="cMessage" placeholder="Describe your issue..." style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;color:var(--text);width:100%;min-height:120px;font-family:inherit;resize:vertical">\x3C/textarea>\x3C/div>
+        \x3Cdiv id="contactMsg" style="font-size:0.85rem;margin-bottom:12px">\x3C/div>
+        \x3Cbutton class="btn btn-primary" style="width:100%" onclick="sendContact()">Send Message\x3C/button>
+      \x3C/div>
+      \x3Cdiv class="contact-info reveal">
+        \x3Ch3>FAQ\x3C/h3>
+        \x3Cdiv class="faq-item">\x3Ch4>Is AnimeForYou free?\x3C/h4>\x3Cp>Yes! 100% free. No credit card required.\x3C/p>\x3C/div>
+        \x3Cdiv class="faq-item">\x3Ch4>How do I report a bug?\x3C/h4>\x3Cp>Use the contact form or open an issue on GitHub.\x3C/p>\x3C/div>
+        \x3Cdiv class="faq-item">\x3Ch4>Can I suggest new anime?\x3C/h4>\x3Cp>Absolutely! Send us your suggestions.\x3C/p>\x3C/div>
+        \x3Cdiv class="faq-item">\x3Ch4>How do I add anime?\x3C/h4>\x3Cp>Visit the Admin Dashboard to add anime and episodes with download links.\x3C/p>\x3C/div>
+      \x3C/div>
+    \x3C/div>
+  \x3C/main>
+  \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cdiv class="footer-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+  \x3Cscript src="assets/js/animations.js">\x3C/script>
+  \x3Cscript>
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+    function sendContact() {
+      const n = document.getElementById('cName').value, e = document.getElementById('cEmail').value, s = document.getElementById('cSubject').value, m = document.getElementById('cMessage').value;
+      const el = document.getElementById('contactMsg');
+      if (!n || !e || !s || !m) { el.style.color = '#ef4444'; el.textContent = 'Please fill all fields.'; return; }
+      el.style.color = 'var(--accent)'; el.textContent = 'Message sent! We\\'ll get back to you soon.';
+      document.getElementById('cName').value = ''; document.getElementById('cEmail').value = ''; document.getElementById('cSubject').value = ''; document.getElementById('cMessage').value = '';
+    }
+  \x3C/script>
+\x3C/body>
+\x3C/html>",lineStart:1,lineEnd:64,totalLines:64,truncated:!1}},title:"contact.html",time:$R[27881]={start:1781800288017,end:1781800288144}},id:"prt_edb92bc0e0018mwx94wNDIn0vB",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb925164001fQpL59j2FtJsD7"},$R[27882]={type:"tool",tool:"read",callID:"call_b91840ee6ac541bca9516f9b",state:$R[27883]={status:"completed",input:$R[27884]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\work.html"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\work.html\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: \x3C!doctype html>
+2: \x3Chtml lang="en">
+3: \x3Chead>
+4:   \x3Cmeta charset="utf-8" />
+5:   \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+6:   \x3Cmeta name="theme-color" content="#0a0a1a" />
+7:   \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+8:   \x3Ctitle>Browse Anime — AnimeForYou\x3C/title>
+9:   \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+10:   \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+11:   \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+12:   \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+13: \x3C/head>
+14: \x3Cbody>
+15:   \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+16:   \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+17:   \x3Cnav class="mobile-nav" id="mobileNav">
+18:     \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+19:     \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+20:     \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html" class="active">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+21:   \x3C/nav>
+22:   \x3Cheader class="header">
+23:     \x3Cdiv class="header-inner">
+24:       \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+25:       \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+26:       \x3Cdiv class="nav-links">
+27:         \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html" class="active">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+28:       \x3C/div>
+29:     \x3C/div>
+30:   \x3C/header>
+31:   \x3Csection class="search-section">
+32:     \x3Cdiv class="search-box">
+33:       \x3Cinput type="text" id="searchInput" placeholder="Search anime..." onkeyup="filterAnime()" />
+34:       \x3Cbutton onclick="filterAnime()">Search\x3C/button>
+35:     \x3C/div>
+36:   \x3C/section>
+37:   \x3Cmain class="container">
+38:     \x3Cdiv style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px" id="genreChips">\x3C/div>
+39:     \x3Cdiv class="anime-grid" id="animeGrid">\x3C/div>
+40:   \x3C/main>
+41:   \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cdiv class="footer-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+42:   \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js">\x3C/script>
+43:   \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js">\x3C/script>
+44:   \x3Cscript src="assets/js/data-store.js">\x3C/script>
+45:   \x3Cscript src="assets/js/animations.js">\x3C/script>
+46:   \x3Cscript>
+47:     const firebaseConfig = {apiKey:"AIzaSyC4eObWxV8Nk64ssj2U7efXhlKxEeECPFI",authDomain:"animeforyou-e73a5.firebaseapp.com",projectId:"animeforyou-e73a5",storageBucket:"animeforyou-e73a5.firebasestorage.app",messagingSenderId:"747290347081",appId:"1:747290347081:web:354e7c49829a809010e198"};
+48:     if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+49:     function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+50:     function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+51:     let allAnime = [], currentGenre = 'all';
+52:     const genres = ['all','action','romance','comedy','fantasy','sci-fi','drama','thriller','adventure'];
+53:     function init() {
+54:       document.getElementById('genreChips').innerHTML = genres.map(g => `\x3Cbutton class="admin-tab ${g==='all'?'active':''}" onclick="setGenre('${g}',this)">${g.charAt(0).toUpperCase()+g.slice(1)}\x3C/button>`).join('');
+55:       allAnime = DataStore.getList();
+56:       renderGrid();
+57:       if (window.AnimeAnimations) setTimeout(() => window.AnimeAnimations.initReveal(), 100);
+58:     }
+59:     function setGenre(g, btn) { currentGenre = g; document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active')); btn.classList.add('active'); filterAnime(); }
+60:     function renderGrid(list) {
+61:       const grid = document.getElementById('animeGrid');
+62:       const items = list || allAnime.filter(a => currentGenre === 'all' || (a.genre||'').toLowerCase().includes(currentGenre));
+63:       if (!items.length) { grid.innerHTML = '\x3Cp style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:60px 20px">No anime found.\x3C/p>'; return; }
+64:       grid.innerHTML = items.map(a => `\x3Ca href="episode.html?id=${a.id}" class="anime-card">\x3Cimg src="${a.image||'https://cdn.myanimelist.net/images/anime/1015/138006l.jpg'}" alt="${(a.title||'').replace(/"/g,'&quot;')}" loading="lazy" />\x3Cdiv class="info">\x3Cdiv class="title">${(a.title||'Unknown').replace(/\x3C/g,'&lt;')}\x3C/div>\x3Cdiv class="meta">\x3Cspan class="rating">${a.rating||'N/A'}★\x3C/span> ${a.genre||'Anime'}\x3C/div>\x3C/div>\x3C/a>`).join('');
+65:     }
+66:     function filterAnime() { const q = document.getElementById('searchInput').value.toLowerCase(); renderGrid(allAnime.filter(a => { const s = (a.title||'').toLowerCase().includes(q) || (a.genre||'').toLowerCase().includes(q); const g = currentGenre === 'all' || (a.genre||'').toLowerCase().includes(currentGenre); return s && g; })); }
+67:     DataStore.init();
+68:     DataStore.seedData();
+69:     init();
+70:   \x3C/script>
+71: \x3C/body>
+72: \x3C/html>
+
+(End of file - total 72 lines)
+\x3C/content>",metadata:$R[27885]={preview:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>Browse Anime — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html" class="active">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>",truncated:!1,loaded:$R[27886]=[],display:$R[27887]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\work.html",text:"\x3C!doctype html>
+\x3Chtml lang="en">
+\x3Chead>
+  \x3Cmeta charset="utf-8" />
+  \x3Cmeta name="viewport" content="width=device-width,initial-scale=1" />
+  \x3Cmeta name="theme-color" content="#0a0a1a" />
+  \x3Clink rel="icon" type="image/svg+xml" href="favicon.svg" />
+  \x3Ctitle>Browse Anime — AnimeForYou\x3C/title>
+  \x3Clink rel="preconnect" href="https://fonts.googleapis.com" />
+  \x3Clink rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  \x3Clink rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  \x3Clink rel="stylesheet" href="assets/css/styles.css" />
+\x3C/head>
+\x3Cbody>
+  \x3Cdiv class="ambient">\x3Cdiv class="ambient-orb orb-1">\x3C/div>\x3Cdiv class="ambient-orb orb-2">\x3C/div>\x3Cdiv class="ambient-orb orb-3">\x3C/div>\x3C/div>
+  \x3Cdiv class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()">\x3C/div>
+  \x3Cnav class="mobile-nav" id="mobileNav">
+    \x3Cbutton class="close-btn" onclick="closeNav()">\x3Csvg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="18" y1="6" x2="6" y2="18"/>\x3Cline x1="6" y1="6" x2="18" y2="18"/>\x3C/svg>\x3C/button>
+    \x3Cdiv class="nav-brand">Anime\x3Cspan>ForYou\x3C/span>\x3C/div>
+    \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html" class="active">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+  \x3C/nav>
+  \x3Cheader class="header">
+    \x3Cdiv class="header-inner">
+      \x3Cbutton class="menu-btn" onclick="openNav()">\x3Csvg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">\x3Cline x1="3" y1="6" x2="21" y2="6"/>\x3Cline x1="3" y1="12" x2="21" y2="12"/>\x3Cline x1="3" y1="18" x2="21" y2="18"/>\x3C/svg>\x3C/button>
+      \x3Ca href="index.html" class="logo">Anime\x3Cspan>ForYou\x3C/span>\x3C/a>
+      \x3Cdiv class="nav-links">
+        \x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html" class="active">Browse\x3C/a>\x3Ca href="services.html">Features\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>
+      \x3C/div>
+    \x3C/div>
+  \x3C/header>
+  \x3Csection class="search-section">
+    \x3Cdiv class="search-box">
+      \x3Cinput type="text" id="searchInput" placeholder="Search anime..." onkeyup="filterAnime()" />
+      \x3Cbutton onclick="filterAnime()">Search\x3C/button>
+    \x3C/div>
+  \x3C/section>
+  \x3Cmain class="container">
+    \x3Cdiv style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px" id="genreChips">\x3C/div>
+    \x3Cdiv class="anime-grid" id="animeGrid">\x3C/div>
+  \x3C/main>
+  \x3Cfooter class="footer">\x3Cdiv class="footer-inner">\x3Cdiv class="footer-links">\x3Ca href="index.html">Home\x3C/a>\x3Ca href="work.html">Browse\x3C/a>\x3Ca href="about.html">About\x3C/a>\x3Ca href="contact.html">Support\x3C/a>\x3C/div>\x3Cp>&copy; 2026 AnimeForYou. All rights reserved.\x3C/p>\x3C/div>\x3C/footer>
+  \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js">\x3C/script>
+  \x3Cscript src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js">\x3C/script>
+  \x3Cscript src="assets/js/data-store.js">\x3C/script>
+  \x3Cscript src="assets/js/animations.js">\x3C/script>
+  \x3Cscript>
+    const firebaseConfig = {apiKey:"AIzaSyC4eObWxV8Nk64ssj2U7efXhlKxEeECPFI",authDomain:"animeforyou-e73a5.firebaseapp.com",projectId:"animeforyou-e73a5",storageBucket:"animeforyou-e73a5.firebasestorage.app",messagingSenderId:"747290347081",appId:"1:747290347081:web:354e7c49829a809010e198"};
+    if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+    let allAnime = [], currentGenre = 'all';
+    const genres = ['all','action','romance','comedy','fantasy','sci-fi','drama','thriller','adventure'];
+    function init() {
+      document.getElementById('genreChips').innerHTML = genres.map(g => `\x3Cbutton class="admin-tab ${g==='all'?'active':''}" onclick="setGenre('${g}',this)">${g.charAt(0).toUpperCase()+g.slice(1)}\x3C/button>`).join('');
+      allAnime = DataStore.getList();
+      renderGrid();
+      if (window.AnimeAnimations) setTimeout(() => window.AnimeAnimations.initReveal(), 100);
+    }
+    function setGenre(g, btn) { currentGenre = g; document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active')); btn.classList.add('active'); filterAnime(); }
+    function renderGrid(list) {
+      const grid = document.getElementById('animeGrid');
+      const items = list || allAnime.filter(a => currentGenre === 'all' || (a.genre||'').toLowerCase().includes(currentGenre));
+      if (!items.length) { grid.innerHTML = '\x3Cp style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:60px 20px">No anime found.\x3C/p>'; return; }
+      grid.innerHTML = items.map(a => `\x3Ca href="episode.html?id=${a.id}" class="anime-card">\x3Cimg src="${a.image||'https://cdn.myanimelist.net/images/anime/1015/138006l.jpg'}" alt="${(a.title||'').replace(/"/g,'&quot;')}" loading="lazy" />\x3Cdiv class="info">\x3Cdiv class="title">${(a.title||'Unknown').replace(/\x3C/g,'&lt;')}\x3C/div>\x3Cdiv class="meta">\x3Cspan class="rating">${a.rating||'N/A'}★\x3C/span> ${a.genre||'Anime'}\x3C/div>\x3C/div>\x3C/a>`).join('');
+    }
+    function filterAnime() { const q = document.getElementById('searchInput').value.toLowerCase(); renderGrid(allAnime.filter(a => { const s = (a.title||'').toLowerCase().includes(q) || (a.genre||'').toLowerCase().includes(q); const g = currentGenre === 'all' || (a.genre||'').toLowerCase().includes(currentGenre); return s && g; })); }
+    DataStore.init();
+    DataStore.seedData();
+    init();
+  \x3C/script>
+\x3C/body>
+\x3C/html>",lineStart:1,lineEnd:72,totalLines:72,truncated:!1}},title:"work.html",time:$R[27888]={start:1781800288064,end:1781800288210}},id:"prt_edb92bf17001ymO5znBwzVJs2u",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb925164001fQpL59j2FtJsD7"},$R[27889]={type:"tool",tool:"read",callID:"call_56a6b3f7e8a042ceaf197b33",state:$R[27890]={status:"completed",input:$R[27891]={filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\assets\\js\\animations.js"},output:"\x3Cpath>C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\assets\\js\\animations.js\x3C/path>
+\x3Ctype>file\x3C/type>
+\x3Ccontent>
+1: // AnimeForYou — Modern Animations
+2: (function(){
+3:   // Scroll Reveal
+4:   const revealObserver = new IntersectionObserver((entries) => {
+5:     entries.forEach(entry => {
+6:       if (entry.isIntersecting) {
+7:         entry.target.classList.add('visible');
+8:         revealObserver.unobserve(entry.target);
+9:       }
+10:     });
+11:   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+12: 
+13:   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+14: 
+15:   // Auto-add reveal to cards on page load
+16:   function initReveal() {
+17:     document.querySelectorAll('.anime-card, .feature-card, .team-card, .faq-item, .admin-form').forEach((el, i) => {
+18:       el.classList.add('reveal');
+19:       el.style.transitionDelay = `${(i % 6) * 0.08}s`;
+20:       revealObserver.observe(el);
+21:     });
+22:   }
+23: 
+24:   // Stagger reveal for grid items
+25:   function staggerReveal(container) {
+26:     const items = container.querySelectorAll('.anime-card');
+27:     items.forEach((el, i) => {
+28:       el.classList.add('reveal');
+29:       el.style.transitionDelay = `${(i % 8) * 0.06}s`;
+30:       revealObserver.observe(el);
+31:     });
+32:   }
+33: 
+34:   // Smooth header hide/show on scroll
+35:   let lastScroll = 0;
+36:   const header = document.querySelector('.header');
+37:   if (header) {
+38:     window.addEventListener('scroll', () => {
+39:       const currentScroll = window.scrollY;
+40:       if (currentScroll > 100) {
+41:         header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
+42:       } else {
+43:         header.style.boxShadow = 'none';
+44:       }
+45:       lastScroll = currentScroll;
+46:     }, { passive: true });
+47:   }
+48: 
+49:   // Press feedback on buttons
+50:   document.addEventListener('mousedown', (e) => {
+51:     const btn = e.target.closest('.btn, .admin-tab, .menu-btn');
+52:     if (btn) btn.style.transform = 'scale(0.95)';
+53:   });
+54:   document.addEventListener('mouseup', () => {
+55:     document.querySelectorAll('.btn, .admin-tab, .menu-btn').forEach(b => b.style.transform = '');
+56:   });
+57: 
+58:   // 3D tilt on cards
+59:   document.addEventListener('mousemove', (e) => {
+60:     const card = e.target.closest('.anime-card');
+61:     if (!card) return;
+62:     const rect = card.getBoundingClientRect();
+63:     const x = e.clientX - rect.left;
+64:     const y = e.clientY - rect.top;
+65:     const centerX = rect.width / 2;
+66:     const centerY = rect.height / 2;
+67:     const rotateX = (y - centerY) / 20;
+68:     const rotateY = (centerX - x) / 20;
+69:     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
+70:   });
+71: 
+72:   document.addEventListener('mouseleave', (e) => {
+73:     if (e.target.closest && e.target.closest('.anime-card')) {
+74:       document.querySelectorAll('.anime-card').forEach(c => c.style.transform = '');
+75:     }
+76:   }, true);
+77: 
+78:   // Counter animation
+79:   function animateCounter(el, target) {
+80:     let current = 0;
+81:     const increment = target / 30;
+82:     const timer = setInterval(() => {
+83:       current += increment;
+84:       if (current >= target) {
+85:         current = target;
+86:         clearInterval(timer);
+87:       }
+88:       el.textContent = Math.floor(current);
+89:     }, 30);
+90:   }
+91: 
+92:   // Init on DOM ready
+93:   if (document.readyState === 'loading') {
+94:     document.addEventListener('DOMContentLoaded', initReveal);
+95:   } else {
+96:     initReveal();
+97:   }
+98: 
+99:   // Expose for dynamic content
+100:   window.AnimeAnimations = { initReveal, staggerReveal, animateCounter };
+101: })();
+
+(End of file - total 101 lines)
+\x3C/content>",metadata:$R[27892]={preview:"// AnimeForYou — Modern Animations
+(function(){
+  // Scroll Reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Auto-add reveal to cards on page load
+  function initReveal() {
+    document.querySelectorAll('.anime-card, .feature-card, .team-card, .faq-item, .admin-form').forEach((el, i) => {
+      el.classList.add('reveal');
+      el.style.transitionDelay = `${(i % 6) * 0.08}s`;
+      revealObserver.observe(el);",truncated:!1,loaded:$R[27893]=[],display:$R[27894]={type:"file",path:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\assets\\js\\animations.js",text:"// AnimeForYou — Modern Animations
+(function(){
+  // Scroll Reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Auto-add reveal to cards on page load
+  function initReveal() {
+    document.querySelectorAll('.anime-card, .feature-card, .team-card, .faq-item, .admin-form').forEach((el, i) => {
+      el.classList.add('reveal');
+      el.style.transitionDelay = `${(i % 6) * 0.08}s`;
+      revealObserver.observe(el);
+    });
+  }
+
+  // Stagger reveal for grid items
+  function staggerReveal(container) {
+    const items = container.querySelectorAll('.anime-card');
+    items.forEach((el, i) => {
+      el.classList.add('reveal');
+      el.style.transitionDelay = `${(i % 8) * 0.06}s`;
+      revealObserver.observe(el);
+    });
+  }
+
+  // Smooth header hide/show on scroll
+  let lastScroll = 0;
+  const header = document.querySelector('.header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > 100) {
+        header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+      lastScroll = currentScroll;
+    }, { passive: true });
+  }
+
+  // Press feedback on buttons
+  document.addEventListener('mousedown', (e) => {
+    const btn = e.target.closest('.btn, .admin-tab, .menu-btn');
+    if (btn) btn.style.transform = 'scale(0.95)';
+  });
+  document.addEventListener('mouseup', () => {
+    document.querySelectorAll('.btn, .admin-tab, .menu-btn').forEach(b => b.style.transform = '');
+  });
+
+  // 3D tilt on cards
+  document.addEventListener('mousemove', (e) => {
+    const card = e.target.closest('.anime-card');
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = (y - centerY) / 20;
+    const rotateY = (centerX - x) / 20;
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
+  });
+
+  document.addEventListener('mouseleave', (e) => {
+    if (e.target.closest && e.target.closest('.anime-card')) {
+      document.querySelectorAll('.anime-card').forEach(c => c.style.transform = '');
+    }
+  }, true);
+
+  // Counter animation
+  function animateCounter(el, target) {
+    let current = 0;
+    const increment = target / 30;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = Math.floor(current);
+    }, 30);
+  }
+
+  // Init on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initReveal);
+  } else {
+    initReveal();
+  }
+
+  // Expose for dynamic content
+  window.AnimeAnimations = { initReveal, staggerReveal, animateCounter };
+})();",lineStart:1,lineEnd:101,totalLines:101,truncated:!1}},title:"assets\\js\\animations.js",time:$R[27895]={start:1781800289101,end:1781800289292}},id:"prt_edb92bf45001olZ8ELjoHo3XLN",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb925164001fQpL59j2FtJsD7"},$R[27896]={reason:"tool-calls",snapshot:"fe5f6386e8b71b1092622095aaf5ac9d9a1807c9",type:"step-finish",tokens:$R[27897]={total:92702,input:40,output:217,reasoning:221,cache:$R[27898]={write:0,read:92224}},cost:0,id:"prt_edb92c66f001NaVXEPDSgYTM5w",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb925164001fQpL59j2FtJsD7"}],msg_edb92cb73001xByx6xzMWf5EmV:$R[27899]=[$R[27900]={snapshot:"fe5f6386e8b71b1092622095aaf5ac9d9a1807c9",type:"step-start",id:"prt_edb93dd17001GGbo58XTF4fSkj",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb92cb73001xByx6xzMWf5EmV"},$R[27901]={type:"reasoning",text:"Now I have a complete picture. The cover image issue is likely:
+
+1. The default image URL `https://cdn.myanimelist.net/images/anime/1015/138006l.jpg` might be blocked by CORS/referrer policies
+2. The CSP allows `https:` in img-src which should work
+3. But Cloudflare might be stripping referrer headers, and MAL might block requests without proper referrer
+
+The fix is to add `Referrer-Policy: no-referrer-when-downgrade` or use `crossorigin` attribute on images, or use a different image source.
+
+Actually, looking more carefully at the CSP:
+
+
+The img-src directive has `https:` as a catch-all which should allow any HTTPS image. The real problem is likely that MAL blocks requests missing a proper Referer header. I can fix this by setting `Referrer-Policy: no-referrer-when-downgrade` in the headers, adding `crossorigin="anonymous"` to the img tags, or using the `Referrer-Policy: unsafe-url` header to always send the referrer.
+
+The simplest solution is updating the Referrer-Policy header to `no-referrer-when-downgrade` so Cloudflare sends the referer for HTTPS requests. Now I'm redesigning all six pages with modern animations, glassmorphism effects, and consistent micro-interactions across the board.",time:$R[27902]={start:1781800361242,end:1781800365684},id:"prt_edb93dd1a0010Fb5qTEVfWfhV9",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb92cb73001xByx6xzMWf5EmV"},$R[27903]={type:"text",text:"Now I see the issue. The cover images are blocked because Cloudflare strips the `Referer` header and MAL blocks requests without it. Let me fix the headers and redesign all pages.",time:$R[27904]={start:1781800365689,end:1781800367789},id:"prt_edb93ee79001l4YsrEKik80VH9",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb92cb73001xByx6xzMWf5EmV"},$R[27905]={type:"tool",tool:"write",callID:"call_425364f5fdb7414fa3026df4",state:$R[27906]={status:"completed",input:$R[27907]={content:"/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: no-referrer-when-downgrade
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://cdn.myanimelist.net data: blob: https:; media-src 'self' https: blob:; frame-src https://drive.google.com https://*.firebaseapp.com; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://*.firebaseapp.com https://api.jikan.moe;
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",filePath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\_headers"},output:"Wrote file successfully.",metadata:$R[27908]={diagnostics:$R[27909]={},filepath:"C:\\Users\\Asus\\OneDrive\\Documents\\axioma-creative-agency-website-template\\_headers",exists:!0,truncated:!1},title:"_headers",time:$R[27910]={start:1781800367781,end:1781800367831}},id:"prt_edb93eee6001WNzEYMML5I3FaR",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb92cb73001xByx6xzMWf5EmV"},$R[27911]={reason:"tool-calls",snapshot:"677a6efc2124c83add74c9d976d56fef5db7f91a",type:"step-finish",tokens:$R[27912]={total:101718,input:8869,output:338,reasoning:287,cache:$R[27913]={write:0,read:92224}},cost:0,id:"prt_edb93f987001pfR2aMtqqs1W2G",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb92cb73001xByx6xzMWf5EmV"},$R[27914]={type:"patch",hash:"fe5f6386e8b71b1092622095aaf5ac9d9a1807c9",files:$R[27915]=["C:/Users/Asus/OneDrive/Documents/axioma-creative-agency-website-template/_headers"],id:"prt_edb93fb6e001NA13NcysKSmWRr",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb92cb73001xByx6xzMWf5EmV"}],msg_edb93fc8f001q23T0Le77BRMvC:$R[27916]=[$R[27917]={snapshot:"677a6efc2124c83add74c9d976d56fef5db7f91a",type:"step-start",id:"prt_edb9480c8001qgdEqgM0HP9UY0",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb93fc8f001q23T0Le77BRMvC"},$R[27918]={type:"reasoning",text:"Now let me rewrite all pages with modern UI. I'll start with styles.css to create a comprehensive design system, then rewrite all HTML pages.",time:$R[27919]={start:1781800403147,end:1781800404086},id:"prt_edb9480cb001mQ54pCxhunnTmE",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb93fc8f001q23T0Le77BRMvC"},$R[27920]={type:"text",text:"Now rewriting the complete CSS design system and all pages. Starting with styles.css:",time:$R[27921]={start:1781800404091,end:1781800485975},id:"prt_edb94847b001yTw63f3f2ZrNtS",sessionID:"ses_12b36e345ffe2sGXmCITmnRsm8",messageID:"msg_edb93fc8f001q23T0Le77BRMvC"},$R[27922]={type:"tool",tool:"write",callID:"call_0d107c2e2a4c44b3be2ec4d5",state:$R[27923]={status:"completed",input:$R[27924]={content:"/* AnimeForYou — Complete Design System */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}

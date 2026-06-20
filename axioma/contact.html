@@ -1,0 +1,754 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>Support — AnimeForYou</title>
+  <meta name="description" content="Contact AnimeForYou support for account help, streaming issues, and general questions about our anime library." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #12121a;
+      --bg-tertiary: #1a1a25;
+      --bg-card: #151520;
+      --bg-card-hover: #1d1d2a;
+      --bg-surface: rgba(255, 255, 255, 0.03);
+      
+      --text-primary: #f8fafc;
+      --text-secondary: #a0aec0;
+      --text-muted: #636e80;
+      --text-dim: #4a5568;
+      
+      --accent-primary: #22c55e;
+      --accent-primary-rgb: 34, 197, 94;
+      --accent-secondary: #8b5cf6;
+      --accent-secondary-rgb: 139, 92, 246;
+      --accent-tertiary: #06b6d4;
+      --accent-pink: #ec4899;
+      
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-color-hover: rgba(255, 255, 255, 0.15);
+      
+      --radius-sm: 8px;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-pill: 999px;
+      
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --ease-out: cubic-bezier(0, 0, 0.2, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+      --shadow-glow: 0 0 40px rgba(var(--accent-primary-rgb), 0.15);
+      
+      --display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+
+    .page {
+      position: relative;
+      width: min(1280px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 18px 0 32px;
+    }
+
+    .top-nav {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 24px;
+      min-height: 56px;
+      margin-bottom: 18px;
+    }
+
+    .quick-actions, .auth-actions, .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-links {
+      justify-content: center;
+      gap: 38px;
+      font-weight: 600;
+      font-family: var(--mono);
+      font-size: 0.84rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      position: relative;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      color: var(--text-secondary);
+      transition: color 0.2s var(--ease);
+    }
+
+    .nav-links a:hover { color: var(--accent-primary); }
+
+    .nav-links a[aria-current="page"] {
+      color: var(--accent-primary);
+    }
+
+    .nav-links a[aria-current="page"]::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 6px;
+      width: 52px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--accent-primary);
+      transform: translateX(-50%);
+      box-shadow: 0 0 12px rgba(var(--accent-primary-rgb), 0.6);
+    }
+
+    .icon-button {
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: var(--radius-sm);
+      display: grid;
+      place-items: center;
+      color: var(--bg-primary);
+      background: var(--accent-primary);
+      box-shadow: var(--shadow-glow);
+      transition: all 0.2s var(--ease);
+    }
+
+    .icon-button:nth-child(2) {
+      background: var(--accent-secondary);
+    }
+
+    .icon-button:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 0 20px rgba(var(--accent-primary-rgb), 0.4);
+    }
+
+    .btn {
+      min-height: 42px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-pill);
+      padding: 0 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-family: var(--mono);
+      font-size: 0.84rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.3s var(--ease);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn.primary {
+      border-color: transparent;
+      color: var(--bg-primary);
+      background: var(--accent-primary);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn.primary:hover {
+      background: #16a34a;
+      box-shadow: 0 0 30px rgba(var(--accent-primary-rgb), 0.4);
+    }
+
+    .page-header {
+      position: relative;
+      padding: 60px 32px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: 
+        radial-gradient(ellipse at 30% 70%, rgba(var(--accent-primary-rgb), 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 30%, rgba(var(--accent-secondary-rgb), 0.1) 0%, transparent 50%),
+        var(--bg-card);
+      box-shadow: var(--shadow-xl);
+      margin-bottom: 32px;
+    }
+
+    .page-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(var(--accent-primary-rgb), 0.1) 0 2px, transparent 2px);
+      background-size: 42px 42px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .page-header .crumb {
+      position: relative;
+      z-index: 2;
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+    }
+
+    .page-header .crumb span {
+      color: var(--accent-primary);
+    }
+
+    .page-header h1 {
+      position: relative;
+      z-index: 2;
+      font-family: var(--display);
+      font-size: clamp(2.6rem, 5.4vw, 4rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin: 0 0 24px;
+      background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-header .lede {
+      position: relative;
+      z-index: 2;
+      max-width: 60ch;
+      font-size: 1.18rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .section-title {
+      font-family: var(--display);
+      font-size: 1.8rem;
+      line-height: 1;
+      color: var(--text-primary);
+      margin: 0 0 24px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-info h3 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: 1.4rem;
+      color: var(--text-primary);
+    }
+
+    .info-card {
+      position: relative;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .info-card .label {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .channels {
+      display: grid;
+      gap: 12px;
+    }
+
+    .channel-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s var(--ease);
+    }
+
+    .channel-link:hover {
+      transform: translateX(4px);
+      border-color: var(--accent-primary);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .channel-link .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: rgba(var(--accent-primary-rgb), 0.1);
+      display: grid;
+      place-items: center;
+      color: var(--accent-primary);
+    }
+
+    .channel-link .text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .channel-link .name {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .channel-link .value {
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .contact-form-card {
+      position: relative;
+      padding: 40px;
+      border-radius: var(--radius-xl);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-form-card h3 {
+      margin: 0 0 8px;
+      font-family: var(--display);
+      font-size: 1.6rem;
+      color: var(--text-primary);
+    }
+
+    .contact-form-card .subtitle {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin: 0 0 24px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      font-family: var(--sans);
+      font-size: 1rem;
+      transition: all 0.2s var(--ease);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 3px rgba(var(--accent-primary-rgb), 0.2);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .form-actions .note {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 0.06em;
+    }
+
+    .cta-card {
+      position: relative;
+      padding: 60px 48px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: 
+        radial-gradient(ellipse at 30% 70%, rgba(var(--accent-primary-rgb), 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 30%, rgba(var(--accent-secondary-rgb), 0.15) 0%, transparent 50%),
+        var(--bg-card);
+      box-shadow: var(--shadow-xl);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .cta-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(var(--accent-primary-rgb), 0.1) 0 2px, transparent 2px);
+      background-size: 42px 42px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .cta-card h2 {
+      position: relative;
+      z-index: 2;
+      font-family: var(--display);
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      line-height: 1.06;
+      font-weight: 400;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      margin: 0 0 16px;
+    }
+
+    .cta-card h2 em {
+      font-style: italic;
+      color: var(--accent-primary);
+    }
+
+    .cta-card p {
+      position: relative;
+      z-index: 2;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin: 0 0 24px;
+    }
+
+    .cta-card .btn {
+      position: relative;
+      z-index: 2;
+      width: fit-content;
+    }
+
+    @media (max-width: 980px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        width: min(100% - 20px, 520px);
+        padding-top: 10px;
+      }
+
+      .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .auth-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .page-header {
+        padding: 40px 24px;
+      }
+
+      .page-header h1 {
+        font-size: 2.4rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-card {
+        padding: 28px;
+      }
+
+      .cta-card {
+        padding: 40px 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="top-nav" aria-label="Primary navigation">
+      <div class="quick-actions">
+        <button class="icon-button" type="button" aria-label="Open profile">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 20a7 7 0 0 0-14 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="icon-button" type="button" aria-label="Add favorite">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="nav-links" aria-label="Sections">
+        <a href="index.html">Home</a>
+        <a href="work.html">Anime</a>
+        <a href="services.html">Features</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Support</a>
+      </nav>
+
+      <div class="auth-actions">
+        <a class="btn" href="contact.html">Log in</a>
+        <a class="btn primary" href="contact.html">Sign up</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <p class="crumb">Home → <span>Support</span></p>
+        <h1>Need help with<br/>your stream?</h1>
+        <p class="lede">Contact AnimeForYou support for account questions, playback issues, and library recommendations. We reply quickly so you can get back to watching.</p>
+      </section>
+
+      <h2 class="section-title">Get in touch</h2>
+      <section class="contact-grid">
+        <div class="contact-info">
+          <div class="info-card">
+            <span class="label">Email</span>
+            <p>support@animeforyou.com<br/>Available 24/7 for streaming issues and account help.</p>
+          </div>
+          <div class="info-card">
+            <span class="label">Live chat</span>
+            <p>Open in the app and click "Help" to chat with support instantly.</p>
+          </div>
+
+          <div class="channels">
+            <a href="mailto:support@animeforyou.com" class="channel-link">
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="text">
+                <span class="name">Support</span>
+                <span class="value">support@animeforyou.com</span>
+              </div>
+            </a>
+            <a href="#" class="channel-link">
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                </svg>
+              </div>
+              <div class="text">
+                <span class="name">Twitter</span>
+                <span class="value">@animeforyou</span>
+              </div>
+            </a>
+            <a href="#" class="channel-link">
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </div>
+              <div class="text">
+                <span class="name">Instagram</span>
+                <span class="value">@animeforyou</span>
+              </div>
+            </a>
+            <a href="#" class="channel-link">
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </div>
+              <div class="text">
+                <span class="name">Help center</span>
+                <span class="value">Find answers, troubleshooting, and account guides.</span>
+              </div>
+            </a>
+            <a href="#" class="channel-link">
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
+              <div class="text">
+                <span class="name">Status</span>
+                <span class="value">Streaming service status and updates</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form-card" aria-label="Support request form" novalidate>
+          <h3>Support request</h3>
+          <p class="subtitle">All fields except notes are required</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="account">Username / account</label>
+              <input type="text" id="account" name="account" required />
+            </div>
+            <div class="form-group">
+              <label for="device">Device</label>
+              <input type="text" id="device" name="device" required />
+            </div>
+            <div class="form-group">
+              <label for="issue_type">Issue type</label>
+              <select id="issue_type" name="issue_type" required>
+                <option value="">Select…</option>
+                <option>Playback issue</option>
+                <option>Download problem</option>
+                <option>Subtitle / audio</option>
+                <option>Account access</option>
+                <option>Billing</option>
+                <option>Content request</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="urgency">Urgency</label>
+              <select id="urgency" name="urgency" required>
+                <option value="">Select…</option>
+                <option>Urgent</option>
+                <option>Normal</option>
+                <option>Can wait</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="app_version">App version</label>
+              <input type="text" id="app_version" name="app_version" />
+            </div>
+            <div class="form-group">
+              <label for="referral">Where did you hear about us?</label>
+              <input type="text" id="referral" name="referral" />
+            </div>
+            <div class="form-group full-width">
+              <label for="message">Tell us more</label>
+              <textarea id="message" name="message" placeholder="Describe the issue, what you tried, and any error messages you saw."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <p class="note">We'll only use this to reply and improve your stream.</p>
+            <button type="submit" class="btn primary">Send request <span class="arrow">→</span></button>
+          </div>
+        </form>
+      </section>
+
+      <section class="cta-card">
+        <div>
+          <h2>Prefer to <em>email?</em></h2>
+        </div>
+        <div>
+          <p>Skip the form. Send your account details and issue notes — we'll respond quickly.</p>
+          <a class="btn primary" href="mailto:support@animeforyou.com">support@animeforyou.com <span class="arrow">→</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,398 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#080816" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Download Anime — AnimeForYou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .dl-page{max-width:900px;margin:0 auto;padding:40px 20px}
+    .dl-hero{position:relative;border-radius:var(--radius-xl);overflow:hidden;margin-bottom:28px;background:var(--bg-card);border:1px solid var(--border);animation:fadeInUp var(--dur-slow) var(--ease) both}
+    .dl-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center top;filter:blur(20px) brightness(0.3);transform:scale(1.1)}
+    .dl-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,22,0.4) 0%,rgba(8,8,22,0.95) 100%)}
+    .dl-hero-content{position:relative;display:flex;gap:32px;padding:40px;z-index:1}
+    .dl-hero-poster{width:220px;min-height:310px;border-radius:var(--radius-lg);overflow:hidden;flex-shrink:0;box-shadow:0 8px 32px rgba(0,0,0,0.5);position:relative}
+    .dl-hero-poster img{width:100%;height:100%;object-fit:cover;display:block}
+    .dl-hero-badge{position:absolute;top:12px;left:12px;background:linear-gradient(135deg,var(--accent),#ea580c);color:white;padding:5px 14px;border-radius:20px;font-size:0.72rem;font-weight:700;box-shadow:0 2px 10px var(--accent-glow)}
+    .dl-hero-info{flex:1;display:flex;flex-direction:column;justify-content:center}
+    .dl-hero-title{font-size:1.8rem;font-weight:900;margin-bottom:6px;line-height:1.2;letter-spacing:-0.5px;color:#fff}
+    .dl-hero-sub{font-size:0.85rem;color:rgba(255,255,255,0.5);margin-bottom:14px;font-style:italic}
+    .dl-hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+    .dl-hero-meta span{background:rgba(255,255,255,0.08);padding:5px 14px;border-radius:20px;font-size:0.78rem;color:rgba(255,255,255,0.8);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.06)}
+    .dl-hero-meta .imdb{background:linear-gradient(135deg,#f5c518,#e6a800);color:#000;font-weight:700;border:none}
+    .dl-hero-table{width:100%;border-collapse:collapse;margin-top:8px}
+    .dl-hero-table tr td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.83rem;color:rgba(255,255,255,0.7)}
+    .dl-hero-table tr td:first-child{color:rgba(255,255,255,0.45);width:120px;font-weight:600}
+
+    .dl-section{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);margin-bottom:24px;overflow:hidden;animation:fadeInUp var(--dur-slow) var(--ease) both}
+    .dl-section-header{padding:20px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+    .dl-section-header h3{font-size:1rem;font-weight:700;margin:0}
+    .dl-section-header .icon{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;font-size:0.85rem;flex-shrink:0}
+    .dl-section-body{padding:24px 28px}
+
+    .dl-storyline{color:rgba(255,255,255,0.65);font-size:0.88rem;line-height:1.85}
+
+    .dl-screenshots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .dl-screenshots img{width:100%;border-radius:var(--radius);border:1px solid var(--border);cursor:pointer;transition:all var(--dur) var(--ease)}
+    .dl-screenshots img:hover{transform:scale(1.03);border-color:var(--accent);box-shadow:0 4px 20px var(--accent-glow)}
+
+    .dl-pack-grid{display:grid;gap:10px}
+    .dl-pack-item{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 22px;display:flex;align-items:center;justify-content:space-between;transition:all var(--dur) var(--ease)}
+    .dl-pack-item:hover{border-color:rgba(249,115,22,0.3);background:rgba(249,115,22,0.04);transform:translateX(4px)}
+    .dl-pack-info{display:flex;align-items:center;gap:14px}
+    .dl-pack-icon{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;font-size:0.65rem;font-weight:800;color:white;flex-shrink:0}
+    .dl-pack-icon.p1080{background:linear-gradient(135deg,var(--accent),#ea580c)}
+    .dl-pack-icon.p720{background:linear-gradient(135deg,#d9232e,#ff6b00)}
+    .dl-pack-icon.p480{background:linear-gradient(135deg,#005dab,#00a4ef)}
+    .dl-pack-icon.hevc{background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
+    .dl-pack-name{font-weight:700;font-size:0.9rem;color:var(--text)}
+    .dl-pack-size{font-size:0.78rem;color:var(--text-muted);margin-top:2px}
+    .dl-pack-btn{padding:10px 24px;border-radius:var(--radius);font-weight:600;font-size:0.82rem;border:none;cursor:pointer;transition:all var(--dur) var(--ease);text-decoration:none;display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--accent),#ea580c);color:white;box-shadow:0 4px 15px var(--accent-glow)}
+    .dl-pack-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--accent-glow);color:white}
+
+    .dl-ep-grid{display:grid;gap:8px}
+    .dl-ep-item{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;transition:all var(--dur) var(--ease);font-size:0.85rem}
+    .dl-ep-item:hover{border-color:rgba(249,115,22,0.3);background:rgba(249,115,22,0.04)}
+    .dl-ep-item .ep-label{color:var(--text);font-weight:600}
+    .dl-ep-item .ep-links{display:flex;gap:8px}
+    .dl-ep-item .ep-links a{padding:6px 14px;border-radius:6px;font-size:0.75rem;font-weight:600;text-decoration:none;transition:all var(--dur) var(--ease)}
+    .dl-ep-item .ep-links .link-720{background:rgba(217,35,46,0.12);color:#ff6b00;border:1px solid rgba(217,35,46,0.2)}
+    .dl-ep-item .ep-links .link-1080{background:rgba(249,115,22,0.12);color:var(--accent);border:1px solid rgba(249,115,22,0.2)}
+    .dl-ep-item .ep-links a:hover{transform:translateY(-1px)}
+
+    .dl-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .dl-tag{background:rgba(249,115,22,0.1);color:var(--accent);padding:5px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;border:1px solid rgba(249,115,22,0.15)}
+
+    .dl-ep-nav{display:flex;gap:12px;margin-top:24px}
+    .dl-ep-nav a{flex:1;padding:16px;border-radius:var(--radius-lg);background:var(--bg-card);border:1px solid var(--border);text-align:center;text-decoration:none;color:var(--text);font-weight:600;transition:all var(--dur) var(--ease);font-size:0.9rem}
+    .dl-ep-nav a:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+    .dl-ep-nav a.disabled{opacity:0.3;pointer-events:none}
+
+    .dl-comment{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border);animation:fadeIn 0.3s ease both}
+    .dl-comment-avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:0.9rem;flex-shrink:0}
+    .dl-comment-name{font-weight:600;font-size:0.9rem}
+    .dl-comment-time{font-size:0.7rem;color:var(--text-muted)}
+    .dl-comment-text{color:var(--text-muted);font-size:0.88rem;line-height:1.6;margin:0}
+
+    .dl-available{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(34,197,94,0.15),rgba(34,197,94,0.05));color:#22c55e;padding:8px 18px;border-radius:var(--radius);font-size:0.82rem;font-weight:600;border:1px solid rgba(34,197,94,0.2);margin-bottom:20px}
+    .dl-available::before{content:'';width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+
+    .dl-review{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;margin-top:12px}
+    .dl-review-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+    .dl-review-stars{color:#f5c518;font-size:0.9rem}
+    .dl-review-text{color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.7}
+
+    @media(max-width:700px){
+      .dl-hero-content{flex-direction:column;align-items:center;text-align:center;padding:28px 20px}
+      .dl-hero-poster{width:160px;min-height:220px}
+      .dl-hero-meta{justify-content:center}
+      .dl-hero-table tr td:first-child{width:auto}
+      .dl-screenshots{grid-template-columns:repeat(2,1fr)}
+      .dl-pack-item{flex-direction:column;gap:10px;text-align:center}
+      .dl-ep-item{flex-direction:column;gap:8px;text-align:center}
+      .dl-ep-item .ep-links{justify-content:center}
+      .dl-ep-nav{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient"><div class="ambient-orb orb-1"></div><div class="ambient-orb orb-2"></div><div class="ambient-orb orb-3"></div></div>
+
+  <div class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="close-btn" onclick="closeNav()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="nav-brand">Anime<span>ForYou</span></div>
+    <a href="index.html">Home</a><a href="work.html">Browse</a><a href="services.html">Features</a><a href="about.html">About</a><a href="contact.html">Support</a>
+  </nav>
+
+  <header class="header" id="siteHeader">
+    <div class="header-inner">
+      <button class="menu-btn" onclick="openNav()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <a href="index.html" class="logo">Anime<span>ForYou</span></a>
+      <div class="nav-links"><a href="index.html">Home</a><a href="work.html">Browse</a><a href="services.html">Features</a><a href="about.html">About</a><a href="contact.html">Support</a></div>
+    </div>
+  </header>
+
+  <main class="dl-page" id="dlPage">
+    <div id="loadingState" style="text-align:center;padding:80px 20px;color:var(--text-muted)">
+      <div style="width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.6s linear infinite;margin:0 auto 16px"></div>
+      <p>Loading...</p>
+    </div>
+
+    <div id="errorState" style="display:none;text-align:center;padding:80px 20px;color:var(--text-muted)">
+      <h2 style="margin-bottom:8px;font-weight:700">Anime Not Found</h2>
+      <p>The anime you're looking for doesn't exist or has been removed.</p>
+      <a href="index.html" class="btn btn-primary" style="margin-top:20px">Browse Anime</a>
+    </div>
+
+    <div id="dlContent" style="display:none"></div>
+  </main>
+
+  <footer class="footer"><div class="footer-inner"><div class="footer-brand">Anime<span>ForYou</span></div><p>&copy; 2026 AnimeForYou. All rights reserved.</p></div></footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+  <script>
+    var firebaseConfig = {apiKey:"AIzaSyC4eObWxV8Nk64ssj2U7efXhlKxEeECPFI",authDomain:"animeforyou-e73a5.firebaseapp.com",projectId:"animeforyou-e73a5",storageBucket:"animeforyou-e73a5.firebasestorage.app",messagingSenderId:"747290347081",appId:"1:747290347081:web:354e7c49829a809010e198"};
+    if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+    function openNav(){document.getElementById('mobileNav').classList.add('open');document.getElementById('navOverlay').classList.add('open')}
+    function closeNav(){document.getElementById('mobileNav').classList.remove('open');document.getElementById('navOverlay').classList.remove('open')}
+
+    var currentAnime=null,allAnime=[];
+
+    function esc(s){if(!s)return'';var d=document.createElement('div');d.textContent=String(s);return d.innerHTML}
+
+    function init(){
+      DataStore.init();
+      DataStore.seedData();
+      allAnime=DataStore.getList();
+      var id=new URLSearchParams(window.location.search).get('id');
+      if(!id){showError();return}
+      currentAnime=allAnime.find(function(a){return String(a.id)===String(id)});
+      if(!currentAnime){showError();return}
+      if(!currentAnime.episodes)currentAnime.episodes=[];
+      if(typeof currentAnime.episodes==='number'){currentAnime.episodeCount=currentAnime.episodes;currentAnime.episodes=[]}
+      document.title=currentAnime.title+' — Download — AnimeForYou';
+      renderPage();
+    }
+
+    function showError(){document.getElementById('loadingState').style.display='none';document.getElementById('errorState').style.display='block'}
+
+    function renderPage(){
+      document.getElementById('loadingState').style.display='none';
+      var el=document.getElementById('dlContent');
+      el.style.display='block';
+      var a=currentAnime;
+      var img=a.image||'';
+      var eps=a.episodes||[];
+      var epCount=eps.length||(a.episodeCount||0);
+      var packs=a.packLinks||[];
+      var singleEps=a.singleEpLinks||[];
+      var genreList=(a.genre||'').split(',').map(function(g){return g.trim()}).filter(Boolean);
+
+      var html='';
+
+      // HERO SECTION
+      html+='<div class="dl-hero">';
+      html+='<div class="dl-hero-bg" style="background-image:url('+esc(img)+')"></div>';
+      html+='<div class="dl-hero-overlay"></div>';
+      html+='<div class="dl-hero-content">';
+      html+='<div class="dl-hero-poster"><img src="'+esc(img)+'" alt="'+esc(a.title)+'" crossorigin="anonymous" referrerpolicy="no-referrer" /><span class="dl-hero-badge">'+esc((a.quality||'HD').split('|')[0].trim())+'</span></div>';
+      html+='<div class="dl-hero-info">';
+      html+='<h1 class="dl-hero-title">'+esc(a.title)+'</h1>';
+      if(a.title!==a.title)html+='<div class="dl-hero-sub">'+esc(a.title)+'</div>';
+      html+='<div class="dl-available">Available Now on AnimeForYou</div>';
+      html+='<div class="dl-hero-meta">';
+      if(a.imdbRating)html+='<span class="imdb">IMDb '+esc(a.imdbRating)+'</span>';
+      if(a.rating)html+='<span>★ '+esc(a.rating)+'</span>';
+      if(a.year)html+='<span>'+esc(a.year)+'</span>';
+      if(epCount)html+='<span>'+epCount+' Episodes</span>';
+      genreList.forEach(function(g){html+='<span>'+esc(g)+'</span>'});
+      html+='</div>';
+      html+='<table class="dl-hero-table">';
+      if(a.stars)html+='<tr><td>Stars</td><td>'+esc(a.stars)+'</td></tr>';
+      if(a.language)html+='<tr><td>Language</td><td>'+esc(a.language)+'</td></tr>';
+      if(a.creator)html+='<tr><td>Creator</td><td>'+esc(a.creator)+'</td></tr>';
+      if(a.studio)html+='<tr><td>Studio</td><td>'+esc(a.studio)+'</td></tr>';
+      if(a.aired)html+='<tr><td>Aired</td><td>'+esc(a.aired)+'</td></tr>';
+      if(a.status)html+='<tr><td>Status</td><td>'+esc(a.status)+'</td></tr>';
+      html+='</table>';
+      html+='</div></div></div>';
+
+      // STORYLINE
+      var story=a.storyline||a.description;
+      if(story){
+        html+='<div class="dl-section"><div class="dl-section-header"><div class="icon" style="background:rgba(249,115,22,0.12);color:var(--accent)">📖</div><h3>'+esc(a.title)+' - Storyline</h3></div>';
+        html+='<div class="dl-section-body"><p class="dl-storyline">'+esc(story)+'</p></div></div>';
+      }
+
+      // SCREENSHOTS (placeholder grid)
+      html+='<div class="dl-section"><div class="dl-section-header"><div class="icon" style="background:rgba(168,85,247,0.12);color:#a855f7">📸</div><h3>Screenshots</h3></div>';
+      html+='<div class="dl-section-body"><div class="dl-screenshots">';
+      for(var s=0;s<6;s++){
+        html+='<img src="'+esc(img)+'" alt="Screenshot '+(s+1)+'" crossorigin="anonymous" referrerpolicy="no-referrer" style="aspect-ratio:16/9;object-fit:cover" />';
+      }
+      html+='</div></div></div>';
+
+      // WATCH ONLINE
+      html+='<div class="dl-section"><div class="dl-section-header"><div class="icon" style="background:rgba(34,197,94,0.12);color:#22c55e">▶</div><h3>Watch Online</h3></div>';
+      html+='<div class="dl-section-body"><p style="color:var(--text-muted);font-size:0.88rem">Stream '+esc(a.title)+' all episodes online for free on AnimeForYou.</p>';
+      html+='<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">';
+      html+='<a href="work.html" style="padding:10px 22px;border-radius:var(--radius);background:linear-gradient(135deg,var(--accent),#ea580c);color:white;text-decoration:none;font-weight:600;font-size:0.85rem">▶ Watch Now</a>';
+      html+='</div></div></div>';
+
+      // DOWNLOAD LINKS - PACK
+      if(packs.length>0){
+        html+='<div class="dl-section"><div class="dl-section-header"><div class="icon" style="background:rgba(249,115,22,0.12);color:var(--accent)">📦</div><h3>'+esc(a.title)+' Season '+getSeason(a)+' [All Episodes] Pack Downloads</h3></div>';
+        html+='<div class="dl-section-body"><div class="dl-pack-grid">';
+        packs.forEach(function(p){
+          var iconClass=getPackIconClass(p.label||p.size||'');
+          html+='<div class="dl-pack-item"><div class="dl-pack-info"><div class="dl-pack-icon '+iconClass+'">'+getPackIconText(p.label||'')+'</div><div><div class="dl-pack-name">'+esc(p.label||'Pack Download')+'</div><div class="dl-pack-size">'+esc(p.size||'')+'</div></div></div>';
+          html+='<a href="'+esc(p.url||'#')+'" target="_blank" rel="noopener" class="dl-pack-btn">⬇ Download</a></div>';
+        });
+        html+='</div></div></div>';
+      }
+
+      // SINGLE EPISODE LINKS
+      if(singleEps.length>0){
+        html+='<div class="dl-section"><div class="dl-section-header"><div class="icon" style="background:rgba(6,182,212,0.12);color:#06b6d4">📋</div><h3>'+esc(a.title)+' Season '+getSeason(a)+' Single Episodes</h3></div>';
+        html+='<div class="dl-section-body"><div class="dl-ep-grid">';
+        singleEps.forEach(function(se){
+          html+='<div class="dl-ep-item"><span class="ep-label">Episode '+esc(se.episode||'?')+' — '+esc(se.quality||'')+'</span>';
+          html+='<div class="ep-links">';
+          if(se.url)html+='<a href="'+esc(se.url)+'" target="_blank" rel="noopener" class="'+(se.quality&&se.quality.includes('1080')?'link-1080':'link-720')+'">⬇ '+esc(se.size||se.quality||'Download')+'</a>';
+          html+='</div></div>';
+        });
+        html+='</div></div></div>';
+      }
+
+      // EPISODE SELECTOR + DOWNLOAD SERVERS
+      if(eps.length>0){
+        html+='<div class="dl-section"><div class="dl-section-header"><div class="icon" style="background:rgba(249,115,22,0.12);color:var(--accent)">⚡</div><h3>Episode Downloads</h3></div>';
+        html+='<div class="dl-section-body">';
+        html+='<div style="display:flex;align-items:center;gap:12px;margin-bottom:20px"><label style="font-weight:600;font-size:0.9rem;color:var(--text-muted)">Select Episode:</label>';
+        html+='<select id="epSelect" style="padding:10px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg-secondary);color:var(--text);font-size:0.9rem;flex:1;font-family:inherit" onchange="loadEpisode(this.value)">';
+        eps.forEach(function(ep,i){html+='<option value="'+i+'">Episode '+(i+1)+(ep.title?' — '+ep.title:'')+'</option>'});
+        html+='</select></div>';
+        html+='<div id="dlServers"></div>';
+        html+='</div></div>';
+      }
+
+      // MORE INFO
+      html+='<div class="dl-section"><div class="dl-section-header"><div class="icon" style="background:rgba(168,85,247,0.12);color:#a855f7">ℹ</div><h3>'+esc(a.title)+' More Info</h3></div>';
+      html+='<div class="dl-section-body"><p style="color:var(--text-muted);font-size:0.88rem;line-height:1.7">';
+      html+='Download Anime <strong>'+esc(a.title)+'</strong>';
+      if(a.year)html+=' ('+esc(a.year)+')';
+      if(a.language)html+=' '+esc(a.language);
+      html+=' all episodes in high quality. ';
+      if(genreList.length)html+='Genres: <strong>'+esc(genreList.join(', '))+'</strong>. ';
+      if(a.imdbRating)html+='IMDb Rating: <strong>'+esc(a.imdbRating)+'</strong>. ';
+      html+='Available for free download on AnimeForYou.';
+      html+='</p></div></div>';
+
+      // REVIEW
+      html+='<div class="dl-section"><div class="dl-section-header"><div class="icon" style="background:rgba(245,197,24,0.12);color:#f5c518">⭐</div><h3>Review</h3></div>';
+      html+='<div class="dl-section-body"><div class="dl-review"><div class="dl-review-header"><div class="dl-review-stars">★★★★★</div><span style="font-weight:700;font-size:0.9rem">'+esc(a.rating||'N/A')+'/10</span></div>';
+      html+='<p class="dl-review-text">'+esc(story||a.title+' is a great anime series. Available for download on AnimeForYou.')+'</p></div></div>';
+
+      // HASHTAGS
+      html+='<div style="padding:0 0 8px">';
+      html+='<div class="dl-tags">';
+      html+='<span class="dl-tag">#'+esc(a.title.replace(/\\s+/g,''))+'</span>';
+      if(a.year)html+='<span class="dl-tag">#'+esc(a.year)+'</span>';
+      html+='<span class="dl-tag">#AnimeForYou</span>';
+      html+='<span class="dl-tag">#DownloadAnime</span>';
+      genreList.forEach(function(g){html+='<span class="dl-tag">#'+esc(g.replace(/\\s+/g,''))+'</span>'});
+      html+='</div></div>';
+
+      // COMMENTS
+      html+='<div class="dl-section"><div class="dl-section-header"><div class="icon" style="background:rgba(6,182,212,0.12);color:#06b6d4">💬</div><h3>Comments (<span id="commentCount">0</span>)</h3></div>';
+      html+='<div class="dl-section-body">';
+      html+='<div style="display:flex;gap:12px;margin-bottom:16px"><input type="text" id="commentName" placeholder="Your name" style="flex:1;padding:12px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg-secondary);color:var(--text);font-size:0.9rem;font-family:inherit" /></div>';
+      html+='<div style="display:flex;gap:12px;margin-bottom:16px"><textarea id="commentText" rows="3" placeholder="Write a comment..." style="flex:1;padding:12px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg-secondary);color:var(--text);font-size:0.9rem;font-family:inherit;resize:vertical"></textarea></div>';
+      html+='<button class="btn btn-primary" onclick="postComment()">Post Comment</button>';
+      html+='<div id="commentsList" style="margin-top:20px"></div>';
+      html+='</div></div>';
+
+      // PREV/NEXT NAV
+      html+='<div class="dl-ep-nav"><a id="prevEp" href="#" onclick="return false" class="disabled">← Previous Episode</a><a id="nextEp" href="#" onclick="return false" class="disabled">Next Episode →</a></div>';
+
+      el.innerHTML=html;
+
+      // Load first episode downloads if episodes exist
+      if(eps.length>0){
+        var startIdx=0;
+        for(var i=eps.length-1;i>=0;i--){if(eps[i].downloads&&eps[i].downloads.length>0){startIdx=i;break}}
+        document.getElementById('epSelect').value=startIdx;
+        loadEpisode(startIdx);
+      }
+      loadComments();
+    }
+
+    function getSeason(a){
+      var t=(a.title||'').toLowerCase();
+      if(t.includes('season 2')||t.includes('2nd'))return '2';
+      if(t.includes('season 3')||t.includes('3rd'))return '3';
+      if(t.includes('season 4')||t.includes('4th'))return '4';
+      return '1';
+    }
+
+    function getPackIconClass(label){
+      var l=(label||'').toLowerCase();
+      if(l.includes('1080')&&!l.includes('hevc'))return 'p1080';
+      if(l.includes('720')&&!l.includes('hevc'))return 'p720';
+      if(l.includes('480'))return 'p480';
+      if(l.includes('hevc'))return 'hevc';
+      return 'p1080';
+    }
+
+    function getPackIconText(label){
+      var l=(label||'').toLowerCase();
+      if(l.includes('1080'))return '1080p';
+      if(l.includes('720'))return '720p';
+      if(l.includes('480'))return '480p';
+      return 'HD';
+    }
+
+    function loadEpisode(idx){
+      idx=parseInt(idx);
+      var eps=currentAnime.episodes||[];
+      var ep=eps[idx];
+      if(!ep)return;
+      var el=document.getElementById('dlServers');
+      var dls=ep.downloads||[];
+      if(!dls.length){
+        el.innerHTML='<div style="text-align:center;padding:32px;color:var(--text-muted)"><p>No download links for this episode yet.</p><p style="font-size:0.85rem;margin-top:8px">Links will be added soon.</p></div>';
+        return;
+      }
+      el.innerHTML='<div class="dl-pack-grid">'+dls.map(function(d,i){
+        var q=(d.quality||'HD').toLowerCase();
+        var iconClass=q.includes('1080')?'p1080':q.includes('720')?'p720':q.includes('480')?'p480':'p1080';
+        var serverName=q.includes('1080')?'Full HD Server':q.includes('720')?'HD Server':q.includes('480')?'SD Server':d.quality+' Server';
+        return '<div class="dl-pack-item"><div class="dl-pack-info"><div class="dl-pack-icon '+iconClass+'">'+esc((d.quality||'HD').replace('p',''))+'</div><div><div class="dl-pack-name">'+esc(serverName)+'</div><div class="dl-pack-size">'+esc(d.quality||'')+(d.size?' · '+esc(d.size):'')+'</div></div></div><a href="'+esc(d.url||'#')+'" target="_blank" rel="noopener" class="dl-pack-btn">⬇ Download</a></div>';
+      }).join('')+'</div>';
+    }
+
+    // COMMENTS
+    function getCommentsKey(){return 'a4y_comments_'+currentAnime.id}
+    function loadComments(){
+      try{
+        var comments=JSON.parse(localStorage.getItem(getCommentsKey())||'[]');
+        var countEl=document.getElementById('commentCount');
+        if(countEl)countEl.textContent=comments.length;
+        var listEl=document.getElementById('commentsList');
+        if(!listEl)return;
+        if(!comments.length){listEl.innerHTML='<p style="color:var(--text-muted);text-align:center;padding:20px">No comments yet. Be the first!</p>';return}
+        var colors=['#f97316','#a855f7','#22c55e','#06b6d4','#ec4899'];
+        listEl.innerHTML=comments.map(function(c,i){
+          var color=colors[i%colors.length];
+          return '<div class="dl-comment" style="animation-delay:'+i*0.05+'s"><div class="dl-comment-avatar" style="background:'+color+'20;color:'+color+'">'+(c.name||'A')[0].toUpperCase()+'</div><div style="flex:1"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><span class="dl-comment-name">'+esc(c.name||'Anonymous')+'</span><span class="dl-comment-time">'+esc(c.time||'')+'</span></div><p class="dl-comment-text">'+esc(c.text)+'</p></div></div>';
+        }).join('');
+      }catch(e){}
+    }
+    function postComment(){
+      var name=document.getElementById('commentName').value.trim();
+      var text=document.getElementById('commentText').value.trim();
+      if(!text){showToast('Write a comment first');return}
+      try{
+        var comments=JSON.parse(localStorage.getItem(getCommentsKey())||'[]');
+        var now=new Date();
+        comments.push({name:name||'Anonymous',text:text,time:now.toLocaleDateString()+' '+now.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})});
+        localStorage.setItem(getCommentsKey(),JSON.stringify(comments));
+        document.getElementById('commentText').value='';
+        loadComments();
+        showToast('Comment posted!');
+      }catch(e){showToast('Failed to post comment')}
+    }
+
+    init();
+  </script>
+</body>
+</html>
