@@ -1,114 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#080816" />
   <title>About — AnimeForYou</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <style>
-    .about-content { max-width: 800px; margin: 0 auto; }
-    .about-content h2 { font-size: 1.5rem; margin: 32px 0 12px; }
-    .about-content p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
-    .stats-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 32px 0; }
-    .stat-box { text-align: center; padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); }
-    .stat-box .num { font-size: 2rem; font-weight: 800; color: var(--accent); }
-    .stat-box .label { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; }
-  </style>
 </head>
 <body>
-  <div class="ambient">
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-  </div>
+  <div class="ambient"><div class="ambient-orb orb-1"></div><div class="ambient-orb orb-2"></div><div class="ambient-orb orb-3"></div></div>
 
   <div class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()"></div>
   <nav class="mobile-nav" id="mobileNav">
-    <button class="close-btn" onclick="closeNav()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
+    <button class="close-btn" onclick="closeNav()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <div class="nav-brand">Anime<span>ForYou</span></div>
-    <a href="index.html">Home</a>
-    <a href="work.html">Browse</a>
-    <a href="services.html">Features</a>
-    <a href="about.html" class="active">About</a>
-    <a href="contact.html">Support</a>
+    <a href="index.html">Home</a><a href="work.html">Browse</a><a href="services.html">Features</a><a href="about.html" class="active">About</a><a href="contact.html">Support</a>
   </nav>
 
   <header class="header" id="siteHeader">
     <div class="header-inner">
-      <button class="menu-btn" onclick="openNav()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
+      <button class="menu-btn" onclick="openNav()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
       <a href="index.html" class="logo">Anime<span>ForYou</span></a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="work.html">Browse</a>
-        <a href="services.html">Features</a>
-        <a href="about.html" class="active">About</a>
-        <a href="contact.html">Support</a>
-      </div>
+      <div class="nav-links"><a href="index.html">Home</a><a href="work.html">Browse</a><a href="services.html">Features</a><a href="about.html" class="active">About</a><a href="contact.html">Support</a></div>
     </div>
   </header>
 
-  <section class="hero">
-    <h1>About <span class="gradient">AnimeForYou</span></h1>
-    <p>Your ultimate destination for anime streaming and discovery</p>
-  </section>
+  <main class="container">
+    <div class="page-header"><h1>About <span class="gradient">AnimeForYou</span></h1><p>Your premium destination for anime</p></div>
 
-  <main class="container about-content">
-    <div class="stats-row reveal">
-      <div class="stat-box">
-        <div class="num">1000+</div>
-        <div class="label">Anime Series</div>
+    <div class="about-grid">
+      <div class="about-content reveal">
+        <h1>We Love Anime.</h1>
+        <p>Your premium destination for streaming anime series, movies, and exclusives. We provide a curated collection of the best anime content with a modern, beautiful viewing experience.</p>
+        <p>Our mission is to make anime accessible to everyone with a fast, free, and beautiful platform built with love for the community.</p>
+        <div style="display:flex;gap:12px;margin-top:24px">
+          <a href="work.html" class="btn btn-primary">Browse Anime</a>
+          <a href="contact.html" class="btn btn-ghost">Contact Us</a>
+        </div>
       </div>
-      <div class="stat-box">
-        <div class="num">50K+</div>
-        <div class="label">Happy Users</div>
+      <div class="about-image reveal">
+        <div style="width:100%;height:400px;background:linear-gradient(135deg,var(--accent),var(--purple));border-radius:var(--radius-xl);display:grid;place-items:center;font-size:4rem">🎬</div>
       </div>
     </div>
 
-    <h2 class="reveal">Our Mission</h2>
-    <p class="reveal">AnimeForYou was created with a simple goal: make anime accessible to everyone. We believe that great stories should be easy to find and enjoy, no matter where you are in the world.</p>
-
-    <h2 class="reveal">What We Offer</h2>
-    <p class="reveal">From the latest seasonal anime to classic series, we curate a collection that caters to every taste. Whether you're into action-packed shonen, heartfelt slice-of-life, or mind-bending psychological thrillers, we've got you covered.</p>
-
-    <h2 class="reveal">Our Team</h2>
-    <p class="reveal">We're a small team of passionate anime fans who wake up at 3 AM to watch new episodes. Our dedication to the community drives everything we do, from improving the platform to curating the best content recommendations.</p>
+    <h2 class="section-title reveal" style="margin-top:80px">Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card reveal"><div class="team-avatar">A</div><h3>Aria</h3><p>AI Assistant</p></div>
+      <div class="team-card reveal"><div class="team-avatar" style="background:linear-gradient(135deg,var(--cyan),var(--purple))">Y</div><h3>You</h3><p>Founder</p></div>
+    </div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">Anime<span>ForYou</span></div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="work.html">Browse</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Support</a>
-      </div>
+      <div class="footer-links"><a href="index.html">Home</a><a href="work.html">Browse</a><a href="about.html">About</a><a href="contact.html">Support</a></div>
       <p>&copy; 2026 AnimeForYou. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="assets/js/data-store.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script src="assets/js/chatbot.js"></script>
   <script>
-    function openNav() {
-      document.getElementById('mobileNav').classList.add('open');
-      document.getElementById('navOverlay').classList.add('open');
-    }
-    function closeNav() {
-      document.getElementById('mobileNav').classList.remove('open');
-      document.getElementById('navOverlay').classList.remove('open');
-    }
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
   </script>
 </body>
 </html>

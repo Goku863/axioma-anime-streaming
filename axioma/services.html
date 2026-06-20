@@ -1,116 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#080816" />
   <title>Features — AnimeForYou</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <style>
-    .features-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 48px; }
-    .feature-card {
-      padding: 28px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      transition: all 0.3s var(--ease);
-    }
-    .feature-card:hover {
-      border-color: rgba(var(--accent-rgb), 0.3);
-      transform: translateY(-4px);
-    }
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius);
-      background: rgba(var(--accent-rgb), 0.1);
-      display: grid;
-      place-items: center;
-      margin-bottom: 16px;
-      font-size: 1.5rem;
-    }
-    .feature-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-    .feature-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
-  </style>
 </head>
 <body>
-  <div class="ambient">
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-  </div>
+  <div class="ambient"><div class="ambient-orb orb-1"></div><div class="ambient-orb orb-2"></div><div class="ambient-orb orb-3"></div></div>
 
   <div class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()"></div>
   <nav class="mobile-nav" id="mobileNav">
-    <button class="close-btn" onclick="closeNav()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
+    <button class="close-btn" onclick="closeNav()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <div class="nav-brand">Anime<span>ForYou</span></div>
-    <a href="index.html">Home</a>
-    <a href="work.html">Browse</a>
-    <a href="services.html" class="active">Features</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Support</a>
+    <a href="index.html">Home</a><a href="work.html">Browse</a><a href="services.html" class="active">Features</a><a href="about.html">About</a><a href="contact.html">Support</a>
   </nav>
 
   <header class="header" id="siteHeader">
     <div class="header-inner">
-      <button class="menu-btn" onclick="openNav()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
+      <button class="menu-btn" onclick="openNav()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
       <a href="index.html" class="logo">Anime<span>ForYou</span></a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="work.html">Browse</a>
-        <a href="services.html" class="active">Features</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Support</a>
-      </div>
+      <div class="nav-links"><a href="index.html">Home</a><a href="work.html">Browse</a><a href="services.html" class="active">Features</a><a href="about.html">About</a><a href="contact.html">Support</a></div>
     </div>
   </header>
 
-  <section class="hero">
-    <h1>Powerful <span class="gradient">Features</span></h1>
-    <p>Everything you need for the perfect anime experience</p>
-  </section>
-
   <main class="container">
+    <div class="page-header"><h1>What We <span class="gradient">Offer</span></h1><p>Everything you need for the best anime experience</p></div>
+
     <div class="features-grid">
       <div class="feature-card reveal">
-        <div class="feature-icon">🔍</div>
+        <div class="icon">🔍</div>
         <h3>Smart Search</h3>
-        <p>Find any anime instantly with our powerful search. Filter by genre, rating, or status.</p>
+        <p>Find anime instantly with our intelligent search and genre filtering system</p>
       </div>
       <div class="feature-card reveal">
-        <div class="feature-icon">📱</div>
-        <h3>Mobile Friendly</h3>
-        <p>Watch anywhere. Our responsive design works perfectly on phones, tablets, and desktops.</p>
+        <div class="icon">📱</div>
+        <h3>Download Ready</h3>
+        <p>Download episodes directly to your mobile device for offline viewing</p>
       </div>
       <div class="feature-card reveal">
-        <div class="feature-icon">🎯</div>
-        <h3>Personal Library</h3>
-        <p>Build your own anime library. Track what you've watched and save favorites.</p>
+        <div class="icon">🌟</div>
+        <h3>Top Rated Content</h3>
+        <p>Curated collection of the highest-rated anime across all genres</p>
       </div>
       <div class="feature-card reveal">
-        <div class="feature-icon">⭐</div>
-        <h3>Ratings & Reviews</h3>
-        <p>See what's popular with community ratings. Find hidden gems recommended by fans.</p>
+        <div class="icon">🤖</div>
+        <h3>AI Assistant</h3>
+        <p>Get personalized recommendations and answers from our AI chatbot Aria</p>
       </div>
       <div class="feature-card reveal">
-        <div class="feature-icon">🔔</div>
-        <h3>New Episodes</h3>
-        <p>Never miss a release. Get notified when new episodes of your favorite series drop.</p>
+        <div class="icon">⚡</div>
+        <h3>Lightning Fast</h3>
+        <p>Instant page loads and smooth animations for the best experience</p>
       </div>
       <div class="feature-card reveal">
-        <div class="feature-icon">🌙</div>
-        <h3>Dark Mode</h3>
-        <p>Easy on the eyes. Our dark theme is perfect for late-night anime sessions.</p>
+        <div class="icon">🎨</div>
+        <h3>Beautiful Design</h3>
+        <p>Modern dark theme with stunning visual effects and glassmorphism</p>
       </div>
     </div>
   </main>
@@ -118,27 +68,16 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">Anime<span>ForYou</span></div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="work.html">Browse</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Support</a>
-      </div>
+      <div class="footer-links"><a href="index.html">Home</a><a href="work.html">Browse</a><a href="about.html">About</a><a href="contact.html">Support</a></div>
       <p>&copy; 2026 AnimeForYou. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="assets/js/data-store.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script src="assets/js/chatbot.js"></script>
   <script>
-    function openNav() {
-      document.getElementById('mobileNav').classList.add('open');
-      document.getElementById('navOverlay').classList.add('open');
-    }
-    function closeNav() {
-      document.getElementById('mobileNav').classList.remove('open');
-      document.getElementById('navOverlay').classList.remove('open');
-    }
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
   </script>
 </body>
 </html>

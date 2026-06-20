@@ -1,207 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#080816" />
   <title>Support — AnimeForYou</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <style>
-    .support-content { max-width: 600px; margin: 0 auto; }
-    .faq-item {
-      margin-bottom: 12px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-    .faq-q {
-      width: 100%;
-      padding: 16px;
-      background: transparent;
-      border: none;
-      color: var(--text);
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .faq-q::after {
-      content: '+';
-      font-size: 1.2rem;
-      color: var(--accent);
-      transition: transform 0.2s;
-    }
-    .faq-item.open .faq-q::after {
-      transform: rotate(45deg);
-    }
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s;
-    }
-    .faq-item.open .faq-a {
-      max-height: 200px;
-    }
-    .faq-a p {
-      padding: 0 16px 16px;
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-    .contact-form { margin-top: 40px; }
-    .form-group { margin-bottom: 16px; }
-    .form-group label {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-bottom: 6px;
-      color: var(--text-secondary);
-    }
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      color: var(--text);
-      font-family: inherit;
-      font-size: 0.9rem;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--accent);
-    }
-    .form-group textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-  </style>
 </head>
 <body>
-  <div class="ambient">
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-  </div>
+  <div class="ambient"><div class="ambient-orb orb-1"></div><div class="ambient-orb orb-2"></div><div class="ambient-orb orb-3"></div></div>
 
   <div class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()"></div>
   <nav class="mobile-nav" id="mobileNav">
-    <button class="close-btn" onclick="closeNav()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
+    <button class="close-btn" onclick="closeNav()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <div class="nav-brand">Anime<span>ForYou</span></div>
-    <a href="index.html">Home</a>
-    <a href="work.html">Browse</a>
-    <a href="services.html">Features</a>
-    <a href="about.html">About</a>
-    <a href="contact.html" class="active">Support</a>
+    <a href="index.html">Home</a><a href="work.html">Browse</a><a href="services.html">Features</a><a href="about.html">About</a><a href="contact.html" class="active">Support</a>
   </nav>
 
   <header class="header" id="siteHeader">
     <div class="header-inner">
-      <button class="menu-btn" onclick="openNav()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
+      <button class="menu-btn" onclick="openNav()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
       <a href="index.html" class="logo">Anime<span>ForYou</span></a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="work.html">Browse</a>
-        <a href="services.html">Features</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="active">Support</a>
-      </div>
+      <div class="nav-links"><a href="index.html">Home</a><a href="work.html">Browse</a><a href="services.html">Features</a><a href="about.html">About</a><a href="contact.html" class="active">Support</a></div>
     </div>
   </header>
 
-  <section class="hero">
-    <h1>Need <span class="gradient">Help?</span></h1>
-    <p>Find answers or contact our support team</p>
-  </section>
+  <main class="container">
+    <div class="page-header"><h1>Support & <span class="gradient">Help</span></h1><p>Find answers and get in touch</p></div>
 
-  <main class="container support-content">
-    <h2 class="section-title reveal">Frequently Asked Questions</h2>
-
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I add anime to my library?</button>
-      <div class="faq-a"><p>Click on any anime card to open its page, then click the "Add to Library" button. Your saved anime will appear on your profile page.</p></div>
-    </div>
-
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is AnimeForYou free?</button>
-      <div class="faq-a"><p>Yes! AnimeForYou is completely free to use. We support the site through non-intrusive ads.</p></div>
-    </div>
-
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I report a broken link?</button>
-      <div class="faq-a"><p>Use the contact form below or reach out on social media. We try to fix broken links within 24 hours.</p></div>
-    </div>
-
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I request new anime?</button>
-      <div class="faq-a"><p>Absolutely! Send us a message through the form below with the anime title and we'll try to add it.</p></div>
-    </div>
-
-    <form class="contact-form reveal" onsubmit="submitForm(event)">
-      <h2 class="section-title">Contact Us</h2>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Your name" required />
+    <div class="contact-grid">
+      <div class="contact-form-card reveal">
+        <h2>Contact Us</h2>
+        <form class="contact-form" onsubmit="event.preventDefault();showToast('Message sent! We will get back to you soon.')">
+          <div class="form-group"><label>Your Name</label><input type="text" placeholder="Enter your name" required /></div>
+          <div class="form-group"><label>Your Email</label><input type="email" placeholder="Enter your email" required /></div>
+          <div class="form-group"><label>Subject</label><select><option>General Inquiry</option><option>Bug Report</option><option>Feature Request</option><option>Content Issue</option></select></div>
+          <div class="form-group"><label>Message</label><textarea placeholder="Tell us how we can help..." rows="5"></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="your@email.com" required />
+
+      <div class="contact-info-card reveal">
+        <h2>FAQ</h2>
+        <div class="faq-item"><h4>Is AnimeForYou free?</h4><p>Yes! AnimeForYou is completely free to use.</p></div>
+        <div class="faq-item"><h4>Can I download anime?</h4><p>Yes! Select any anime, choose an episode, and download from one of our multiple servers.</p></div>
+        <div class="faq-item"><h4>How do I report issues?</h4><p>Use the contact form or chat with our AI assistant Aria for immediate help.</p></div>
+        <div class="faq-item"><h4>Do I need an account?</h4><p>No account needed! Everything works directly in your browser with localStorage.</p></div>
       </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="How can we help?" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message</button>
-    </form>
+    </div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">Anime<span>ForYou</span></div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="work.html">Browse</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Support</a>
-      </div>
+      <div class="footer-links"><a href="index.html">Home</a><a href="work.html">Browse</a><a href="about.html">About</a><a href="contact.html">Support</a></div>
       <p>&copy; 2026 AnimeForYou. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="assets/js/data-store.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script src="assets/js/chatbot.js"></script>
   <script>
-    function openNav() {
-      document.getElementById('mobileNav').classList.add('open');
-      document.getElementById('navOverlay').classList.add('open');
-    }
-    function closeNav() {
-      document.getElementById('mobileNav').classList.remove('open');
-      document.getElementById('navOverlay').classList.remove('open');
-    }
-
-    function submitForm(e) {
-      e.preventDefault();
-      alert('Thank you! Your message has been sent.');
-      e.target.reset();
-    }
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
+    function showToast(msg) { alert(msg); }
   </script>
 </body>
 </html>

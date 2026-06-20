@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#080816" />
   <title>AnimeForYou — Watch Anime Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,49 +11,26 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <!-- Ambient Background -->
-  <div class="ambient">
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-    <div class="ambient-orb orb-3"></div>
-  </div>
+  <div class="ambient"><div class="ambient-orb orb-1"></div><div class="ambient-orb orb-2"></div><div class="ambient-orb orb-3"></div></div>
 
-  <!-- Mobile Navigation -->
   <div class="mobile-nav-overlay" id="navOverlay" onclick="closeNav()"></div>
   <nav class="mobile-nav" id="mobileNav">
-    <button class="close-btn" onclick="closeNav()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
+    <button class="close-btn" onclick="closeNav()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     <div class="nav-brand">Anime<span>ForYou</span></div>
-    <a href="index.html" class="active">Home</a>
-    <a href="work.html">Browse</a>
-    <a href="services.html">Features</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Support</a>
+    <a href="index.html" class="active">Home</a><a href="work.html">Browse</a><a href="services.html">Features</a><a href="about.html">About</a><a href="contact.html">Support</a>
   </nav>
 
-  <!-- Header -->
   <header class="header" id="siteHeader">
     <div class="header-inner">
-      <button class="menu-btn" onclick="openNav()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
-      </button>
+      <button class="menu-btn" onclick="openNav()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
       <a href="index.html" class="logo">Anime<span>ForYou</span></a>
       <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="work.html">Browse</a>
-        <a href="services.html">Features</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Support</a>
+        <a href="index.html" class="active">Home</a><a href="work.html">Browse</a><a href="services.html">Features</a><a href="about.html">About</a><a href="contact.html">Support</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <h1>Your Anime.<br><span class="gradient">Your World.</span></h1>
     <p>Discover, track, and download your favorite anime series with a beautiful modern experience.</p>
@@ -63,22 +40,20 @@
     </div>
   </section>
 
-  <!-- Search Section -->
+  <!-- Search -->
   <section class="search-section">
     <div class="search-box">
-      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-      </svg>
       <input type="text" id="searchInput" placeholder="Search anime..." onkeyup="filterAnime()" />
+      <button onclick="filterAnime()">Search</button>
     </div>
   </section>
 
-  <!-- Latest Anime -->
+  <!-- Anime Grid -->
   <main class="container">
     <h2 class="section-title reveal">Latest Anime</h2>
     <div class="anime-grid" id="animeGrid"></div>
 
-    <h2 class="section-title reveal" style="margin-top: 48px;">Trending Now</h2>
+    <h2 class="section-title reveal" style="margin-top:48px">Trending Now</h2>
     <div class="anime-grid" id="trendingGrid"></div>
   </main>
 
@@ -98,51 +73,28 @@
 
   <script src="assets/js/data-store.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script src="assets/js/chatbot.js"></script>
   <script>
-    // Mobile Navigation
-    function openNav() {
-      document.getElementById('mobileNav').classList.add('open');
-      document.getElementById('navOverlay').classList.add('open');
-    }
-    function closeNav() {
-      document.getElementById('mobileNav').classList.remove('open');
-      document.getElementById('navOverlay').classList.remove('open');
-    }
+    function openNav() { document.getElementById('mobileNav').classList.add('open'); document.getElementById('navOverlay').classList.add('open'); }
+    function closeNav() { document.getElementById('mobileNav').classList.remove('open'); document.getElementById('navOverlay').classList.remove('open'); }
 
-    // Anime Data
     let allAnime = [];
-
     function loadAnime() {
       allAnime = DataStore.getList();
       renderGrid('animeGrid', allAnime.slice(0, 20));
-      renderGrid('trendingGrid', allAnime.filter(a => a.rating >= 8).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 8));
-      if (window.AnimeAnimations) {
-        setTimeout(() => window.AnimeAnimations.initReveal(), 100);
-      }
+      renderGrid('trendingGrid', allAnime.filter(a => a.rating >= 8).sort((a,b) => (b.rating||0)-(a.rating||0)).slice(0, 8));
+      if (window.AnimeAnimations) setTimeout(() => window.AnimeAnimations.initReveal(), 100);
     }
 
     function renderGrid(id, list) {
       const grid = document.getElementById(id);
-      if (!list.length) {
-        grid.innerHTML = '<p class="empty-message">No anime found. Add anime via the admin panel.</p>';
-        return;
-      }
+      if (!list.length) { grid.innerHTML = '<p style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:60px 20px">No anime found. Add anime via the admin panel.</p>'; return; }
       grid.innerHTML = list.map(a => `
         <a href="episode.html?id=${a.id}" class="anime-card">
-          <div class="poster">
-            <img src="${a.image || 'https://cdn.myanimelist.net/images/anime/1015/138006l.jpg'}" alt="${(a.title || '').replace(/"/g, '&quot;')}" loading="lazy" />
-            <div class="overlay">
-              <div class="play-btn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
-              </div>
-            </div>
-          </div>
+          <img src="${a.image || 'https://cdn.myanimelist.net/images/anime/1015/138006l.jpg'}" alt="${(a.title||'').replace(/"/g,'&quot;')}" loading="lazy" crossorigin="anonymous" referrerpolicy="no-referrer" />
           <div class="info">
-            <div class="title">${(a.title || 'Unknown').replace(/</g, '&lt;')}</div>
-            <div class="meta">
-              <span class="rating">${a.rating || 'N/A'}★</span>
-              <span class="genre">${a.genre || 'Anime'}</span>
-            </div>
+            <div class="title">${(a.title||'Unknown').replace(/</g,'&lt;')}</div>
+            <div class="meta"><span class="rating">${a.rating || 'N/A'}★</span> ${a.genre || 'Anime'}</div>
           </div>
         </a>
       `).join('');
@@ -150,15 +102,11 @@
 
     function filterAnime() {
       const q = document.getElementById('searchInput').value.toLowerCase();
-      const filtered = allAnime.filter(a =>
-        (a.title || '').toLowerCase().includes(q) ||
-        (a.genre || '').toLowerCase().includes(q)
-      );
+      const filtered = allAnime.filter(a => (a.title||'').toLowerCase().includes(q) || (a.genre||'').toLowerCase().includes(q));
       renderGrid('animeGrid', filtered.slice(0, 20));
-      renderGrid('trendingGrid', filtered.filter(a => a.rating >= 8).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 8));
+      renderGrid('trendingGrid', filtered.filter(a => a.rating >= 8).sort((a,b) => (b.rating||0)-(a.rating||0)).slice(0, 8));
     }
 
-    // Initialize
     DataStore.init();
     DataStore.seedData();
     loadAnime();
