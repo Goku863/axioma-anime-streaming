@@ -1,82 +1,82 @@
 <html lang="en">
-3: <head>
-4:   <meta charset="utf-8" />
-5:   <meta name="viewport" content="width=device-width,initial-scale=1" />
-6:   <meta name="theme-color" content="#0a0a0f" />
-7:   <title>AnimeForYou — Premium Anime Streaming</title>
-8:   <link rel="preconnect" href="https://fonts.googleapis.com" />
-9:   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-10:   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
-11:   <style>
-12:     :root {
-13:       --bg-primary: #0a0a0f;
-14:       --bg-secondary: #12121a;
-15:       --bg-card: #151520;
-16:       --bg-card-hover: #1d1d2a;
-17:       --text-primary: #f8fafc;
-18:       --text-secondary: #a0aec0;
-19:       --text-muted: #636e80;
-20:       --accent-primary: #8b5cf6;
-21:       --accent-primary-rgb: 139, 92, 246;
-22:       --accent-secondary: #06b6d4;
-23:       --accent-secondary-rgb: 6, 182, 212;
-24:       --accent-green: #22c55e;
-25:       --accent-pink: #ec4899;
-26:       --accent-orange: #f97316;
-27:       --border-color: rgba(255, 255, 255, 0.06);
-28:       --radius: 12px;
-29:       --radius-lg: 16px;
-30:       --radius-xl: 20px;
-31:       --radius-pill: 999px;
-32:       --ease: cubic-bezier(0.4, 0, 0.2, 1);
-33:       --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-34:       --shadow-glow: 0 0 60px rgba(var(--accent-primary-rgb), 0.15);
-35:       --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-36:       --mono: 'JetBrains Mono', monospace;
-37:     }
-38:     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-39:     html { scroll-behavior: smooth; }
-40:     body {
-41:       font-family: var(--font);
-42:       color: var(--text-primary);
-43:       background: var(--bg-primary);
-44:       -webkit-font-smoothing: antialiased;
-45:       overflow-x: hidden;
-46:     }
-47:     a { color: inherit; text-decoration: none; }
-48:     img { display: block; max-width: 100%; }
-49: 
-50:     /* ===== NAVBAR ===== */
-51:     .navbar {
-52:       position: fixed;
-53:       top: 0;
-54:       left: 0;
-55:       right: 0;
-56:       z-index: 1000;
-57:       padding: 16px 32px;
-58:       display: flex;
-59:       align-items: center;
-60:       justify-content: space-between;
-61:       background: rgba(10, 10, 15, 0.8);
-62:       backdrop-filter: blur(20px);
-63:       border-bottom: 1px solid var(--border-color);
-64:       transition: all 0.3s var(--ease);
-65:     }
-66:     .navbar.scrolled { padding: 12px 32px; background: rgba(10, 10, 15, 0.95); }
-67:     .nav-brand {
-68:       display: flex;
-69:       align-items: center;
-70:       gap: 10px;
-71:       font-weight: 700;
-72:       font-size: 1.2rem;
-73:     }
-74:     .nav-brand .logo {
-75:       width: 36px;
-76:       height: 36px;
-77:       border-radius: 10px;
-78:       background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-79:       display: grid;
-80:       place-items: center;
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>AnimeForYou — Premium Anime Streaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #12121a;
+      --bg-card: #151520;
+      --bg-card-hover: #1d1d2a;
+      --text-primary: #f8fafc;
+      --text-secondary: #a0aec0;
+      --text-muted: #636e80;
+      --accent-primary: #8b5cf6;
+      --accent-primary-rgb: 139, 92, 246;
+      --accent-secondary: #06b6d4;
+      --accent-secondary-rgb: 6, 182, 212;
+      --accent-green: #22c55e;
+      --accent-pink: #ec4899;
+      --accent-orange: #f97316;
+      --border-color: rgba(255, 255, 255, 0.06);
+      --radius: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --radius-pill: 999px;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      --shadow-glow: 0 0 60px rgba(var(--accent-primary-rgb), 0.15);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(10, 10, 15, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s var(--ease);
+    }
+    .navbar.scrolled { padding: 12px 32px; background: rgba(10, 10, 15, 0.95); }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .nav-brand .logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      display: grid;
+      place-items: center;
 
 (Showing lines 1-80 of 1074. Use offset=81 to continue.)
 </content>",metadata:$R[16187]={preview:"<!doctype html>
